@@ -10,7 +10,7 @@ namespace LibraryServices.Entdades
     public class Editorial
     {
         [Key]
-        public int EditarialId { get; set; }
+        public int EditorialId { get; set; }
         public string Nombre { get; set; }
         public string Dirrecion { get; set; }
 
@@ -18,9 +18,9 @@ namespace LibraryServices.Entdades
         {
         }
 
-        public Editorial(int editarialId, string nombre, string dirrecion)
+        public Editorial(int editorialId, string nombre, string dirrecion)
         {
-            EditarialId = editarialId;
+            EditorialId = editorialId;
             Nombre = nombre;
             Dirrecion = dirrecion;
         }

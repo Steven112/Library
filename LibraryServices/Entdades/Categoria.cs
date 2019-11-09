@@ -14,6 +14,10 @@ namespace LibraryServices.Entdades
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
 
+        public Categoria()
+        {
+        }
+
         public Categoria(int categoriaId, string nombre, string descripcion)
         {
             CategoriaId = categoriaId;

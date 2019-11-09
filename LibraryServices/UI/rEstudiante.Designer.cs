@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MatriculatextBox = new System.Windows.Forms.MaskedTextBox();
             this.ApellidotextBox = new System.Windows.Forms.TextBox();
             this.NoTelefonoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -40,11 +41,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
-            this.Buscarbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // MatriculatextBox
@@ -146,46 +151,83 @@
             this.DirecciontextBox.Size = new System.Drawing.Size(116, 20);
             this.DirecciontextBox.TabIndex = 126;
             // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_35;
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(18, 220);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(75, 58);
+            this.Nuevobutton.TabIndex = 130;
+            this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Guardarbutton.Location = new System.Drawing.Point(99, 220);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(75, 58);
+            this.Guardarbutton.TabIndex = 129;
+            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Image = global::LibraryServices.Properties.Resources.icons8_eliminar_propiedad_35;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Eliminarbutton.Location = new System.Drawing.Point(180, 220);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 58);
+            this.Eliminarbutton.TabIndex = 128;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
             // Buscarbutton
             // 
+            this.Buscarbutton.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
             this.Buscarbutton.Location = new System.Drawing.Point(191, 14);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(47, 23);
             this.Buscarbutton.TabIndex = 127;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // Eliminarbutton
+            // FechadateTimePicker
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(180, 189);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 51);
-            this.Eliminarbutton.TabIndex = 128;
-            this.Eliminarbutton.Text = "Eliminar";
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(122, 170);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(116, 20);
+            this.FechadateTimePicker.TabIndex = 131;
             // 
-            // Guardarbutton
+            // label7
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(99, 189);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(75, 51);
-            this.Guardarbutton.TabIndex = 129;
-            this.Guardarbutton.Text = "Guardar";
-            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(34, 170);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 13);
+            this.label7.TabIndex = 132;
+            this.label7.Text = "Fecha Insercion:";
             // 
-            // Nuevobutton
+            // MyerrorProvider
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(18, 189);
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(75, 51);
-            this.Nuevobutton.TabIndex = 130;
-            this.Nuevobutton.Text = "Nuevo";
-            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.MyerrorProvider.ContainerControl = this;
             // 
             // rEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 259);
+            this.ClientSize = new System.Drawing.Size(280, 290);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Eliminarbutton);
@@ -206,6 +248,7 @@
             this.Text = "rEstudiante";
             this.Load += new System.EventHandler(this.REstudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +272,8 @@
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Nuevobutton;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ErrorProvider MyerrorProvider;
     }
 }

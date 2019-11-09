@@ -73,6 +73,16 @@ namespace LibraryServices.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_agregar_propiedad_351 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-agregar-propiedad-351", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_agregar_propiedad_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-agregar-propiedad-40", resourceCulture);

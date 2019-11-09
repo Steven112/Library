@@ -230,7 +230,7 @@
             // 
             this.button2.Image = global::LibraryServices.Properties.Resources.icons8_remover_etiqueta_20;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(16, 191);
+            this.button2.Location = new System.Drawing.Point(16, 197);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 30);
             this.button2.TabIndex = 2;

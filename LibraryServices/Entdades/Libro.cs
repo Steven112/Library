@@ -10,7 +10,7 @@ namespace LibraryServices.Entdades
     public class Libro
     {
         [Key]
-        public int LibroID { get; set; }
+        public int LibroId { get; set; }
         public string NombreLibro { get; set; }
         public string ISBN { get; set; }
         public int CategoriaID { get; set; }
@@ -24,9 +24,9 @@ namespace LibraryServices.Entdades
 
         }
 
-        public Libro(int libroID, string nombreLibro, string iSBN, int categoriaID, string introduccion, int editorialID, DateTime fechaImpresion, bool disponibilidad)
+        public Libro(int libroId, string nombreLibro, string iSBN, int categoriaID, string introduccion, int editorialID, DateTime fechaImpresion, bool disponibilidad)
         {
-            LibroID = libroID;
+            LibroId = libroId;
             NombreLibro = nombreLibro;
             ISBN = iSBN;
             CategoriaID = categoriaID;

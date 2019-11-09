@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.EditoracomboBox = new System.Windows.Forms.ComboBox();
             this.CategoriacomboBox = new System.Windows.Forms.ComboBox();
@@ -38,15 +39,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.Nuvobutton = new System.Windows.Forms.Button();
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.FeechaLibrodateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.AgregarCategoriabutton = new System.Windows.Forms.Button();
             this.AgregarEditorialbutton = new System.Windows.Forms.Button();
+            this.AgregarCategoriabutton = new System.Windows.Forms.Button();
+            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Buscarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LibroIdnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -132,41 +135,44 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "Editorial:";
             // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Location = new System.Drawing.Point(247, 38);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(33, 23);
-            this.Buscarbutton.TabIndex = 51;
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // Nuvobutton
             // 
+            this.Nuvobutton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_351;
+            this.Nuvobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuvobutton.Location = new System.Drawing.Point(37, 207);
             this.Nuvobutton.Name = "Nuvobutton";
             this.Nuvobutton.Size = new System.Drawing.Size(75, 57);
             this.Nuvobutton.TabIndex = 52;
             this.Nuvobutton.Text = "Nuevo";
+            this.Nuvobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuvobutton.UseVisualStyleBackColor = true;
+            this.Nuvobutton.Click += new System.EventHandler(this.Nuvobutton_Click);
             // 
             // Agregarbutton
             // 
+            this.Agregarbutton.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
+            this.Agregarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Agregarbutton.Location = new System.Drawing.Point(118, 207);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(75, 57);
             this.Agregarbutton.TabIndex = 53;
             this.Agregarbutton.Text = "Agregar";
+            this.Agregarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Image = global::LibraryServices.Properties.Resources.icons8_eliminar_propiedad_35;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton.Location = new System.Drawing.Point(199, 207);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 57);
             this.Eliminarbutton.TabIndex = 54;
             this.Eliminarbutton.Text = "Nuevo";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // FeechaLibrodateTimePicker
             // 
@@ -184,14 +190,6 @@
             this.label6.TabIndex = 56;
             this.label6.Text = "Fecha Impresion:";
             // 
-            // AgregarCategoriabutton
-            // 
-            this.AgregarCategoriabutton.Location = new System.Drawing.Point(247, 119);
-            this.AgregarCategoriabutton.Name = "AgregarCategoriabutton";
-            this.AgregarCategoriabutton.Size = new System.Drawing.Size(33, 23);
-            this.AgregarCategoriabutton.TabIndex = 57;
-            this.AgregarCategoriabutton.UseVisualStyleBackColor = true;
-            // 
             // AgregarEditorialbutton
             // 
             this.AgregarEditorialbutton.Location = new System.Drawing.Point(247, 172);
@@ -199,12 +197,38 @@
             this.AgregarEditorialbutton.Size = new System.Drawing.Size(33, 23);
             this.AgregarEditorialbutton.TabIndex = 58;
             this.AgregarEditorialbutton.UseVisualStyleBackColor = true;
+            this.AgregarEditorialbutton.Click += new System.EventHandler(this.AgregarEditorialbutton_Click);
+            // 
+            // AgregarCategoriabutton
+            // 
+            this.AgregarCategoriabutton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
+            this.AgregarCategoriabutton.Location = new System.Drawing.Point(247, 119);
+            this.AgregarCategoriabutton.Name = "AgregarCategoriabutton";
+            this.AgregarCategoriabutton.Size = new System.Drawing.Size(33, 23);
+            this.AgregarCategoriabutton.TabIndex = 57;
+            this.AgregarCategoriabutton.UseVisualStyleBackColor = true;
+            this.AgregarCategoriabutton.Click += new System.EventHandler(this.AgregarCategoriabutton_Click);
+            // 
+            // MyerrorProvider
+            // 
+            this.MyerrorProvider.ContainerControl = this;
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
+            this.Buscarbutton.Location = new System.Drawing.Point(247, 41);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(33, 23);
+            this.Buscarbutton.TabIndex = 59;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // rLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(311, 276);
+            this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.AgregarEditorialbutton);
             this.Controls.Add(this.AgregarCategoriabutton);
             this.Controls.Add(this.label6);
@@ -212,7 +236,6 @@
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Agregarbutton);
             this.Controls.Add(this.Nuvobutton);
-            this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -227,6 +250,7 @@
             this.Text = "Registro Libro";
             this.Load += new System.EventHandler(this.RLibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LibroIdnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,7 +268,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Nuvobutton;
         private System.Windows.Forms.Button Agregarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
@@ -252,5 +275,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button AgregarCategoriabutton;
         private System.Windows.Forms.Button AgregarEditorialbutton;
+        private System.Windows.Forms.ErrorProvider MyerrorProvider;
+        private System.Windows.Forms.Button Buscarbutton;
     }
 }
