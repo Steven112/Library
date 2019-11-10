@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MatriculatextBox = new System.Windows.Forms.MaskedTextBox();
-            this.IdprestamoidnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.PrestamoidnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.FechaPrestamodateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.LibrocomboBox = new System.Windows.Forms.ComboBox();
-            this.LectorcomboBox = new System.Windows.Forms.ComboBox();
+            this.EstudiantecomboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,16 +42,18 @@
             this.label6 = new System.Windows.Forms.Label();
             this.FechaDevoluciondateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Removerbutton = new System.Windows.Forms.Button();
+            this.AñadirButton = new System.Windows.Forms.Button();
+            this.MydataGridView = new System.Windows.Forms.DataGridView();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.AñadirButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.IdprestamoidnumericUpDown)).BeginInit();
+            this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.PrestamoidnumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MydataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // MatriculatextBox
@@ -62,12 +65,12 @@
             this.MatriculatextBox.TabIndex = 124;
             this.MatriculatextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // IdprestamoidnumericUpDown
+            // PrestamoidnumericUpDown
             // 
-            this.IdprestamoidnumericUpDown.Location = new System.Drawing.Point(127, 38);
-            this.IdprestamoidnumericUpDown.Name = "IdprestamoidnumericUpDown";
-            this.IdprestamoidnumericUpDown.Size = new System.Drawing.Size(96, 20);
-            this.IdprestamoidnumericUpDown.TabIndex = 121;
+            this.PrestamoidnumericUpDown.Location = new System.Drawing.Point(127, 38);
+            this.PrestamoidnumericUpDown.Name = "PrestamoidnumericUpDown";
+            this.PrestamoidnumericUpDown.Size = new System.Drawing.Size(96, 20);
+            this.PrestamoidnumericUpDown.TabIndex = 121;
             // 
             // FechaPrestamodateTimePicker
             // 
@@ -85,13 +88,13 @@
             this.LibrocomboBox.Size = new System.Drawing.Size(214, 21);
             this.LibrocomboBox.TabIndex = 119;
             // 
-            // LectorcomboBox
+            // EstudiantecomboBox
             // 
-            this.LectorcomboBox.FormattingEnabled = true;
-            this.LectorcomboBox.Location = new System.Drawing.Point(127, 64);
-            this.LectorcomboBox.Name = "LectorcomboBox";
-            this.LectorcomboBox.Size = new System.Drawing.Size(214, 21);
-            this.LectorcomboBox.TabIndex = 118;
+            this.EstudiantecomboBox.FormattingEnabled = true;
+            this.EstudiantecomboBox.Location = new System.Drawing.Point(127, 64);
+            this.EstudiantecomboBox.Name = "EstudiantecomboBox";
+            this.EstudiantecomboBox.Size = new System.Drawing.Size(214, 21);
+            this.EstudiantecomboBox.TabIndex = 118;
             // 
             // label3
             // 
@@ -157,22 +160,47 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.Removerbutton);
             this.groupBox1.Controls.Add(this.AñadirButton);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.MydataGridView);
             this.groupBox1.Location = new System.Drawing.Point(18, 194);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(548, 227);
             this.groupBox1.TabIndex = 130;
             this.groupBox1.TabStop = false;
             // 
-            // dataGridView1
+            // Removerbutton
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 38);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(514, 153);
-            this.dataGridView1.TabIndex = 0;
+            this.Removerbutton.Image = global::LibraryServices.Properties.Resources.icons8_remover_etiqueta_20;
+            this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Removerbutton.Location = new System.Drawing.Point(16, 197);
+            this.Removerbutton.Name = "Removerbutton";
+            this.Removerbutton.Size = new System.Drawing.Size(107, 30);
+            this.Removerbutton.TabIndex = 2;
+            this.Removerbutton.Text = "Remover Fila";
+            this.Removerbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Removerbutton.UseVisualStyleBackColor = true;
+            this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
+            // 
+            // AñadirButton
+            // 
+            this.AñadirButton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
+            this.AñadirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AñadirButton.Location = new System.Drawing.Point(450, 6);
+            this.AñadirButton.Name = "AñadirButton";
+            this.AñadirButton.Size = new System.Drawing.Size(80, 26);
+            this.AñadirButton.TabIndex = 1;
+            this.AñadirButton.Text = "Añadir";
+            this.AñadirButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AñadirButton.UseVisualStyleBackColor = true;
+            // 
+            // MydataGridView
+            // 
+            this.MydataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MydataGridView.Location = new System.Drawing.Point(16, 38);
+            this.MydataGridView.Name = "MydataGridView";
+            this.MydataGridView.Size = new System.Drawing.Size(514, 153);
+            this.MydataGridView.TabIndex = 0;
             // 
             // EliminarButton
             // 
@@ -186,6 +214,7 @@
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
@@ -225,30 +254,11 @@
             this.Buscarbutton.TabIndex = 131;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // button2
+            // MyerrorProvider
             // 
-            this.button2.Image = global::LibraryServices.Properties.Resources.icons8_remover_etiqueta_20;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(16, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 30);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Remover Fila";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // AñadirButton
-            // 
-            this.AñadirButton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
-            this.AñadirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirButton.Location = new System.Drawing.Point(450, 6);
-            this.AñadirButton.Name = "AñadirButton";
-            this.AñadirButton.Size = new System.Drawing.Size(80, 26);
-            this.AñadirButton.TabIndex = 1;
-            this.AñadirButton.Text = "Añadir";
-            this.AñadirButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AñadirButton.UseVisualStyleBackColor = true;
+            this.MyerrorProvider.ContainerControl = this;
             // 
             // rPrestamoLibro
             // 
@@ -266,17 +276,18 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MatriculatextBox);
-            this.Controls.Add(this.IdprestamoidnumericUpDown);
+            this.Controls.Add(this.PrestamoidnumericUpDown);
             this.Controls.Add(this.FechaPrestamodateTimePicker);
             this.Controls.Add(this.LibrocomboBox);
-            this.Controls.Add(this.LectorcomboBox);
+            this.Controls.Add(this.EstudiantecomboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "rPrestamoLibro";
             this.Text = "rPrestamoLibro";
-            ((System.ComponentModel.ISupportInitialize)(this.IdprestamoidnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrestamoidnumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MydataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,10 +296,10 @@
         #endregion
 
         private System.Windows.Forms.MaskedTextBox MatriculatextBox;
-        private System.Windows.Forms.NumericUpDown IdprestamoidnumericUpDown;
+        private System.Windows.Forms.NumericUpDown PrestamoidnumericUpDown;
         private System.Windows.Forms.DateTimePicker FechaPrestamodateTimePicker;
         private System.Windows.Forms.ComboBox LibrocomboBox;
-        private System.Windows.Forms.ComboBox LectorcomboBox;
+        private System.Windows.Forms.ComboBox EstudiantecomboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -297,12 +308,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker FechaDevoluciondateTimePicker;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Removerbutton;
         private System.Windows.Forms.Button AñadirButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView MydataGridView;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button NuevoButton;
+        private System.Windows.Forms.ErrorProvider MyerrorProvider;
     }
 }

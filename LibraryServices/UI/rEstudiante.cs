@@ -114,7 +114,7 @@ namespace LibraryServices.UI
 
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
-
+            Limpiar();
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)

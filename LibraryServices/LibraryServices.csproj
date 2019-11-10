@@ -59,6 +59,7 @@
     <Compile Include="BLL\EstudianteBLL.cs" />
     <Compile Include="BLL\IRepository.cs" />
     <Compile Include="BLL\LibroBLL.cs" />
+    <Compile Include="BLL\PrestamoBLL.cs" />
     <Compile Include="BLL\RepositorioBase.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entdades\Categoria.cs" />
