@@ -11,25 +11,28 @@ namespace LibraryServices.Entdades
     {
         [Key]
         public int EstudianteId { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
+        public string Nombres { get; set; }
+        public string Apellidos{ get; set; }
         public string Matricula { get; set; }
-        public string Telefono { get; set; }
+        public string Celular { get; set; }
         public string Direccion { get; set; }
+        public string Email { get; set; }
         public DateTime FechaInsercion { get; set; }
+        
 
         public Estudiante()
         {
         }
 
-        public Estudiante(int estudianteId, string nombre, string apellido, string matricula, string telefono, string direccion, DateTime fechaInsercion)
+        public Estudiante(int estudianteId, string nombres, string apellidos, string matricula, string celular, string direccion, string email, DateTime fechaInsercion)
         {
             EstudianteId = estudianteId;
-            Nombre = nombre;
-            Apellido = apellido;
+            Nombres = nombres;
+            Apellidos = apellidos;
             Matricula = matricula;
-            Telefono = telefono;
+            Celular = celular;
             Direccion = direccion;
+            Email = email;
             FechaInsercion = fechaInsercion;
         }
     }

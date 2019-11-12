@@ -35,6 +35,7 @@ namespace LibraryServices.UI
             libro.CategoriaID = Convert.ToInt32(CategoriacomboBox.SelectedValue);
             libro.EditorialID = Convert.ToInt32(EditoracomboBox.SelectedValue);
             libro.FechaImpresion = FeechaLibrodateTimePicker.Value;
+            libro.Disponibilidad = Disponible.Checked;
            
             return libro;
         }
@@ -53,6 +54,7 @@ namespace LibraryServices.UI
             CategoriacomboBox.SelectedItem = LB.CategoriaID;
             EditoracomboBox.SelectedItem = LB.EditorialID;
             FeechaLibrodateTimePicker.Value =LB.FechaImpresion;
+            Disponible.Checked = LB.Disponibilidad;
             LlenaCombox();
 
         }
@@ -162,6 +164,7 @@ namespace LibraryServices.UI
             NombretextBox.Text = string.Empty;
             EditoracomboBox.Text = string.Empty;
             FeechaLibrodateTimePicker.Value = DateTime.Now;
+            Disponible.Checked = false;
         }
 
         private void Nuvobutton_Click(object sender, EventArgs e)

@@ -29,6 +29,7 @@ namespace LibraryServices.UI
             NoTelefonoMaskedTextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
+            EmailtextBox.Text = string.Empty;
         }
         private bool ExisteEnLaBaseDeDatos()
         {
@@ -45,6 +46,12 @@ namespace LibraryServices.UI
             {
                 MyerrorProvider.SetError(NombretextBox, "El campo no debe estar vacio");
                 NombretextBox.Focus();
+                paso = false;
+            }
+            if (string.IsNullOrWhiteSpace(EmailtextBox.Text))
+            {
+                MyerrorProvider.SetError(EmailtextBox, "El campo no debe estar vacio");
+               EmailtextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(ApellidotextBox.Text))
@@ -79,12 +86,13 @@ namespace LibraryServices.UI
         {
             Estudiante estudiante = new Estudiante();
             estudiante.EstudianteId = Convert.ToInt32(IDnumericUpDown.Value);
-            estudiante.Nombre = NombretextBox.Text;
-            estudiante.Apellido = ApellidotextBox.Text;
+            estudiante.Nombres = NombretextBox.Text;
+            estudiante.Apellidos = ApellidotextBox.Text;
             estudiante.Matricula = MatriculatextBox.Text;
-            estudiante.Telefono = NoTelefonoMaskedTextBox.Text;
+            estudiante.Celular = NoTelefonoMaskedTextBox.Text;
             estudiante.Direccion = DirecciontextBox.Text;
             estudiante.FechaInsercion = FechadateTimePicker.Value;
+            estudiante.Email = EmailtextBox.Text;
 
             
             return estudiante;
@@ -94,12 +102,13 @@ namespace LibraryServices.UI
         {
 
             IDnumericUpDown.Value = estudiante.EstudianteId;
-            NombretextBox.Text = estudiante.Nombre;
-            ApellidotextBox.Text = estudiante.Apellido;
+            NombretextBox.Text = estudiante.Nombres;
+            ApellidotextBox.Text = estudiante.Apellidos;
             MatriculatextBox.Text = estudiante.Matricula;
             DirecciontextBox.Text = estudiante.Direccion;
-            NoTelefonoMaskedTextBox.Text = estudiante.Telefono;
+            NoTelefonoMaskedTextBox.Text = estudiante.Celular;
             FechadateTimePicker.Value = estudiante.FechaInsercion;
+            EmailtextBox.Text = estudiante.Email;
         }
 
         private void REstudiante_Load(object sender, EventArgs e)
@@ -117,6 +126,7 @@ namespace LibraryServices.UI
             Limpiar();
         }
 
+      
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Estudent = new RepositorioBase<Estudiante>(new Contexto());

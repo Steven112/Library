@@ -30,10 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.IntroduccionTextBox = new System.Windows.Forms.TextBox();
-            this.NombretextBox = new System.Windows.Forms.TextBox();
             this.IdcategorianumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
@@ -47,19 +45,11 @@
             // IntroduccionTextBox
             // 
             this.IntroduccionTextBox.BackColor = System.Drawing.Color.White;
-            this.IntroduccionTextBox.Location = new System.Drawing.Point(103, 86);
+            this.IntroduccionTextBox.Location = new System.Drawing.Point(103, 63);
             this.IntroduccionTextBox.Multiline = true;
             this.IntroduccionTextBox.Name = "IntroduccionTextBox";
             this.IntroduccionTextBox.Size = new System.Drawing.Size(132, 23);
             this.IntroduccionTextBox.TabIndex = 38;
-            // 
-            // NombretextBox
-            // 
-            this.NombretextBox.BackColor = System.Drawing.Color.White;
-            this.NombretextBox.Location = new System.Drawing.Point(103, 60);
-            this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.Size = new System.Drawing.Size(132, 20);
-            this.NombretextBox.TabIndex = 37;
             // 
             // IdcategorianumericUpDown
             // 
@@ -78,19 +68,10 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "Id:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Nombre:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 86);
+            this.label3.Location = new System.Drawing.Point(15, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 44;
@@ -156,13 +137,11 @@
             this.ClientSize = new System.Drawing.Size(272, 232);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IntroduccionTextBox);
-            this.Controls.Add(this.NombretextBox);
             this.Controls.Add(this.IdcategorianumericUpDown);
             this.Name = "rCategoria";
             this.Text = "rCategoria";
@@ -176,13 +155,11 @@
         #endregion
 
         private System.Windows.Forms.TextBox IntroduccionTextBox;
-        private System.Windows.Forms.TextBox NombretextBox;
         private System.Windows.Forms.NumericUpDown IdcategorianumericUpDown;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;

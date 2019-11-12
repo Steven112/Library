@@ -48,6 +48,7 @@
             this.AgregarCategoriabutton = new System.Windows.Forms.Button();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Disponible = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.LibroIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -139,7 +140,7 @@
             // 
             this.Nuvobutton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_351;
             this.Nuvobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuvobutton.Location = new System.Drawing.Point(37, 207);
+            this.Nuvobutton.Location = new System.Drawing.Point(43, 249);
             this.Nuvobutton.Name = "Nuvobutton";
             this.Nuvobutton.Size = new System.Drawing.Size(75, 57);
             this.Nuvobutton.TabIndex = 52;
@@ -152,7 +153,7 @@
             // 
             this.Agregarbutton.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
             this.Agregarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Agregarbutton.Location = new System.Drawing.Point(118, 207);
+            this.Agregarbutton.Location = new System.Drawing.Point(124, 249);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(75, 57);
             this.Agregarbutton.TabIndex = 53;
@@ -165,7 +166,7 @@
             // 
             this.Eliminarbutton.Image = global::LibraryServices.Properties.Resources.icons8_eliminar_propiedad_35;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(199, 207);
+            this.Eliminarbutton.Location = new System.Drawing.Point(205, 249);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 57);
             this.Eliminarbutton.TabIndex = 54;
@@ -223,11 +224,22 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
+            // Disponible
+            // 
+            this.Disponible.AutoSize = true;
+            this.Disponible.Location = new System.Drawing.Point(36, 200);
+            this.Disponible.Name = "Disponible";
+            this.Disponible.Size = new System.Drawing.Size(75, 17);
+            this.Disponible.TabIndex = 60;
+            this.Disponible.Text = "Disponible";
+            this.Disponible.UseVisualStyleBackColor = true;
+            // 
             // rLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 276);
+            this.ClientSize = new System.Drawing.Size(311, 306);
+            this.Controls.Add(this.Disponible);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.AgregarEditorialbutton);
             this.Controls.Add(this.AgregarCategoriabutton);
@@ -277,5 +289,6 @@
         private System.Windows.Forms.Button AgregarEditorialbutton;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
         private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.CheckBox Disponible;
     }
 }

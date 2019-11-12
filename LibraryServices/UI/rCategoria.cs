@@ -25,7 +25,6 @@ namespace LibraryServices.UI
         {
             MyerrorProvider.Clear();
             IdcategorianumericUpDown.Value = 0;
-            NombretextBox.Text = string.Empty;
             IntroduccionTextBox.Text = string.Empty;
         }
 
@@ -34,7 +33,6 @@ namespace LibraryServices.UI
         {
             Categoria categoria = new Categoria();
             categoria.CategoriaId = Convert.ToInt32(IdcategorianumericUpDown.Value);
-            categoria.Nombre = NombretextBox.Text;
             categoria.Descripcion = IntroduccionTextBox.Text;
 
             return categoria;
@@ -42,7 +40,6 @@ namespace LibraryServices.UI
         private void LlenaCampo(Categoria cat)
         {
             IdcategorianumericUpDown.Value = cat.CategoriaId;
-            NombretextBox.Text = cat.Nombre;
             IntroduccionTextBox.Text = cat.Descripcion;
         }
         private bool ExisteEnLaBaseDeDatos()
@@ -55,12 +52,7 @@ namespace LibraryServices.UI
         {
             bool paso = true;
 
-            if (string.IsNullOrWhiteSpace(NombretextBox.Text))
-            {
-                MyerrorProvider.SetError(NombretextBox, "El campo no debe estar vacio");
-                NombretextBox.Focus();
-                paso = false;
-            }
+            
             if (string.IsNullOrWhiteSpace(IntroduccionTextBox.Text))
             {
                 MyerrorProvider.SetError(IntroduccionTextBox, "El Campo no debe estar vacio");

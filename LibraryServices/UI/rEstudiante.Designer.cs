@@ -48,6 +48,8 @@
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EmailtextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -104,18 +106,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(34, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 121;
-            this.label2.Text = "Apellido:";
+            this.label2.Text = "Apellidos:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(34, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 122;
-            this.label3.Text = "Nombre:";
+            this.label3.Text = "Nombres:";
             // 
             // label4
             // 
@@ -131,9 +133,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(34, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 124;
-            this.label5.Text = "Telefono:";
+            this.label5.Text = "Celular:";
             // 
             // label6
             // 
@@ -155,7 +157,7 @@
             // 
             this.Nuevobutton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_35;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(18, 220);
+            this.Nuevobutton.Location = new System.Drawing.Point(17, 260);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 58);
             this.Nuevobutton.TabIndex = 130;
@@ -168,7 +170,7 @@
             // 
             this.Guardarbutton.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(99, 220);
+            this.Guardarbutton.Location = new System.Drawing.Point(98, 260);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 58);
             this.Guardarbutton.TabIndex = 129;
@@ -181,7 +183,7 @@
             // 
             this.Eliminarbutton.Image = global::LibraryServices.Properties.Resources.icons8_eliminar_propiedad_35;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(180, 220);
+            this.Eliminarbutton.Location = new System.Drawing.Point(179, 260);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 58);
             this.Eliminarbutton.TabIndex = 128;
@@ -221,11 +223,29 @@
             // 
             this.MyerrorProvider.ContainerControl = this;
             // 
+            // EmailtextBox
+            // 
+            this.EmailtextBox.Location = new System.Drawing.Point(122, 196);
+            this.EmailtextBox.Name = "EmailtextBox";
+            this.EmailtextBox.Size = new System.Drawing.Size(116, 20);
+            this.EmailtextBox.TabIndex = 133;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(37, 196);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 134;
+            this.label8.Text = "Email:";
+            // 
             // rEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 290);
+            this.ClientSize = new System.Drawing.Size(280, 330);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.EmailtextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.Nuevobutton);
@@ -275,5 +295,7 @@
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox EmailtextBox;
     }
 }

@@ -9,18 +9,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibraryServices.UI;
+using LibraryServices.DAL;
 
 namespace LibraryServices.UI
 {
     public partial class rPrestamoLibro : Form
     {
-        public List<PrestamoDetalle> Detalles { get; set; }
+        
+        public List<PrestamosDetalle> Detalles { get; set; }
+        public RepositorioBase<Estudiante> Estudent;
+        public RepositorioBase<Libro> Book;
+
         public rPrestamoLibro()
         {
+            LlenaCombox();
             InitializeComponent();
-            this.Detalles = new List<PrestamoDetalle>();
-            
+            this.Detalles = new List<PrestamosDetalle>();
+            Estudent = new RepositorioBase<Estudiante>(new Contexto());
+            Book = new RepositorioBase<Libro>(new Contexto());
         }
+    
+       
         private void Limpiar()
         {
             MyerrorProvider.Clear();
@@ -30,10 +40,12 @@ namespace LibraryServices.UI
             FechaPrestamodateTimePicker.Value = DateTime.Now;
             EstudiantecomboBox.SelectedIndex = -1;
             LibrocomboBox.SelectedIndex = -1;
-            MatriculatextBox.Text = string.Empty;
-           
-           // this.DetalleEstudiante = new List<EstudiantesDetalle>();
-          
+            this.Detalles= new List<PrestamosDetalle>();
+            CargarGrid();
+
+
+            // this.DetalleEstudiante = new List<EstudiantesDetalle>();
+
 
         }
 
@@ -41,27 +53,28 @@ namespace LibraryServices.UI
         {
             bool paso = true;
 
-            if (string.IsNullOrWhiteSpace(MatriculatextBox.Text))
-            {
-                MyerrorProvider.SetError(MatriculatextBox, "El campo no debe estar vacio");
-                MatriculatextBox.Focus();
-                paso = false;
-            }
-           
 
-           /* if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
+
+
+            /* if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
+             {
+                 MyerrorProvider.SetError(EstudiantecomboBox, "El Campo no debe estar vacio");
+                 EstudiantecomboBox.Focus();
+                 paso = false;
+             }
+             if (string.IsNullOrWhiteSpace(LibrocomboBox.Text))
+             {
+                 MyerrorProvider.SetError(LibrocomboBox, "El Campo no debe estar vacio");
+                 LibrocomboBox.Focus();
+                 paso = false;
+             }*/
+           /* if (this.Detalles.Count == 0)
             {
-                MyerrorProvider.SetError(EstudiantecomboBox, "El Campo no debe estar vacio");
+                MyerrorProvider.SetError(MydataGridView, "Debe Agregar algun Estudiante");
                 EstudiantecomboBox.Focus();
                 paso = false;
-            }
-            if (string.IsNullOrWhiteSpace(LibrocomboBox.Text))
-            {
-                MyerrorProvider.SetError(LibrocomboBox, "El Campo no debe estar vacio");
-                LibrocomboBox.Focus();
-                paso = false;
             }*/
-            if(FechaDevoluciondateTimePicker.Value<= FechaPrestamodateTimePicker.Value)
+            if (FechaDevoluciondateTimePicker.Value<= FechaPrestamodateTimePicker.Value)
             {
                 MyerrorProvider.SetError(FechaDevoluciondateTimePicker, "La fecha de devolucion no puede ser menor o igual a la Fecha de prestamo");
                 FechaDevoluciondateTimePicker.Focus();
@@ -77,10 +90,12 @@ namespace LibraryServices.UI
             prestamo.PrestamoId = Convert.ToInt32(PrestamoidnumericUpDown.Value);
             prestamo.EstudianteId = EstudiantecomboBox.SelectedIndex;
             prestamo.LibroId = LibrocomboBox.SelectedIndex;
-            prestamo.Matricula = MatriculatextBox.Text;
             prestamo.FechaPrestamo = FechaPrestamodateTimePicker.Value;
             prestamo.FechaDevolucion = FechaDevoluciondateTimePicker.Value;
-            
+            prestamo.Detalle = this.Detalles;
+            LlenaCombox();
+
+
             return prestamo;
         }
 
@@ -88,12 +103,14 @@ namespace LibraryServices.UI
         {
             PrestamoidnumericUpDown.Value = prestamo.PrestamoId;
             EstudiantecomboBox.SelectedIndex = prestamo.EstudianteId;
-            MatriculatextBox.Text = prestamo.Matricula;
             LibrocomboBox.SelectedIndex = prestamo.LibroId;
             FechaPrestamodateTimePicker.Value = prestamo.FechaPrestamo;
             FechaDevoluciondateTimePicker.Value = prestamo.FechaDevolucion;
+            this.Detalles = prestamo.Detalle;
+            CargarGrid();
+            LlenaCombox();
 
-           
+
 
         }
         private bool ExisteEnLaBaseDeDatos()
@@ -101,7 +118,19 @@ namespace LibraryServices.UI
              Prestamo prestamo = PrestamoBLL.Buscar((int)PrestamoidnumericUpDown.Value);
             return (prestamo != null);
         }
+        private void LlenaCombox()
+        {
+            Estudiante Ed = new Estudiante();
+            RepositorioBase<Libro> Cat = new RepositorioBase<Libro>(new Contexto());
+            EstudiantecomboBox.DataSource = EstudianteBLL.GetList(c => true);
+            EstudiantecomboBox.ValueMember = "EstudianteId";
+            EstudiantecomboBox.DisplayMember = "Nombres";
 
+            /*LibrocomboBox.DataSource = Cat.GetList(c => true);
+            LibrocomboBox.ValueMember = "LibroId";
+            LibrocomboBox.DisplayMember = "NombreLibro";*/
+
+        }
         private void GuardarButton_Click(object sender, EventArgs e)
         {
             Prestamo prestamo = new Prestamo();
@@ -114,6 +143,7 @@ namespace LibraryServices.UI
 
             if (PrestamoidnumericUpDown.Value == 0)
             {
+                LlenaCombox();
                 paso = PrestamoBLL.Guardar(prestamo);
             }
             else
@@ -187,12 +217,47 @@ namespace LibraryServices.UI
             if (PrestamoBLL.Eliminar(id))
             {
                 MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LlenaCombox();
                 Limpiar();
             }
             else
             {
                 MyerrorProvider.SetError(PrestamoidnumericUpDown, "No se puede eliminar registro que no existe");
             }
+        }
+
+
+        private void AñadirButton_Click(object sender, EventArgs e)
+        {
+            if (MydataGridView.DataSource != null)
+                this.Detalles = (List<PrestamosDetalle>)MydataGridView.DataSource;
+
+            //todo:nvalidar campos detalle
+            //Agrega un nuevo detalle al datagrid
+
+
+            string nombres = "gggg";
+            this.Detalles.Add(
+                new PrestamosDetalle(
+                    libroId:LibrocomboBox.SelectedIndex,
+                    nombreLibro: nombres,
+                    fechaDevolucion: FechaDevoluciondateTimePicker.Value
+
+                    )
+            );
+
+            CargarGrid();
+           
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -127,6 +127,9 @@
   <data name="icons8-añadir-subnodo-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-añadir-subnodo-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-guardar-301" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-guardar-301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-guardar-35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-guardar-35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,9 +141,6 @@
   </data>
   <data name="icons8-eliminar-propiedad-35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-eliminar-propiedad-35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-borrar-búsqueda-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-borrar-búsqueda-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-agregar-propiedad-40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-agregar-propiedad-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +154,11 @@
   <data name="icons8-crear-nuevo-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-crear-nuevo-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-guardar-301" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-guardar-301.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-borrar-búsqueda-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-borrar-búsqueda-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-agregar-propiedad-351" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-agregar-propiedad-351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-guardar-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-guardar-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,7 +166,7 @@
   <data name="icons8-búsqueda-de-propiedad-18" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-búsqueda-de-propiedad-18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-agregar-propiedad-351" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-agregar-propiedad-351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-imprimir-35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-imprimir-35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

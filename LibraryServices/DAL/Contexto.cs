@@ -15,8 +15,7 @@ namespace LibraryServices.DAL
         public DbSet<Categoria> categorias { get; set; }
         public DbSet<Editorial> Editorial { get; set; }
         public DbSet<Prestamo> Prestamo { get; set; }
-        //public DbSet<Administrador> Administrador { get; set; }
-        public DbSet<PrestamoDetalle> Detalle { get; set; }
+        public DbSet<PrestamosDetalle> Detalle { get; set; }
 
         public Contexto():base("ConStr")
         {

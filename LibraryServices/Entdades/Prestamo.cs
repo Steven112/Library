@@ -16,9 +16,9 @@ namespace LibraryServices.Entdades
         public DateTime FechaPrestamo { get; set; }
         public DateTime FechaDevolucion { get; set; }
         public string Matricula { get; set; }
-        public virtual List<PrestamoDetalle> Detalle { get; set; }
+        public virtual List<PrestamosDetalle> Detalle { get; set; }
 
-        public Prestamo(int prestamoId, int estudianteId, int libroId, DateTime fechaPrestamo, DateTime fechaDevolucion, string matricula, List<PrestamoDetalle> detalle)
+        public Prestamo(int prestamoId, int estudianteId, int libroId, DateTime fechaPrestamo, DateTime fechaDevolucion, string matricula, List<PrestamosDetalle> detalle)
         {
             PrestamoId = prestamoId;
             EstudianteId = estudianteId;
@@ -32,5 +32,6 @@ namespace LibraryServices.Entdades
         public Prestamo()
         {
         }
+       
     }
 }

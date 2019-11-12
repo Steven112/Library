@@ -47,7 +47,7 @@ namespace LibraryServices.BLL
                 var Anterior =PrestamoBLL.Buscar(prestamo.PrestamoId);
                 foreach (var item in Anterior.Detalle)
                 {
-                    if (!prestamo.Detalle.Exists(d => d.LibroId == item.LibroId))
+                    if (!prestamo.Detalle.Exists(d => d.NombreLibro == item.NombreLibro))
                         db.Entry(item).State = EntityState.Deleted;
                 }
                 db.Entry(prestamo).State = EntityState.Modified;
