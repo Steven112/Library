@@ -72,6 +72,7 @@
             // 
             // LibrocomboBox
             // 
+            this.LibrocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LibrocomboBox.FormattingEnabled = true;
             this.LibrocomboBox.Location = new System.Drawing.Point(127, 111);
             this.LibrocomboBox.Name = "LibrocomboBox";
@@ -251,6 +252,7 @@
             // 
             // EstudiantecomboBox
             // 
+            this.EstudiantecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EstudiantecomboBox.FormattingEnabled = true;
             this.EstudiantecomboBox.Location = new System.Drawing.Point(127, 65);
             this.EstudiantecomboBox.Name = "EstudiantecomboBox";

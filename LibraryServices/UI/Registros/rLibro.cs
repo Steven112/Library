@@ -164,7 +164,7 @@ namespace LibraryServices.UI
             NombretextBox.Text = string.Empty;
             EditoracomboBox.Text = string.Empty;
             FeechaLibrodateTimePicker.Value = DateTime.Now;
-            Disponible.Checked = false;
+            Disponible.Checked = true;
         }
 
         private void Nuvobutton_Click(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace LibraryServices.DAL
         public DbSet<Editorial> Editorial { get; set; }
         public DbSet<Prestamo> Prestamo { get; set; }
         public DbSet<PrestamosDetalle> Detalle { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
 
         public Contexto():base("ConStr")
         {

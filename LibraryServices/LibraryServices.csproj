@@ -61,6 +61,7 @@
     <Compile Include="BLL\LibroBLL.cs" />
     <Compile Include="BLL\PrestamoBLL.cs" />
     <Compile Include="BLL\RepositorioBase.cs" />
+    <Compile Include="BLL\UsuariosBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entdades\Categoria.cs" />
     <Compile Include="Entdades\Editorial.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Entdades\Libro.cs" />
     <Compile Include="Entdades\Prestamo.cs" />
     <Compile Include="Entdades\PrestamosDetalle.cs" />
+    <Compile Include="Entdades\Usuarios.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,35 +78,71 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\rCategoria.cs">
+    <Compile Include="UI\Consultas\cCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rCategoria.Designer.cs">
+    <Compile Include="UI\Consultas\cCategorias.Designer.cs">
+      <DependentUpon>cCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cEditorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cEditorial.Designer.cs">
+      <DependentUpon>cEditorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cEstudiante.Designer.cs">
+      <DependentUpon>cEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cLibro.Designer.cs">
+      <DependentUpon>cLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cPrestamos.Designer.cs">
+      <DependentUpon>cPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rCategoria.Designer.cs">
       <DependentUpon>rCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\rEditorial.cs">
+    <Compile Include="UI\Registros\rEditorial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rEditorial.Designer.cs">
+    <Compile Include="UI\Registros\rEditorial.Designer.cs">
       <DependentUpon>rEditorial.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\rEstudiante.cs">
+    <Compile Include="UI\Registros\rEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rEstudiante.Designer.cs">
+    <Compile Include="UI\Registros\rEstudiante.Designer.cs">
       <DependentUpon>rEstudiante.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\rLibro.cs">
+    <Compile Include="UI\Registros\rLibro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rLibro.Designer.cs">
+    <Compile Include="UI\Registros\rLibro.Designer.cs">
       <DependentUpon>rLibro.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\rPrestamoLibro.cs">
+    <Compile Include="UI\Registros\rPrestamoLibro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\rPrestamoLibro.Designer.cs">
+    <Compile Include="UI\Registros\rPrestamoLibro.Designer.cs">
       <DependentUpon>rPrestamoLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rUsuarios.Designer.cs">
+      <DependentUpon>rUsuarios.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -119,20 +157,38 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\rCategoria.resx">
+    <EmbeddedResource Include="UI\Consultas\cCategorias.resx">
+      <DependentUpon>cCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cEditorial.resx">
+      <DependentUpon>cEditorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cEstudiante.resx">
+      <DependentUpon>cEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cLibro.resx">
+      <DependentUpon>cLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cPrestamos.resx">
+      <DependentUpon>cPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rCategoria.resx">
       <DependentUpon>rCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\rEditorial.resx">
+    <EmbeddedResource Include="UI\Registros\rEditorial.resx">
       <DependentUpon>rEditorial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\rEstudiante.resx">
+    <EmbeddedResource Include="UI\Registros\rEstudiante.resx">
       <DependentUpon>rEstudiante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\rLibro.resx">
+    <EmbeddedResource Include="UI\Registros\rLibro.resx">
       <DependentUpon>rLibro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\rPrestamoLibro.resx">
+    <EmbeddedResource Include="UI\Registros\rPrestamoLibro.resx">
       <DependentUpon>rPrestamoLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rUsuarios.resx">
+      <DependentUpon>rUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -198,6 +254,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-imprimir-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

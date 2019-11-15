@@ -1,4 +1,6 @@
 ﻿using LibraryServices.UI;
+using LibraryServices.UI.Consultas;
+using LibraryServices.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,6 +48,36 @@ namespace LibraryServices
         {
             rEstudiante RS = new rEstudiante();
             RS.Show();
+        }
+
+        private void CategoriasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cCategorias CC = new cCategorias();
+            CC.Show();
+        }
+
+        private void EditorialToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cEditorial CE = new cEditorial();
+            CE.Show();
+        }
+
+        private void LibroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cLibro CL = new cLibro();
+            CL.Show();
+        }
+
+        private void EstudianteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cEstudiante Ce = new cEstudiante();
+            Ce.Show();
+        }
+
+        private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rUsuarios user = new rUsuarios();
+            user.Show();
         }
     }
 }
