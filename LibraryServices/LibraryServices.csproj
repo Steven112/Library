@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\DevolucionesBLL.cs" />
     <Compile Include="BLL\EstudianteBLL.cs" />
     <Compile Include="BLL\IRepository.cs" />
     <Compile Include="BLL\LibroBLL.cs" />
@@ -63,13 +64,15 @@
     <Compile Include="BLL\RepositorioBase.cs" />
     <Compile Include="BLL\UsuariosBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
-    <Compile Include="Entdades\Categoria.cs" />
-    <Compile Include="Entdades\Editorial.cs" />
-    <Compile Include="Entdades\Estudiante.cs" />
-    <Compile Include="Entdades\Libro.cs" />
-    <Compile Include="Entdades\Prestamo.cs" />
-    <Compile Include="Entdades\PrestamosDetalle.cs" />
-    <Compile Include="Entdades\Usuarios.cs" />
+    <Compile Include="Entidades\Categoria.cs" />
+    <Compile Include="Entidades\DevolucionDetalle.cs" />
+    <Compile Include="Entidades\Devoluciones.cs" />
+    <Compile Include="Entidades\Editorial.cs" />
+    <Compile Include="Entidades\Estudiante.cs" />
+    <Compile Include="Entidades\Libro.cs" />
+    <Compile Include="Entidades\Prestamo.cs" />
+    <Compile Include="Entidades\PrestamosDetalle.cs" />
+    <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +116,12 @@
     </Compile>
     <Compile Include="UI\Registros\rCategoria.Designer.cs">
       <DependentUpon>rCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rDevlucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rDevlucion.Designer.cs">
+      <DependentUpon>rDevlucion.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\rEditorial.cs">
       <SubType>Form</SubType>
@@ -174,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rCategoria.resx">
       <DependentUpon>rCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rDevlucion.resx">
+      <DependentUpon>rDevlucion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rEditorial.resx">
       <DependentUpon>rEditorial.cs</DependentUpon>

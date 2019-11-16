@@ -15,17 +15,15 @@ namespace LibraryServices.Entdades
         public int LibroId { get; set; }
         public DateTime FechaPrestamo { get; set; }
         public DateTime FechaDevolucion { get; set; }
-        public string Matricula { get; set; }
         public virtual List<PrestamosDetalle> Detalle { get; set; }
 
-        public Prestamo(int prestamoId, int estudianteId, int libroId, DateTime fechaPrestamo, DateTime fechaDevolucion, string matricula, List<PrestamosDetalle> detalle)
+        public Prestamo(int prestamoId, int estudianteId, int libroId, DateTime fechaPrestamo, DateTime fechaDevolucion, List<PrestamosDetalle> detalle)
         {
             PrestamoId = prestamoId;
             EstudianteId = estudianteId;
             LibroId = libroId;
             FechaPrestamo = fechaPrestamo;
             FechaDevolucion = fechaDevolucion;
-            Matricula = matricula;
             Detalle = detalle;
         }
 

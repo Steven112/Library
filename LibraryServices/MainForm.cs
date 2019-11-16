@@ -79,5 +79,20 @@ namespace LibraryServices
             rUsuarios user = new rUsuarios();
             user.Show();
         }
+
+       
+
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DevolucionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            rDevlucion dev = new rDevlucion();
+            dev.Show();
+        }
     }
 }

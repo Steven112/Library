@@ -57,7 +57,7 @@ namespace LibraryServices.UI
 
 
 
-            /* if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
+            if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
              {
                  MyerrorProvider.SetError(EstudiantecomboBox, "El Campo no debe estar vacio");
                  EstudiantecomboBox.Focus();
@@ -68,13 +68,8 @@ namespace LibraryServices.UI
                  MyerrorProvider.SetError(LibrocomboBox, "El Campo no debe estar vacio");
                  LibrocomboBox.Focus();
                  paso = false;
-             }*/
-            /* if (this.Detalles.Count == 0)
-             {
-                 MyerrorProvider.SetError(MydataGridView, "Debe Agregar algun Estudiante");
-                 EstudiantecomboBox.Focus();
-                 paso = false;
-             }*/
+             }
+            
             if (FechaDevoluciondateTimePicker.Value <= FechaPrestamodateTimePicker.Value)
             {
                 MyerrorProvider.SetError(FechaDevoluciondateTimePicker, "La fecha de devolucion no puede ser menor o igual a la Fecha de prestamo");
@@ -104,7 +99,7 @@ namespace LibraryServices.UI
         {
             PrestamoidnumericUpDown.Value = prestamo.PrestamoId;
             EstudiantecomboBox.SelectedIndex = prestamo.EstudianteId;
-            LibrocomboBox.SelectedIndex = prestamo.LibroId;
+            LibrocomboBox.SelectedValue = prestamo.LibroId;
             FechaPrestamodateTimePicker.Value = prestamo.FechaPrestamo;
             FechaDevoluciondateTimePicker.Value = prestamo.FechaDevolucion;
             this.Detalles = prestamo.Detalle;
@@ -237,18 +232,22 @@ namespace LibraryServices.UI
             //todo:nvalidar campos detalle
             //Agrega un nuevo detalle al datagrid
 
+            if (Validar())
+            {
+                string nombres = Book.Buscar(id: (int)LibrocomboBox.SelectedValue).NombreLibro;
+                this.Detalles.Add(
+                    new PrestamosDetalle(
+                        libroId: (int)LibrocomboBox.SelectedValue,
+                        nombreLibro: nombres,
+                        fechaDevolucion: FechaDevoluciondateTimePicker.Value
 
-            string nombres = LibroBLL.Buscar(id: (int)LibrocomboBox.SelectedIndex + 1).NombreLibro;
-            this.Detalles.Add(
-                new PrestamosDetalle(
-                    libroId: LibrocomboBox.SelectedIndex,
-                    nombreLibro: nombres,
-                    fechaDevolucion: FechaDevoluciondateTimePicker.Value
+                        )
+                );
+            }
 
-                    )
-            );
-
+            
             CargarGrid();
+            LibrocomboBox.SelectAll();
 
         }
 

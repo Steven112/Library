@@ -10,22 +10,21 @@ using System.Threading.Tasks;
 
 namespace LibraryServices.BLL
 {
-    public class PrestamoBLL
+    public class DevolucionesBLL
     {
-        public static bool Guardar(Prestamo prestamo)
+        public static bool Guardar(Devoluciones devoluciones)
         {
+            Prestamo prestamo = new Prestamo();
             bool paso = false;
             Contexto db = new Contexto();
-
-
             try
             {
-
-                if (db.Prestamo.Add(prestamo) != null)
+                if (db.Devolucion.Add(devoluciones) != null)
                 {
-                    foreach (var item in prestamo.Detalle)
+
+                    foreach (var item in devoluciones.DetalleDev)
                     {
-                        db.Libro.Find(item.LibroId).Disponibilidad = false;
+                        db.Libro.Find(item.LibroId).Disponibilidad = true;
                     }
                     db.SaveChanges();
                     paso = true;
@@ -36,7 +35,6 @@ namespace LibraryServices.BLL
             {
                 throw;
             }
-
             finally
             {
                 db.Dispose();
@@ -44,19 +42,21 @@ namespace LibraryServices.BLL
             return paso;
         }
 
-        public static bool Modificar(Prestamo prestamo)
+
+        public static bool Modificar(Devoluciones devoluciones)
         {
             bool paso = false;
+
             Contexto db = new Contexto();
             try
             {//Buscar las entidades que no estan para removerlas
-                var Anterior =PrestamoBLL.Buscar(prestamo.PrestamoId);
-                foreach (var item in Anterior.Detalle)
+                var Anterior = DevolucionesBLL.Buscar(devoluciones.DevolucionId);
+                foreach (var item in Anterior.DetalleDev)
                 {
-                    if (!prestamo.Detalle.Exists(d => d.NombreLibro == item.NombreLibro))
+                    if (!devoluciones.DetalleDev.Exists(d => d.LibroId == item.LibroId))
                         db.Entry(item).State = EntityState.Deleted;
                 }
-                db.Entry(prestamo).State = EntityState.Modified;
+                db.Entry(devoluciones).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
             }
             catch (Exception)
@@ -69,14 +69,14 @@ namespace LibraryServices.BLL
             }
             return paso;
         }
-
         public static bool Eliminar(int id)
         {
             bool paso = false;
+
             Contexto db = new Contexto();
             try
             {
-                var eliminar = db.Prestamo.Find(id);
+                var eliminar = db.Devolucion.Find(id);
                 db.Entry(eliminar).State = EntityState.Deleted;
                 paso = (db.SaveChanges() > 0);
             }
@@ -84,56 +84,43 @@ namespace LibraryServices.BLL
             {
                 throw;
             }
-            finally
-            {
-                db.Dispose();
-            }
             return paso;
         }
-
-        public static Prestamo Buscar(int id)
+        public static Devoluciones Buscar(int id)
         {
-
             Contexto db = new Contexto();
-            Prestamo prestamo=new Prestamo();
-
+            Devoluciones devoluciones = new Devoluciones();
             try
             {
-
-                prestamo = db.Prestamo.Find(id);
-                if (prestamo != null)
-                    prestamo.Detalle.Count();
+                devoluciones = db.Devolucion.Find(id);
+                if (devoluciones != null)
+                    devoluciones.DetalleDev.Count();
+                db.Dispose();
             }
             catch (Exception)
             {
                 throw;
             }
-            finally
-            {
-                db.Dispose();
-            }
-            return prestamo;
-
+            return devoluciones;
         }
 
-        public static List<Prestamo> GetList(Expression<Func<Prestamo, bool>> asistencia)
+
+        public static List<Devoluciones> GetList(Expression<Func<Devoluciones, bool>> expression)
         {
-            List<Prestamo> Lista = new List<Prestamo>();
+            List<Devoluciones> libro = new List<Devoluciones>();
             Contexto db = new Contexto();
 
             try
             {
-                Lista = db.Prestamo.Where(asistencia).ToList();
+                libro = db.Devolucion.Where(expression).ToList();
+                db.Dispose();
             }
             catch (Exception)
             {
                 throw;
             }
-            finally
-            {
-                db.Dispose();
-            }
-            return Lista;
+
+            return libro;
         }
     }
 }

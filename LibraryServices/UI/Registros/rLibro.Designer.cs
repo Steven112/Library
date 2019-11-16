@@ -39,16 +39,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Nuvobutton = new System.Windows.Forms.Button();
-            this.Agregarbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
             this.FeechaLibrodateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.AgregarEditorialbutton = new System.Windows.Forms.Button();
-            this.AgregarCategoriabutton = new System.Windows.Forms.Button();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.Disponible = new System.Windows.Forms.CheckBox();
+            this.AgregarCategoriabutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Agregarbutton = new System.Windows.Forms.Button();
+            this.Nuvobutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LibroIdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -136,45 +135,6 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "Editorial:";
             // 
-            // Nuvobutton
-            // 
-            this.Nuvobutton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_351;
-            this.Nuvobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuvobutton.Location = new System.Drawing.Point(43, 249);
-            this.Nuvobutton.Name = "Nuvobutton";
-            this.Nuvobutton.Size = new System.Drawing.Size(75, 57);
-            this.Nuvobutton.TabIndex = 52;
-            this.Nuvobutton.Text = "Nuevo";
-            this.Nuvobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Nuvobutton.UseVisualStyleBackColor = true;
-            this.Nuvobutton.Click += new System.EventHandler(this.Nuvobutton_Click);
-            // 
-            // Agregarbutton
-            // 
-            this.Agregarbutton.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
-            this.Agregarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Agregarbutton.Location = new System.Drawing.Point(124, 249);
-            this.Agregarbutton.Name = "Agregarbutton";
-            this.Agregarbutton.Size = new System.Drawing.Size(75, 57);
-            this.Agregarbutton.TabIndex = 53;
-            this.Agregarbutton.Text = "Agregar";
-            this.Agregarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Agregarbutton.UseVisualStyleBackColor = true;
-            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
-            // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.Image = global::LibraryServices.Properties.Resources.icons8_eliminar_propiedad_35;
-            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(205, 249);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 57);
-            this.Eliminarbutton.TabIndex = 54;
-            this.Eliminarbutton.Text = "Nuevo";
-            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
-            // 
             // FeechaLibrodateTimePicker
             // 
             this.FeechaLibrodateTimePicker.Location = new System.Drawing.Point(135, 146);
@@ -200,16 +160,6 @@
             this.AgregarEditorialbutton.UseVisualStyleBackColor = true;
             this.AgregarEditorialbutton.Click += new System.EventHandler(this.AgregarEditorialbutton_Click);
             // 
-            // AgregarCategoriabutton
-            // 
-            this.AgregarCategoriabutton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
-            this.AgregarCategoriabutton.Location = new System.Drawing.Point(247, 119);
-            this.AgregarCategoriabutton.Name = "AgregarCategoriabutton";
-            this.AgregarCategoriabutton.Size = new System.Drawing.Size(33, 23);
-            this.AgregarCategoriabutton.TabIndex = 57;
-            this.AgregarCategoriabutton.UseVisualStyleBackColor = true;
-            this.AgregarCategoriabutton.Click += new System.EventHandler(this.AgregarCategoriabutton_Click);
-            // 
             // MyerrorProvider
             // 
             this.MyerrorProvider.ContainerControl = this;
@@ -224,22 +174,60 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // Disponible
+            // AgregarCategoriabutton
             // 
-            this.Disponible.AutoSize = true;
-            this.Disponible.Location = new System.Drawing.Point(36, 200);
-            this.Disponible.Name = "Disponible";
-            this.Disponible.Size = new System.Drawing.Size(75, 17);
-            this.Disponible.TabIndex = 60;
-            this.Disponible.Text = "Disponible";
-            this.Disponible.UseVisualStyleBackColor = true;
+            this.AgregarCategoriabutton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
+            this.AgregarCategoriabutton.Location = new System.Drawing.Point(247, 119);
+            this.AgregarCategoriabutton.Name = "AgregarCategoriabutton";
+            this.AgregarCategoriabutton.Size = new System.Drawing.Size(33, 23);
+            this.AgregarCategoriabutton.TabIndex = 57;
+            this.AgregarCategoriabutton.UseVisualStyleBackColor = true;
+            this.AgregarCategoriabutton.Click += new System.EventHandler(this.AgregarCategoriabutton_Click);
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Image = global::LibraryServices.Properties.Resources.icons8_eliminar_propiedad_35;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Eliminarbutton.Location = new System.Drawing.Point(205, 249);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 57);
+            this.Eliminarbutton.TabIndex = 54;
+            this.Eliminarbutton.Text = "Nuevo";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // Agregarbutton
+            // 
+            this.Agregarbutton.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
+            this.Agregarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Agregarbutton.Location = new System.Drawing.Point(124, 249);
+            this.Agregarbutton.Name = "Agregarbutton";
+            this.Agregarbutton.Size = new System.Drawing.Size(75, 57);
+            this.Agregarbutton.TabIndex = 53;
+            this.Agregarbutton.Text = "Agregar";
+            this.Agregarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
+            // 
+            // Nuvobutton
+            // 
+            this.Nuvobutton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_351;
+            this.Nuvobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuvobutton.Location = new System.Drawing.Point(43, 249);
+            this.Nuvobutton.Name = "Nuvobutton";
+            this.Nuvobutton.Size = new System.Drawing.Size(75, 57);
+            this.Nuvobutton.TabIndex = 52;
+            this.Nuvobutton.Text = "Nuevo";
+            this.Nuvobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Nuvobutton.UseVisualStyleBackColor = true;
+            this.Nuvobutton.Click += new System.EventHandler(this.Nuvobutton_Click);
             // 
             // rLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(311, 306);
-            this.Controls.Add(this.Disponible);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.AgregarEditorialbutton);
             this.Controls.Add(this.AgregarCategoriabutton);
@@ -289,6 +277,5 @@
         private System.Windows.Forms.Button AgregarEditorialbutton;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
         private System.Windows.Forms.Button Buscarbutton;
-        private System.Windows.Forms.CheckBox Disponible;
     }
 }

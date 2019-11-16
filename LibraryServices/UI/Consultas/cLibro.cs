@@ -51,7 +51,7 @@ namespace LibraryServices.UI.Consultas
                     break;
                 case 5:// por CATEGORIA
                     id = Convert.ToInt32(ConsultanumericUpDown.Value);
-                    filtro = a => a.CategoriaID == id;
+                    filtro = a => a.CategoriaId == id;
                     break;
 
             }

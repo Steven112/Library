@@ -1,6 +1,7 @@
 ﻿using LibraryServices.BLL;
 using LibraryServices.DAL;
 using LibraryServices.Entdades;
+using LibraryServices.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,15 +29,22 @@ namespace LibraryServices.UI
         }
         private Libro LlenaClase()
         {
+            rDevlucion rdev = new rDevlucion();
+            Devoluciones devoluciones = new Devoluciones();
             Libro libro = new Libro();
             libro.LibroId = Convert.ToInt32(LibroIdnumericUpDown.Value);
             libro.NombreLibro = NombretextBox.Text;
             libro.ISBN = ISBNtextBox.Text;
-            libro.CategoriaID = Convert.ToInt32(CategoriacomboBox.SelectedValue);
-            libro.EditorialID = Convert.ToInt32(EditoracomboBox.SelectedValue);
+            libro.CategoriaId = Convert.ToInt32(CategoriacomboBox.SelectedValue);
+            libro.EditorialId = Convert.ToInt32(EditoracomboBox.SelectedValue);
             libro.FechaImpresion = FeechaLibrodateTimePicker.Value;
-            libro.Disponibilidad = Disponible.Checked;
-           
+            
+            if (DevolucionesBLL.Buscar((int)LibroIdnumericUpDown.Value) != null)
+            {
+                libro.Disponibilidad = true;
+            }
+
+
             return libro;
         }
         private bool ExisteEnLaBaseDeDatos()
@@ -51,10 +59,9 @@ namespace LibraryServices.UI
             LibroIdnumericUpDown.Value = LB.LibroId;
             NombretextBox.Text = LB.NombreLibro;
             ISBNtextBox.Text = LB.ISBN;
-            CategoriacomboBox.SelectedItem = LB.CategoriaID;
-            EditoracomboBox.SelectedItem = LB.EditorialID;
+            CategoriacomboBox.SelectedItem = LB.CategoriaId;
+            EditoracomboBox.SelectedItem = LB.EditorialId;
             FeechaLibrodateTimePicker.Value =LB.FechaImpresion;
-            Disponible.Checked = LB.Disponibilidad;
             LlenaCombox();
 
         }
@@ -164,7 +171,7 @@ namespace LibraryServices.UI
             NombretextBox.Text = string.Empty;
             EditoracomboBox.Text = string.Empty;
             FeechaLibrodateTimePicker.Value = DateTime.Now;
-            Disponible.Checked = true;
+            
         }
 
         private void Nuvobutton_Click(object sender, EventArgs e)

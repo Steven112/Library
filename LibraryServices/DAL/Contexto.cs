@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibraryServices.Entdades;
+using LibraryServices.Entidades;
 
 namespace LibraryServices.DAL
 {
@@ -17,6 +18,9 @@ namespace LibraryServices.DAL
         public DbSet<Prestamo> Prestamo { get; set; }
         public DbSet<PrestamosDetalle> Detalle { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<Devoluciones> Devolucion { get; set; }
+        public DbSet<DevolucionDetalle> DevolucionDetalle { get; set; }
+
 
         public Contexto():base("ConStr")
         {
