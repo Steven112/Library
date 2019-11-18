@@ -23,7 +23,7 @@ namespace LibraryServices.UI.Consultas
         private void Button1_Click(object sender, EventArgs e)
         {
             Expression<Func<Devoluciones, bool>> filtro = a => true;
-            int id;
+            
             switch (Filtro_comboBox.SelectedIndex)
             {
                 case 0:

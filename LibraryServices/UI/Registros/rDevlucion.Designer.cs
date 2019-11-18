@@ -108,6 +108,7 @@
             this.EstudiantecomboBox.Name = "EstudiantecomboBox";
             this.EstudiantecomboBox.Size = new System.Drawing.Size(121, 21);
             this.EstudiantecomboBox.TabIndex = 165;
+            this.EstudiantecomboBox.SelectedIndexChanged += new System.EventHandler(this.EstudiantecomboBox_SelectedIndexChanged);
             // 
             // LibrocomboBox
             // 
@@ -116,6 +117,7 @@
             this.LibrocomboBox.Name = "LibrocomboBox";
             this.LibrocomboBox.Size = new System.Drawing.Size(121, 21);
             this.LibrocomboBox.TabIndex = 164;
+            this.LibrocomboBox.SelectedIndexChanged += new System.EventHandler(this.LibrocomboBox_SelectedIndexChanged);
             // 
             // button1
             // 

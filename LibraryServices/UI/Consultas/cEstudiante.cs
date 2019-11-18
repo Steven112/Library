@@ -1,5 +1,6 @@
 ﻿using LibraryServices.BLL;
 using LibraryServices.Entdades;
+using LibraryServices.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace LibraryServices.UI.Consultas
     public partial class cEstudiante : Form
     {
         private List<Estudiante> Est = new List<Estudiante>();
+       
         public cEstudiante()
         {
             InitializeComponent();
@@ -69,6 +71,19 @@ namespace LibraryServices.UI.Consultas
             Est =EstudianteBLL.GetList(filtro);
             Consulta_dataGridView.DataSource = Est;
             Consulta_dataGridView.ReadOnly = true;
+        }
+
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            if (Est.Count == 0)
+            {
+                MessageBox.Show("No hay datos que imprimir");
+                return;
+            }
+
+            EstudianteReport estudianteReport = new EstudianteReport(Est);
+            estudianteReport.ShowDialog();
         }
     }
 }

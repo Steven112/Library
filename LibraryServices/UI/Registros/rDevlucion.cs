@@ -16,13 +16,13 @@ namespace LibraryServices.UI.Registros
 {
     public partial class rDevlucion : Form
     {
-        public List<DevolucionDetalle> Detalle { get; set; }
+        public List<DevolucionDetalles> Detalles { get; set; }
         public RepositorioBase<Estudiante> Estudent;
         public RepositorioBase<Libro> Book;
         public rDevlucion()
         {
             InitializeComponent();
-            this.Detalle = new List<DevolucionDetalle>();
+            this.Detalles = new List<DevolucionDetalles>();
             Book = new RepositorioBase<Libro>(new Contexto());
             LlenaCombox();
            
@@ -36,7 +36,7 @@ namespace LibraryServices.UI.Registros
             DisponiblecheckBox.Checked = false;
             FechaDevoluciondateTimePicker.Value = DateTime.Now;
             FechaEntregadateTimePicker.Value = DateTime.Now;
-            this.Detalle = new List<DevolucionDetalle>();
+            this.Detalles = new List<DevolucionDetalles>();
             CargarGrid();
 
 
@@ -78,9 +78,9 @@ namespace LibraryServices.UI.Registros
                 FechaDevoluciondateTimePicker.Focus();
                 paso = false;
             }
-            if (this.Detalle.Count == 0)
+            if (this.Detalles.Count == 0)
             {
-                MyerrorProvider.SetError(MydataGridView, "Debe Agregar algun Estudiante");
+                MyerrorProvider.SetError(MydataGridView, "Debe Agregar alguna devolucion");
                 EstudiantecomboBox.Focus();
                 LibrocomboBox.Focus();
                 paso = false;
@@ -93,7 +93,7 @@ namespace LibraryServices.UI.Registros
         private void CargarGrid()
         {
             MydataGridView.DataSource = null;
-            MydataGridView.DataSource = this.Detalle;
+            MydataGridView.DataSource = this.Detalles;
 
         }
         private bool ExisteEnLaBaseDeDatos()
@@ -109,7 +109,7 @@ namespace LibraryServices.UI.Registros
             DisponiblecheckBox.Checked = devoluciones.Disponible;
             FechaDevoluciondateTimePicker.Value = devoluciones.FechaDevolucion;
             FechaEntregadateTimePicker.Value = devoluciones.FechaDevueltaLibro;
-            this.Detalle = devoluciones.DetalleDev;
+            this.Detalles = devoluciones.DetalleDev;
             CargarGrid();
             LlenaCombox();
         }
@@ -119,10 +119,11 @@ namespace LibraryServices.UI.Registros
             Devoluciones devoluciones = new Devoluciones();
             devoluciones.DevolucionId = Convert.ToInt32(IdnumericUpDown1.Value);
             devoluciones.LibroId = Convert.ToInt32(LibrocomboBox.SelectedValue);
+            devoluciones.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
             devoluciones.Disponible = DisponiblecheckBox.Checked;
             devoluciones.FechaDevolucion = FechaDevoluciondateTimePicker.Value;
             devoluciones.FechaDevueltaLibro = FechaEntregadateTimePicker.Value;
-            devoluciones.DetalleDev = this.Detalle;
+            devoluciones.DetalleDev = this.Detalles;
 
             LlenaCombox();
             return devoluciones;
@@ -180,7 +181,7 @@ namespace LibraryServices.UI.Registros
         {
             if (MydataGridView.Rows.Count > 0 && MydataGridView.CurrentRow != null)
             {
-                Detalle.RemoveAt(MydataGridView.CurrentRow.Index);
+                Detalles.RemoveAt(MydataGridView.CurrentRow.Index);
                 CargarGrid();
 
             }
@@ -189,15 +190,14 @@ namespace LibraryServices.UI.Registros
         private void AñadirButton_Click(object sender, EventArgs e)
         {
             if (MydataGridView.DataSource != null)
-                this.Detalle = (List<DevolucionDetalle>)MydataGridView.DataSource;
+                this.Detalles = (List<DevolucionDetalles>)MydataGridView.DataSource;
 
             
 
-            if (validar())
-            {
+              
                 string nombres = Book.Buscar(id: (int)LibrocomboBox.SelectedValue).NombreLibro;
-                this.Detalle.Add(
-                    new DevolucionDetalle(
+                this.Detalles.Add(
+                    new DevolucionDetalles(
                         libroId: (int)LibrocomboBox.SelectedValue,
                         tituloLibro: nombres,
                         estudianteId: (int)LibrocomboBox.SelectedValue,
@@ -208,7 +208,7 @@ namespace LibraryServices.UI.Registros
 
                         )
                 );
-            }
+            
 
 
             CargarGrid();
@@ -257,6 +257,16 @@ namespace LibraryServices.UI.Registros
             {
                 LlenaCampo(devoluciones);
             }
+        }
+
+        private void EstudiantecomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void LibrocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

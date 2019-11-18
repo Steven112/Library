@@ -75,8 +75,8 @@ namespace LibraryServices.UI
             }
             if (this.Detalles.Count == 0)
             {
-                MyerrorProvider.SetError(MydataGridView, "Debe Agregar algun Estudiante");
-                EstudiantecomboBox.Focus();
+                MyerrorProvider.SetError(MydataGridView, "Debe Agregar algun prestamo");
+                LibrocomboBox.Focus();
                 
                 paso = false;
             }
@@ -88,8 +88,8 @@ namespace LibraryServices.UI
         {
             Prestamo prestamo = new Prestamo();
             prestamo.PrestamoId = Convert.ToInt32(PrestamoidnumericUpDown.Value);
-            prestamo.EstudianteId = EstudiantecomboBox.SelectedIndex;
-            prestamo.LibroId = LibrocomboBox.SelectedIndex;
+            prestamo.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
+            prestamo.LibroId = Convert.ToInt32(LibrocomboBox.SelectedValue);
             prestamo.FechaPrestamo = FechaPrestamodateTimePicker.Value;
             prestamo.FechaDevolucion = FechaDevoluciondateTimePicker.Value;
             prestamo.Detalle = this.Detalles;
@@ -102,7 +102,7 @@ namespace LibraryServices.UI
         private void LlenaCampos(Prestamo prestamo)
         {
             PrestamoidnumericUpDown.Value = prestamo.PrestamoId;
-            EstudiantecomboBox.SelectedIndex = prestamo.EstudianteId;
+            EstudiantecomboBox.SelectedValue = prestamo.EstudianteId;
             LibrocomboBox.SelectedValue = prestamo.LibroId;
             FechaPrestamodateTimePicker.Value = prestamo.FechaPrestamo;
             FechaDevoluciondateTimePicker.Value = prestamo.FechaDevolucion;
@@ -233,21 +233,31 @@ namespace LibraryServices.UI
             if (MydataGridView.DataSource != null)
                 this.Detalles = (List<PrestamosDetalle>)MydataGridView.DataSource;
 
-            //todo:nvalidar campos detalle
-            //Agrega un nuevo detalle al datagrid
 
-            if (Validar())
+
+
+            if (FechaDevoluciondateTimePicker.Value <= FechaPrestamodateTimePicker.Value)
+            {
+                MyerrorProvider.SetError(MydataGridView, "Fecha Incorrecta Devolucion");
+                FechaDevoluciondateTimePicker.Focus();
+
+            }
+            else
             {
                 string nombres = Book.Buscar(id: (int)LibrocomboBox.SelectedValue).NombreLibro;
                 this.Detalles.Add(
                     new PrestamosDetalle(
-                        libroId: (int)LibrocomboBox.SelectedValue,
+                        libroId: Convert.ToInt32(LibrocomboBox.SelectedValue),
                         nombreLibro: nombres,
                         fechaDevolucion: FechaDevoluciondateTimePicker.Value
 
                         )
                 );
             }
+            
+                
+            
+            
 
             
             CargarGrid();

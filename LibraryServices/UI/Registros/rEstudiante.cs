@@ -107,7 +107,7 @@ namespace LibraryServices.UI
             estudiante.Direccion = DirecciontextBox.Text;
             estudiante.FechaInsercion = FechadateTimePicker.Value;
             estudiante.Email = EmailtextBox.Text;
-          
+            estudiante.UsuarioId = Convert.ToInt32(UsuariocomboBox.SelectedValue);
 
 
 

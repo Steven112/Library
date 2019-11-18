@@ -19,7 +19,7 @@ namespace LibraryServices.DAL
         public DbSet<PrestamosDetalle> Detalle { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Devoluciones> Devolucion { get; set; }
-        public DbSet<DevolucionDetalle> DevolucionDetalle { get; set; }
+        public DbSet<DevolucionDetalles> DevolucionDetalle { get; set; }
 
 
         public Contexto():base("ConStr")
