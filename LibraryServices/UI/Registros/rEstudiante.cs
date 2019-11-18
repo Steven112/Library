@@ -19,6 +19,7 @@ namespace LibraryServices.UI
         public rEstudiante()
         {
             InitializeComponent();
+            LlenaCombox();
         }
         private void Limpiar()
         {
@@ -26,7 +27,7 @@ namespace LibraryServices.UI
             NombretextBox.Text = string.Empty;
             ApellidotextBox.Text = string.Empty;
             MatriculatextBox.Text = string.Empty;
-            NoTelefonoMaskedTextBox.Text = string.Empty;
+            CelularMaskedTextBox.Text = string.Empty;
             DirecciontextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
             EmailtextBox.Text = string.Empty;
@@ -48,6 +49,13 @@ namespace LibraryServices.UI
                 NombretextBox.Focus();
                 paso = false;
             }
+            if (string.IsNullOrWhiteSpace(MatriculatextBox.Text))
+            {
+                MyerrorProvider.SetError(MatriculatextBox, "El campo no debe estar vacio");
+                MatriculatextBox.Focus();
+                paso = false;
+            }
+           
             if (string.IsNullOrWhiteSpace(EmailtextBox.Text))
             {
                 MyerrorProvider.SetError(EmailtextBox, "El campo no debe estar vacio");
@@ -67,13 +75,19 @@ namespace LibraryServices.UI
                 DirecciontextBox.Focus();
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(NoTelefonoMaskedTextBox.Text))
+            if (string.IsNullOrWhiteSpace(CelularMaskedTextBox.Text))
             {
-                MyerrorProvider.SetError(NoTelefonoMaskedTextBox, "El Campo no debe estar vacio");
-                NoTelefonoMaskedTextBox.Focus();
+                MyerrorProvider.SetError(CelularMaskedTextBox, "El Campo no debe estar vacio");
+                CelularMaskedTextBox.Focus();
                 paso = false;
             }
-           
+            if (string.IsNullOrWhiteSpace(UsuariocomboBox.Text))
+            {
+                MyerrorProvider.SetError(UsuariocomboBox, "El Campo no debe estar vacio");
+                UsuariocomboBox.Focus();
+                paso = false;
+            }
+
             if (FechadateTimePicker.Value > DateTime.Now)
             {
                 MyerrorProvider.SetError(FechadateTimePicker, "La fecha no es correcta");
@@ -89,12 +103,14 @@ namespace LibraryServices.UI
             estudiante.Nombres = NombretextBox.Text;
             estudiante.Apellidos = ApellidotextBox.Text;
             estudiante.Matricula = MatriculatextBox.Text;
-            estudiante.Celular = NoTelefonoMaskedTextBox.Text;
+            estudiante.Celular = CelularMaskedTextBox.Text;
             estudiante.Direccion = DirecciontextBox.Text;
             estudiante.FechaInsercion = FechadateTimePicker.Value;
             estudiante.Email = EmailtextBox.Text;
+          
 
-            
+
+
             return estudiante;
 
         }
@@ -106,9 +122,10 @@ namespace LibraryServices.UI
             ApellidotextBox.Text = estudiante.Apellidos;
             MatriculatextBox.Text = estudiante.Matricula;
             DirecciontextBox.Text = estudiante.Direccion;
-            NoTelefonoMaskedTextBox.Text = estudiante.Celular;
+            CelularMaskedTextBox.Text = estudiante.Celular;
             FechadateTimePicker.Value = estudiante.FechaInsercion;
             EmailtextBox.Text = estudiante.Email;
+            LlenaCombox();
         }
 
         private void REstudiante_Load(object sender, EventArgs e)
@@ -125,8 +142,16 @@ namespace LibraryServices.UI
         {
             Limpiar();
         }
+        private void LlenaCombox()
+        {
+            RepositorioBase<Usuarios> Ed = new RepositorioBase<Usuarios>(new Contexto());
+            
+            UsuariocomboBox.DataSource = Ed.GetList(c => true);
+            UsuariocomboBox.ValueMember = "UsuarioId";
+            UsuariocomboBox.DisplayMember = "Nombres";
 
-      
+        }
+
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Estudent = new RepositorioBase<Estudiante>(new Contexto());

@@ -35,16 +35,16 @@ namespace LibraryServices.UI.Consultas
                     id = Convert.ToInt32(Criterio_textBox.Text);
                     filtro = c => c.PrestamoId == id;
                     break;
-               
-               
                 case 2:
                     filtro = c => c.FechaPrestamo >= Desde_dateTimePicker.Value.Date && c.FechaPrestamo <= Hasta_dateTimePicker.Value.Date;
+                    break;
+                case 3:
+                    filtro = c => c.FechaDevolucion < Desde_dateTimePicker.Value.Date;
                     break;
 
             }
             prestamo = BLL.PrestamoBLL.GetList(filtro);
             ConsultadataGridView.DataSource = null;
-            filtro = c => c.FechaPrestamo >= Desde_dateTimePicker.Value.Date && c.FechaPrestamo <= Hasta_dateTimePicker.Value.Date;
             ConsultadataGridView.DataSource = prestamo;
         }
 
@@ -54,6 +54,56 @@ namespace LibraryServices.UI.Consultas
         }
 
         private void CPrestamos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Hasta_dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Desde_dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Criterio_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Filtro_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConsultadataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

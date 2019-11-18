@@ -39,10 +39,7 @@ namespace LibraryServices.UI
             libro.EditorialId = Convert.ToInt32(EditoracomboBox.SelectedValue);
             libro.FechaImpresion = FeechaLibrodateTimePicker.Value;
             
-            if (DevolucionesBLL.Buscar((int)LibroIdnumericUpDown.Value) != null)
-            {
-                libro.Disponibilidad = true;
-            }
+            
 
 
             return libro;

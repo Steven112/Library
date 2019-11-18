@@ -18,13 +18,14 @@ namespace LibraryServices.Entdades
         public string Direccion { get; set; }
         public string Email { get; set; }
         public DateTime FechaInsercion { get; set; }
+        public int UsuarioId { get; set; }
         
 
         public Estudiante()
         {
         }
 
-        public Estudiante(int estudianteId, string nombres, string apellidos, string matricula, string celular, string direccion, string email, DateTime fechaInsercion)
+        public Estudiante(int estudianteId, string nombres, string apellidos, string matricula, string celular, string direccion, string email, DateTime fechaInsercion, int usuarioId)
         {
             EstudianteId = estudianteId;
             Nombres = nombres;
@@ -34,6 +35,7 @@ namespace LibraryServices.Entdades
             Direccion = direccion;
             Email = email;
             FechaInsercion = fechaInsercion;
+            UsuarioId = usuarioId;
         }
     }
 }

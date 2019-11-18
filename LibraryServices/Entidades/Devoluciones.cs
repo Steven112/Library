@@ -17,8 +17,9 @@ namespace LibraryServices.Entdades
         public bool Disponible { get; set; }
         public virtual List<DevolucionDetalle> DetalleDev { get; set; }
         public DateTime FechaDevolucion { get; set; }
+        public DateTime FechaDevueltaLibro { get; set; }
 
-        public Devoluciones(int devolucionId, int estudianteId, int libroId, bool disponible, List<DevolucionDetalle> detalleDev, DateTime fechaDevolucion)
+        public Devoluciones(int devolucionId, int estudianteId, int libroId, bool disponible, List<DevolucionDetalle> detalleDev, DateTime fechaDevolucion, DateTime fechaDevueltaLibro)
         {
             DevolucionId = devolucionId;
             EstudianteId = estudianteId;
@@ -26,6 +27,7 @@ namespace LibraryServices.Entdades
             Disponible = disponible;
             DetalleDev = detalleDev;
             FechaDevolucion = fechaDevolucion;
+            FechaDevueltaLibro = fechaDevueltaLibro;
         }
 
         public Devoluciones()

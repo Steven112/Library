@@ -63,6 +63,26 @@ namespace LibraryServices.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _14642670581216 {
+            get {
+                object obj = ResourceManager.GetObject("14642670581216", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fdfe18cc8108550335a9117e297f2fa1_diseno_de_plantilla_de_logotipo_de_biblioteca {
+            get {
+                object obj = ResourceManager.GetObject("fdfe18cc8108550335a9117e297f2fa1-diseno-de-plantilla-de-logotipo-de-biblioteca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_agregar_propiedad_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8-agregar-propiedad-35", resourceCulture);
@@ -226,6 +246,16 @@ namespace LibraryServices.Properties {
         internal static System.Drawing.Bitmap icons8_remover_etiqueta_25 {
             get {
                 object obj = ResourceManager.GetObject("icons8-remover-etiqueta-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap services {
+            get {
+                object obj = ResourceManager.GetObject("services", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

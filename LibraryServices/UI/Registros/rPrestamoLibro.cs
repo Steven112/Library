@@ -54,9 +54,6 @@ namespace LibraryServices.UI
         {
             bool paso = true;
 
-
-
-
             if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
              {
                  MyerrorProvider.SetError(EstudiantecomboBox, "El Campo no debe estar vacio");
@@ -74,6 +71,13 @@ namespace LibraryServices.UI
             {
                 MyerrorProvider.SetError(FechaDevoluciondateTimePicker, "La fecha de devolucion no puede ser menor o igual a la Fecha de prestamo");
                 FechaDevoluciondateTimePicker.Focus();
+                paso = false;
+            }
+            if (this.Detalles.Count == 0)
+            {
+                MyerrorProvider.SetError(MydataGridView, "Debe Agregar algun Estudiante");
+                EstudiantecomboBox.Focus();
+                
                 paso = false;
             }
 

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.MatriculatextBox = new System.Windows.Forms.MaskedTextBox();
             this.ApellidotextBox = new System.Windows.Forms.TextBox();
-            this.NoTelefonoMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.IDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,15 +40,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
-            this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.EmailtextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.UsuariocomboBox = new System.Windows.Forms.ComboBox();
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.CelularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -69,14 +71,6 @@
             this.ApellidotextBox.Name = "ApellidotextBox";
             this.ApellidotextBox.Size = new System.Drawing.Size(116, 20);
             this.ApellidotextBox.TabIndex = 117;
-            // 
-            // NoTelefonoMaskedTextBox
-            // 
-            this.NoTelefonoMaskedTextBox.Location = new System.Drawing.Point(122, 118);
-            this.NoTelefonoMaskedTextBox.Mask = "(999) 000-0000";
-            this.NoTelefonoMaskedTextBox.Name = "NoTelefonoMaskedTextBox";
-            this.NoTelefonoMaskedTextBox.Size = new System.Drawing.Size(116, 20);
-            this.NoTelefonoMaskedTextBox.TabIndex = 116;
             // 
             // NombretextBox
             // 
@@ -153,6 +147,62 @@
             this.DirecciontextBox.Size = new System.Drawing.Size(116, 20);
             this.DirecciontextBox.TabIndex = 126;
             // 
+            // FechadateTimePicker
+            // 
+            this.FechadateTimePicker.Enabled = false;
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(122, 170);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(116, 20);
+            this.FechadateTimePicker.TabIndex = 131;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(34, 170);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 13);
+            this.label7.TabIndex = 132;
+            this.label7.Text = "Fecha Insercion:";
+            // 
+            // MyerrorProvider
+            // 
+            this.MyerrorProvider.ContainerControl = this;
+            // 
+            // EmailtextBox
+            // 
+            this.EmailtextBox.Location = new System.Drawing.Point(122, 196);
+            this.EmailtextBox.Name = "EmailtextBox";
+            this.EmailtextBox.Size = new System.Drawing.Size(116, 20);
+            this.EmailtextBox.TabIndex = 133;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(37, 196);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 134;
+            this.label8.Text = "Email:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(37, 222);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 13);
+            this.label9.TabIndex = 135;
+            this.label9.Text = "Usuario:";
+            // 
+            // UsuariocomboBox
+            // 
+            this.UsuariocomboBox.FormattingEnabled = true;
+            this.UsuariocomboBox.Location = new System.Drawing.Point(122, 222);
+            this.UsuariocomboBox.Name = "UsuariocomboBox";
+            this.UsuariocomboBox.Size = new System.Drawing.Size(116, 21);
+            this.UsuariocomboBox.TabIndex = 136;
+            // 
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_35;
@@ -202,48 +252,22 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // FechadateTimePicker
+            // CelularMaskedTextBox
             // 
-            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(122, 170);
-            this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(116, 20);
-            this.FechadateTimePicker.TabIndex = 131;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 170);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 13);
-            this.label7.TabIndex = 132;
-            this.label7.Text = "Fecha Insercion:";
-            // 
-            // MyerrorProvider
-            // 
-            this.MyerrorProvider.ContainerControl = this;
-            // 
-            // EmailtextBox
-            // 
-            this.EmailtextBox.Location = new System.Drawing.Point(122, 196);
-            this.EmailtextBox.Name = "EmailtextBox";
-            this.EmailtextBox.Size = new System.Drawing.Size(116, 20);
-            this.EmailtextBox.TabIndex = 133;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(37, 196);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 134;
-            this.label8.Text = "Email:";
+            this.CelularMaskedTextBox.Location = new System.Drawing.Point(122, 118);
+            this.CelularMaskedTextBox.Mask = "(999) 000-0000";
+            this.CelularMaskedTextBox.Name = "CelularMaskedTextBox";
+            this.CelularMaskedTextBox.Size = new System.Drawing.Size(116, 20);
+            this.CelularMaskedTextBox.TabIndex = 137;
             // 
             // rEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(280, 330);
+            this.Controls.Add(this.CelularMaskedTextBox);
+            this.Controls.Add(this.UsuariocomboBox);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.EmailtextBox);
             this.Controls.Add(this.label7);
@@ -261,7 +285,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MatriculatextBox);
             this.Controls.Add(this.ApellidotextBox);
-            this.Controls.Add(this.NoTelefonoMaskedTextBox);
             this.Controls.Add(this.NombretextBox);
             this.Controls.Add(this.IDnumericUpDown);
             this.Name = "rEstudiante";
@@ -278,7 +301,6 @@
 
         private System.Windows.Forms.MaskedTextBox MatriculatextBox;
         private System.Windows.Forms.TextBox ApellidotextBox;
-        private System.Windows.Forms.MaskedTextBox NoTelefonoMaskedTextBox;
         private System.Windows.Forms.TextBox NombretextBox;
         private System.Windows.Forms.NumericUpDown IDnumericUpDown;
         private System.Windows.Forms.Label label1;
@@ -297,5 +319,8 @@
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox EmailtextBox;
+        private System.Windows.Forms.ComboBox UsuariocomboBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox CelularMaskedTextBox;
     }
 }

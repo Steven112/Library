@@ -76,7 +76,7 @@ namespace LibraryServices
 
         private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rUsuarios user = new rUsuarios();
+            rUsuario user = new rUsuario();
             user.Show();
         }
 
@@ -93,6 +93,18 @@ namespace LibraryServices
 
             rDevlucion dev = new rDevlucion();
             dev.Show();
+        }
+
+        private void PrestamosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cPrestamos prestamos= new cPrestamos();
+            prestamos.Show();
+        }
+
+        private void LibrosVencidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cLibrosVencidos vencido = new cLibrosVencidos();
+            vencido.Show();
         }
     }
 }

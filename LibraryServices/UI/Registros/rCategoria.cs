@@ -92,7 +92,7 @@ namespace LibraryServices.UI
             }
             if (paso)
             {
-                MessageBox.Show("Guardado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Guardado ", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
                 Limpiar();
             }
@@ -134,13 +134,12 @@ namespace LibraryServices.UI
 
             if (CT != null)
             {
-                MessageBox.Show("Categoria Encontrado.!!", "Exito!!!", MessageBoxButtons.OK);
-                LlenaCampo(CT);
+               LlenaCampo(CT);
             }
             else
             {
                 LlenaCampo(CT);
-                MessageBox.Show("Categoria no Encontrada", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Categoria no encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

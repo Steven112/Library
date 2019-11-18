@@ -35,6 +35,7 @@ namespace LibraryServices.UI.Registros
             EstudiantecomboBox.Text = string.Empty;
             DisponiblecheckBox.Checked = false;
             FechaDevoluciondateTimePicker.Value = DateTime.Now;
+            FechaEntregadateTimePicker.Value = DateTime.Now;
             this.Detalle = new List<DevolucionDetalle>();
             CargarGrid();
 
@@ -71,6 +72,21 @@ namespace LibraryServices.UI.Registros
                 EstudiantecomboBox.Focus();
                 paso = false;
             }
+            if (FechaDevoluciondateTimePicker.Value > DateTime.Now)
+            {
+                MyerrorProvider.SetError(FechaDevoluciondateTimePicker, "La fecha no es correcta");
+                FechaDevoluciondateTimePicker.Focus();
+                paso = false;
+            }
+            if (this.Detalle.Count == 0)
+            {
+                MyerrorProvider.SetError(MydataGridView, "Debe Agregar algun Estudiante");
+                EstudiantecomboBox.Focus();
+                LibrocomboBox.Focus();
+                paso = false;
+            }
+
+
 
             return paso;
         }
@@ -92,6 +108,7 @@ namespace LibraryServices.UI.Registros
             EstudiantecomboBox.SelectedItem = devoluciones.EstudianteId;
             DisponiblecheckBox.Checked = devoluciones.Disponible;
             FechaDevoluciondateTimePicker.Value = devoluciones.FechaDevolucion;
+            FechaEntregadateTimePicker.Value = devoluciones.FechaDevueltaLibro;
             this.Detalle = devoluciones.DetalleDev;
             CargarGrid();
             LlenaCombox();
@@ -104,6 +121,7 @@ namespace LibraryServices.UI.Registros
             devoluciones.LibroId = Convert.ToInt32(LibrocomboBox.SelectedValue);
             devoluciones.Disponible = DisponiblecheckBox.Checked;
             devoluciones.FechaDevolucion = FechaDevoluciondateTimePicker.Value;
+            devoluciones.FechaDevueltaLibro = FechaEntregadateTimePicker.Value;
             devoluciones.DetalleDev = this.Detalle;
 
             LlenaCombox();
@@ -184,7 +202,9 @@ namespace LibraryServices.UI.Registros
                         tituloLibro: nombres,
                         estudianteId: (int)LibrocomboBox.SelectedValue,
                         disponibilidad: DisponiblecheckBox.Checked,
-                        fechaDevolucion: FechaDevoluciondateTimePicker.Value
+                        fechaDevolucion: FechaDevoluciondateTimePicker.Value,
+                        fechaDeDevueltaLibro: FechaEntregadateTimePicker.Value
+
 
                         )
                 );

@@ -105,6 +105,12 @@
     <Compile Include="UI\Consultas\cLibro.Designer.cs">
       <DependentUpon>cLibro.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\cLibrosVencidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cLibrosVencidos.Designer.cs">
+      <DependentUpon>cLibrosVencidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Consultas\cPrestamos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,11 +153,11 @@
     <Compile Include="UI\Registros\rPrestamoLibro.Designer.cs">
       <DependentUpon>rPrestamoLibro.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\rUsuarios.cs">
+    <Compile Include="UI\Registros\rUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\rUsuarios.Designer.cs">
-      <DependentUpon>rUsuarios.cs</DependentUpon>
+    <Compile Include="UI\Registros\rUsuario.Designer.cs">
+      <DependentUpon>rUsuario.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -178,6 +184,9 @@
     <EmbeddedResource Include="UI\Consultas\cLibro.resx">
       <DependentUpon>cLibro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cLibrosVencidos.resx">
+      <DependentUpon>cLibrosVencidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\cPrestamos.resx">
       <DependentUpon>cPrestamos.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,8 +208,8 @@
     <EmbeddedResource Include="UI\Registros\rPrestamoLibro.resx">
       <DependentUpon>rPrestamoLibro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\rUsuarios.resx">
-      <DependentUpon>rUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\rUsuario.resx">
+      <DependentUpon>rUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -269,6 +278,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UI\Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14642670581216.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\services.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fdfe18cc8108550335a9117e297f2fa1-diseno-de-plantilla-de-logotipo-de-biblioteca.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -45,6 +45,7 @@
             // IntroduccionTextBox
             // 
             this.IntroduccionTextBox.BackColor = System.Drawing.Color.White;
+            this.IntroduccionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IntroduccionTextBox.Location = new System.Drawing.Point(103, 63);
             this.IntroduccionTextBox.Multiline = true;
             this.IntroduccionTextBox.Name = "IntroduccionTextBox";
@@ -62,6 +63,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(15, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 13);
@@ -71,6 +74,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(15, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
@@ -134,6 +139,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LibraryServices.Properties.Resources.fdfe18cc8108550335a9117e297f2fa1_diseno_de_plantilla_de_logotipo_de_biblioteca;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(272, 232);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label3);

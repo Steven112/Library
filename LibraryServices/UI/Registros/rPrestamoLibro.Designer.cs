@@ -39,6 +39,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.FechaDevoluciondateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Removerbutton = new System.Windows.Forms.Button();
+            this.AñadirButton = new System.Windows.Forms.Button();
             this.MydataGridView = new System.Windows.Forms.DataGridView();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.button1 = new System.Windows.Forms.Button();
@@ -46,8 +48,6 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.Removerbutton = new System.Windows.Forms.Button();
-            this.AñadirButton = new System.Windows.Forms.Button();
             this.EstudiantecomboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PrestamoidnumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -135,6 +135,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.Removerbutton);
             this.groupBox1.Controls.Add(this.AñadirButton);
             this.groupBox1.Controls.Add(this.MydataGridView);
@@ -145,8 +146,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
+            // Removerbutton
+            // 
+            this.Removerbutton.Image = global::LibraryServices.Properties.Resources.icons8_remover_etiqueta_20;
+            this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Removerbutton.Location = new System.Drawing.Point(16, 197);
+            this.Removerbutton.Name = "Removerbutton";
+            this.Removerbutton.Size = new System.Drawing.Size(107, 30);
+            this.Removerbutton.TabIndex = 2;
+            this.Removerbutton.Text = "Remover Fila";
+            this.Removerbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Removerbutton.UseVisualStyleBackColor = true;
+            this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
+            // 
+            // AñadirButton
+            // 
+            this.AñadirButton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
+            this.AñadirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AñadirButton.Location = new System.Drawing.Point(344, 6);
+            this.AñadirButton.Name = "AñadirButton";
+            this.AñadirButton.Size = new System.Drawing.Size(88, 26);
+            this.AñadirButton.TabIndex = 1;
+            this.AñadirButton.Text = "Añadir";
+            this.AñadirButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AñadirButton.UseVisualStyleBackColor = true;
+            this.AñadirButton.Click += new System.EventHandler(this.AñadirButton_Click);
+            // 
             // MydataGridView
             // 
+            this.MydataGridView.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.MydataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MydataGridView.Location = new System.Drawing.Point(16, 38);
             this.MydataGridView.Name = "MydataGridView";
@@ -224,32 +252,6 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
-            // Removerbutton
-            // 
-            this.Removerbutton.Image = global::LibraryServices.Properties.Resources.icons8_remover_etiqueta_20;
-            this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Removerbutton.Location = new System.Drawing.Point(16, 197);
-            this.Removerbutton.Name = "Removerbutton";
-            this.Removerbutton.Size = new System.Drawing.Size(107, 30);
-            this.Removerbutton.TabIndex = 2;
-            this.Removerbutton.Text = "Remover Fila";
-            this.Removerbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Removerbutton.UseVisualStyleBackColor = true;
-            this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
-            // 
-            // AñadirButton
-            // 
-            this.AñadirButton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
-            this.AñadirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirButton.Location = new System.Drawing.Point(344, 6);
-            this.AñadirButton.Name = "AñadirButton";
-            this.AñadirButton.Size = new System.Drawing.Size(88, 26);
-            this.AñadirButton.TabIndex = 1;
-            this.AñadirButton.Text = "Añadir";
-            this.AñadirButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AñadirButton.UseVisualStyleBackColor = true;
-            this.AñadirButton.Click += new System.EventHandler(this.AñadirButton_Click);
-            // 
             // EstudiantecomboBox
             // 
             this.EstudiantecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -263,6 +265,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LibraryServices.Properties.Resources.fdfe18cc8108550335a9117e297f2fa1_diseno_de_plantilla_de_logotipo_de_biblioteca;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(545, 494);
             this.Controls.Add(this.EstudiantecomboBox);
             this.Controls.Add(this.button1);

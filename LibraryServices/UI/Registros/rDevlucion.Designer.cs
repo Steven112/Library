@@ -48,6 +48,8 @@
             this.FechaDevoluciondateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.FechaEntregadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -57,7 +59,7 @@
             // DisponiblecheckBox
             // 
             this.DisponiblecheckBox.AutoSize = true;
-            this.DisponiblecheckBox.Location = new System.Drawing.Point(349, 49);
+            this.DisponiblecheckBox.Location = new System.Drawing.Point(380, 75);
             this.DisponiblecheckBox.Name = "DisponiblecheckBox";
             this.DisponiblecheckBox.Size = new System.Drawing.Size(75, 17);
             this.DisponiblecheckBox.TabIndex = 170;
@@ -181,7 +183,7 @@
             this.groupBox1.Controls.Add(this.MydataGridView);
             this.groupBox1.Location = new System.Drawing.Point(13, 126);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(432, 227);
+            this.groupBox1.Size = new System.Drawing.Size(463, 227);
             this.groupBox1.TabIndex = 171;
             this.groupBox1.TabStop = false;
             // 
@@ -202,7 +204,7 @@
             // 
             this.AñadirButton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
             this.AñadirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirButton.Location = new System.Drawing.Point(336, 6);
+            this.AñadirButton.Location = new System.Drawing.Point(353, 6);
             this.AñadirButton.Name = "AñadirButton";
             this.AñadirButton.Size = new System.Drawing.Size(96, 26);
             this.AñadirButton.TabIndex = 1;
@@ -216,13 +218,13 @@
             this.MydataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MydataGridView.Location = new System.Drawing.Point(16, 38);
             this.MydataGridView.Name = "MydataGridView";
-            this.MydataGridView.Size = new System.Drawing.Size(400, 153);
+            this.MydataGridView.Size = new System.Drawing.Size(433, 153);
             this.MydataGridView.TabIndex = 0;
             // 
             // FechaDevoluciondateTimePicker
             // 
             this.FechaDevoluciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDevoluciondateTimePicker.Location = new System.Drawing.Point(349, 23);
+            this.FechaDevoluciondateTimePicker.Location = new System.Drawing.Point(380, 24);
             this.FechaDevoluciondateTimePicker.Name = "FechaDevoluciondateTimePicker";
             this.FechaDevoluciondateTimePicker.Size = new System.Drawing.Size(96, 20);
             this.FechaDevoluciondateTimePicker.TabIndex = 172;
@@ -230,17 +232,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(249, 23);
+            this.label4.Location = new System.Drawing.Point(219, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 13);
+            this.label4.Size = new System.Drawing.Size(155, 13);
             this.label4.TabIndex = 173;
-            this.label4.Text = "FechaDevolucion:";
+            this.label4.Text = "Fecha Devolucion Establecida:";
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(349, 76);
+            this.Buscarbutton.Location = new System.Drawing.Point(380, 98);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(96, 23);
             this.Buscarbutton.TabIndex = 174;
@@ -248,11 +250,30 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
+            // FechaEntregadateTimePicker
+            // 
+            this.FechaEntregadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaEntregadateTimePicker.Location = new System.Drawing.Point(380, 50);
+            this.FechaEntregadateTimePicker.Name = "FechaEntregadateTimePicker";
+            this.FechaEntregadateTimePicker.Size = new System.Drawing.Size(96, 20);
+            this.FechaEntregadateTimePicker.TabIndex = 175;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(212, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 13);
+            this.label5.TabIndex = 176;
+            this.label5.Text = "Fecha En que se Devolvio Libro:";
+            // 
             // rDevlucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 429);
+            this.ClientSize = new System.Drawing.Size(488, 429);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.FechaEntregadateTimePicker);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.FechaDevoluciondateTimePicker);
@@ -301,5 +322,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker FechaDevoluciondateTimePicker;
         private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker FechaEntregadateTimePicker;
     }
 }
