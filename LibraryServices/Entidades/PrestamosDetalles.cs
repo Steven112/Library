@@ -11,13 +11,14 @@ namespace LibraryServices.Entdades
     public class PrestamosDetalle
     {
         [Key]
-        public int PrestamoDetailsId { get; set; }
+        public int DetalleId { get; set; }
         public int LibroId { get; set; }
         public string NombreLibro { get; set; }
         public DateTime FechaDevolucion { get; set; }
 
-        public PrestamosDetalle(int libroId, string nombreLibro, DateTime fechaDevolucion)
+        public PrestamosDetalle(int detalleId, int libroId, string nombreLibro, DateTime fechaDevolucion)
         {
+            DetalleId = detalleId;
             LibroId = libroId;
             NombreLibro = nombreLibro;
             FechaDevolucion = fechaDevolucion;

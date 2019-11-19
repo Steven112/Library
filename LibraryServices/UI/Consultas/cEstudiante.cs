@@ -69,7 +69,9 @@ namespace LibraryServices.UI.Consultas
             }
 
             Est =EstudianteBLL.GetList(filtro);
-            Consulta_dataGridView.DataSource = Est;
+
+
+            Consulta_dataGridView.DataSource = EstudianteBLL.GetList(filtro);
             Consulta_dataGridView.ReadOnly = true;
         }
 

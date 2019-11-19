@@ -60,12 +60,7 @@ namespace LibraryServices.UI
                  EstudiantecomboBox.Focus();
                  paso = false;
              }
-             if (string.IsNullOrWhiteSpace(LibrocomboBox.Text))
-             {
-                 MyerrorProvider.SetError(LibrocomboBox, "El Campo no debe estar vacio");
-                 LibrocomboBox.Focus();
-                 paso = false;
-             }
+             
             
             if (FechaDevoluciondateTimePicker.Value <= FechaPrestamodateTimePicker.Value)
             {
@@ -211,20 +206,26 @@ namespace LibraryServices.UI
         private void EliminarButton_Click(object sender, EventArgs e)
         {
             MyerrorProvider.Clear();
-
-            int id;
+            int id = Convert.ToInt32(PrestamoidnumericUpDown.Value);
+            Prestamo prestamo = PrestamoBLL.Buscar(id);
+            
             id = Convert.ToInt32(PrestamoidnumericUpDown.Value);
-
-            if (PrestamoBLL.Eliminar(id))
+            if (prestamo != null)
             {
-                MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LlenaCombox();
-                Limpiar();
+                if (PrestamoBLL.Eliminar(id))
+                {
+                    MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpiar();
+                    LlenaCombox();
+                }
+                else
+                {
+                    MyerrorProvider.SetError(PrestamoidnumericUpDown, "No se puede eliminar registro que no existe");
+                }
             }
             else
-            {
-                MyerrorProvider.SetError(PrestamoidnumericUpDown, "No se puede eliminar registro que no existe");
-            }
+                MessageBox.Show("No existe!!", "Falló", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
         }
 
 
@@ -232,33 +233,17 @@ namespace LibraryServices.UI
         {
             if (MydataGridView.DataSource != null)
                 this.Detalles = (List<PrestamosDetalle>)MydataGridView.DataSource;
-
-
-
-
-            if (FechaDevoluciondateTimePicker.Value <= FechaPrestamodateTimePicker.Value)
-            {
-                MyerrorProvider.SetError(MydataGridView, "Fecha Incorrecta Devolucion");
-                FechaDevoluciondateTimePicker.Focus();
-
-            }
-            else
-            {
+            
                 string nombres = Book.Buscar(id: (int)LibrocomboBox.SelectedValue).NombreLibro;
                 this.Detalles.Add(
                     new PrestamosDetalle(
+                        detalleId: 0,
                         libroId: Convert.ToInt32(LibrocomboBox.SelectedValue),
                         nombreLibro: nombres,
                         fechaDevolucion: FechaDevoluciondateTimePicker.Value
 
                         )
                 );
-            }
-            
-                
-            
-            
-
             
             CargarGrid();
             LibrocomboBox.SelectAll();

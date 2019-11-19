@@ -31,7 +31,7 @@ namespace LibraryServices.UI.Registros
         {
             MyerrorProvider.Clear();
             IdnumericUpDown1.Value = 0;
-            LibrocomboBox.Text = string.Empty;
+            .Text = string.Empty;
             EstudiantecomboBox.Text = string.Empty;
             DisponiblecheckBox.Checked = false;
             FechaDevoluciondateTimePicker.Value = DateTime.Now;
@@ -51,19 +51,19 @@ namespace LibraryServices.UI.Registros
             EstudiantecomboBox.ValueMember = "EstudianteId";
             EstudiantecomboBox.DisplayMember = "Nombres";
 
-            LibrocomboBox.DataSource = Lb.GetList(c => c.Disponibilidad == false);
-            LibrocomboBox.ValueMember = "LibroId";
-            LibrocomboBox.DisplayMember = "NombreLibro";
+            EstudiantecomboBox.DataSource = Lb.GetList(c => c.Disponibilidad == false);
+            EstudiantecomboBox.ValueMember = "LibroId";
+            EstudiantecomboBox.DisplayMember = "NombreLibro";
 
         }
         private bool validar()
         {
             bool paso = true;
 
-            if (string.IsNullOrWhiteSpace(LibrocomboBox.Text))
+            if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
             {
-                MyerrorProvider.SetError(LibrocomboBox, "El campo no debe estar vacio");
-                LibrocomboBox.Focus();
+                MyerrorProvider.SetError(EstudiantecomboBox, "El campo no debe estar vacio");
+                EstudiantecomboBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
@@ -82,7 +82,7 @@ namespace LibraryServices.UI.Registros
             {
                 MyerrorProvider.SetError(MydataGridView, "Debe Agregar alguna devolucion");
                 EstudiantecomboBox.Focus();
-                LibrocomboBox.Focus();
+                EstudiantecomboBox.Focus();
                 paso = false;
             }
 
@@ -104,7 +104,7 @@ namespace LibraryServices.UI.Registros
         private void LlenaCampo(Devoluciones devoluciones)
         {
             IdnumericUpDown1.Value = devoluciones.DevolucionId;
-            LibrocomboBox.SelectedItem = devoluciones.LibroId;
+            EstudiantecomboBox.SelectedItem = devoluciones.LibroId;
             EstudiantecomboBox.SelectedItem = devoluciones.EstudianteId;
             DisponiblecheckBox.Checked = devoluciones.Disponible;
             FechaDevoluciondateTimePicker.Value = devoluciones.FechaDevolucion;
@@ -115,10 +115,11 @@ namespace LibraryServices.UI.Registros
         }
         private Devoluciones LlenaClase()
         {
+            Contexto db = new Contexto();
             Libro libro = new Libro();
             Devoluciones devoluciones = new Devoluciones();
             devoluciones.DevolucionId = Convert.ToInt32(IdnumericUpDown1.Value);
-            devoluciones.LibroId = Convert.ToInt32(LibrocomboBox.SelectedValue);
+            devoluciones.LibroId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
             devoluciones.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
             devoluciones.Disponible = DisponiblecheckBox.Checked;
             devoluciones.FechaDevolucion = FechaDevoluciondateTimePicker.Value;
@@ -195,12 +196,12 @@ namespace LibraryServices.UI.Registros
             
 
               
-                string nombres = Book.Buscar(id: (int)LibrocomboBox.SelectedValue).NombreLibro;
+                string nombres = Book.Buscar(id: (int)EstudiantecomboBox.SelectedValue).NombreLibro;
                 this.Detalles.Add(
                     new DevolucionDetalles(
-                        libroId: (int)LibrocomboBox.SelectedValue,
+                        libroId: (int)EstudiantecomboBox.SelectedValue,
                         tituloLibro: nombres,
-                        estudianteId: (int)LibrocomboBox.SelectedValue,
+                        estudianteId: (int)EstudiantecomboBox.SelectedValue,
                         disponibilidad: DisponiblecheckBox.Checked,
                         fechaDevolucion: FechaDevoluciondateTimePicker.Value,
                         fechaDeDevueltaLibro: FechaEntregadateTimePicker.Value
@@ -212,7 +213,7 @@ namespace LibraryServices.UI.Registros
 
 
             CargarGrid();
-            LibrocomboBox.SelectAll();
+            EstudiantecomboBox.SelectAll();
         }
 
         private void NuevoButton_Click(object sender, EventArgs e)

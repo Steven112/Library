@@ -43,7 +43,6 @@
             this.AñadirButton = new System.Windows.Forms.Button();
             this.MydataGridView = new System.Windows.Forms.DataGridView();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
@@ -185,25 +184,12 @@
             // 
             this.MyerrorProvider.ContainerControl = this;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Image = global::LibraryServices.Properties.Resources.icons8_imprimir_35;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(358, 427);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 55);
-            this.button1.TabIndex = 135;
-            this.button1.Text = "Eliminar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // EliminarButton
             // 
             this.EliminarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.EliminarButton.Image = global::LibraryServices.Properties.Resources.icons8_eliminar_propiedad_35;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(267, 427);
+            this.EliminarButton.Location = new System.Drawing.Point(320, 427);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(85, 55);
             this.EliminarButton.TabIndex = 134;
@@ -217,7 +203,7 @@
             this.GuardarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.GuardarButton.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(176, 427);
+            this.GuardarButton.Location = new System.Drawing.Point(229, 427);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(85, 55);
             this.GuardarButton.TabIndex = 133;
@@ -231,7 +217,7 @@
             this.NuevoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.NuevoButton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_35;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(85, 427);
+            this.NuevoButton.Location = new System.Drawing.Point(138, 427);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(85, 55);
             this.NuevoButton.TabIndex = 132;
@@ -269,7 +255,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(545, 494);
             this.Controls.Add(this.EstudiantecomboBox);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
@@ -314,7 +299,6 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox EstudiantecomboBox;
     }
 }

@@ -31,12 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.DisponiblecheckBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.IdnumericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.EstudiantecomboBox = new System.Windows.Forms.ComboBox();
-            this.LibrocomboBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
@@ -45,21 +40,31 @@
             this.Removerbutton = new System.Windows.Forms.Button();
             this.AñadirButton = new System.Windows.Forms.Button();
             this.MydataGridView = new System.Windows.Forms.DataGridView();
-            this.FechaDevoluciondateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.FechaEntregadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.PrestamogroupBox = new System.Windows.Forms.GroupBox();
+            this.EstudiantecomboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.PrestamoidnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.LibrocomboBox = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MydataGridView)).BeginInit();
+            this.PrestamogroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PrestamoidnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // DisponiblecheckBox
             // 
             this.DisponiblecheckBox.AutoSize = true;
-            this.DisponiblecheckBox.Location = new System.Drawing.Point(380, 75);
+            this.DisponiblecheckBox.Location = new System.Drawing.Point(16, 65);
             this.DisponiblecheckBox.Name = "DisponiblecheckBox";
             this.DisponiblecheckBox.Size = new System.Drawing.Size(75, 17);
             this.DisponiblecheckBox.TabIndex = 170;
@@ -70,74 +75,25 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 23);
+            this.label3.Location = new System.Drawing.Point(13, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 13);
             this.label3.TabIndex = 169;
             this.label3.Text = "Id:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 168;
-            this.label2.Text = "Estudiante:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 167;
-            this.label1.Text = "Titulo Libro:";
-            // 
             // IdnumericUpDown1
             // 
-            this.IdnumericUpDown1.Location = new System.Drawing.Point(76, 23);
+            this.IdnumericUpDown1.Location = new System.Drawing.Point(176, 23);
             this.IdnumericUpDown1.Name = "IdnumericUpDown1";
-            this.IdnumericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.IdnumericUpDown1.Size = new System.Drawing.Size(45, 20);
             this.IdnumericUpDown1.TabIndex = 166;
-            // 
-            // EstudiantecomboBox
-            // 
-            this.EstudiantecomboBox.FormattingEnabled = true;
-            this.EstudiantecomboBox.Location = new System.Drawing.Point(76, 76);
-            this.EstudiantecomboBox.Name = "EstudiantecomboBox";
-            this.EstudiantecomboBox.Size = new System.Drawing.Size(121, 21);
-            this.EstudiantecomboBox.TabIndex = 165;
-            this.EstudiantecomboBox.SelectedIndexChanged += new System.EventHandler(this.EstudiantecomboBox_SelectedIndexChanged);
-            // 
-            // LibrocomboBox
-            // 
-            this.LibrocomboBox.FormattingEnabled = true;
-            this.LibrocomboBox.Location = new System.Drawing.Point(76, 49);
-            this.LibrocomboBox.Name = "LibrocomboBox";
-            this.LibrocomboBox.Size = new System.Drawing.Size(121, 21);
-            this.LibrocomboBox.TabIndex = 164;
-            this.LibrocomboBox.SelectedIndexChanged += new System.EventHandler(this.LibrocomboBox_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Image = global::LibraryServices.Properties.Resources.icons8_imprimir_35;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(329, 362);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 55);
-            this.button1.TabIndex = 163;
-            this.button1.Text = "Eliminar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // EliminarButton
             // 
             this.EliminarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.EliminarButton.Image = global::LibraryServices.Properties.Resources.icons8_eliminar_propiedad_35;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(238, 362);
+            this.EliminarButton.Location = new System.Drawing.Point(295, 516);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(85, 55);
             this.EliminarButton.TabIndex = 162;
@@ -151,7 +107,7 @@
             this.GuardarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.GuardarButton.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(147, 362);
+            this.GuardarButton.Location = new System.Drawing.Point(204, 516);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(85, 55);
             this.GuardarButton.TabIndex = 161;
@@ -165,7 +121,7 @@
             this.NuevoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.NuevoButton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_35;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(56, 362);
+            this.NuevoButton.Location = new System.Drawing.Point(113, 516);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(85, 55);
             this.NuevoButton.TabIndex = 160;
@@ -183,7 +139,7 @@
             this.groupBox1.Controls.Add(this.Removerbutton);
             this.groupBox1.Controls.Add(this.AñadirButton);
             this.groupBox1.Controls.Add(this.MydataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(13, 126);
+            this.groupBox1.Location = new System.Drawing.Point(12, 262);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(463, 227);
             this.groupBox1.TabIndex = 171;
@@ -223,71 +179,147 @@
             this.MydataGridView.Size = new System.Drawing.Size(433, 153);
             this.MydataGridView.TabIndex = 0;
             // 
-            // FechaDevoluciondateTimePicker
-            // 
-            this.FechaDevoluciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaDevoluciondateTimePicker.Location = new System.Drawing.Point(380, 24);
-            this.FechaDevoluciondateTimePicker.Name = "FechaDevoluciondateTimePicker";
-            this.FechaDevoluciondateTimePicker.Size = new System.Drawing.Size(96, 20);
-            this.FechaDevoluciondateTimePicker.TabIndex = 172;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(219, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 13);
-            this.label4.TabIndex = 173;
-            this.label4.Text = "Fecha Devolucion Establecida:";
-            // 
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(380, 98);
+            this.Buscarbutton.Location = new System.Drawing.Point(227, 23);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(96, 23);
+            this.Buscarbutton.Size = new System.Drawing.Size(69, 23);
             this.Buscarbutton.TabIndex = 174;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // FechaEntregadateTimePicker
             // 
             this.FechaEntregadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaEntregadateTimePicker.Location = new System.Drawing.Point(380, 50);
+            this.FechaEntregadateTimePicker.Location = new System.Drawing.Point(176, 49);
             this.FechaEntregadateTimePicker.Name = "FechaEntregadateTimePicker";
-            this.FechaEntregadateTimePicker.Size = new System.Drawing.Size(96, 20);
+            this.FechaEntregadateTimePicker.Size = new System.Drawing.Size(120, 20);
             this.FechaEntregadateTimePicker.TabIndex = 175;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(212, 50);
+            this.label5.Location = new System.Drawing.Point(13, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(162, 13);
             this.label5.TabIndex = 176;
             this.label5.Text = "Fecha En que se Devolvio Libro:";
             // 
+            // PrestamogroupBox
+            // 
+            this.PrestamogroupBox.Controls.Add(this.label1);
+            this.PrestamogroupBox.Controls.Add(this.EstudiantecomboBox);
+            this.PrestamogroupBox.Controls.Add(this.button1);
+            this.PrestamogroupBox.Controls.Add(this.dateTimePicker1);
+            this.PrestamogroupBox.Controls.Add(this.label6);
+            this.PrestamogroupBox.Controls.Add(this.label7);
+            this.PrestamogroupBox.Controls.Add(this.PrestamoidnumericUpDown);
+            this.PrestamogroupBox.Controls.Add(this.LibrocomboBox);
+            this.PrestamogroupBox.Controls.Add(this.label9);
+            this.PrestamogroupBox.Location = new System.Drawing.Point(14, 88);
+            this.PrestamogroupBox.Name = "PrestamogroupBox";
+            this.PrestamogroupBox.Size = new System.Drawing.Size(462, 168);
+            this.PrestamogroupBox.TabIndex = 177;
+            this.PrestamogroupBox.TabStop = false;
+            this.PrestamogroupBox.Text = "Datos Prestamo";
+            // 
+            // EstudiantecomboBox
+            // 
+            this.EstudiantecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EstudiantecomboBox.FormattingEnabled = true;
+            this.EstudiantecomboBox.Location = new System.Drawing.Point(167, 68);
+            this.EstudiantecomboBox.Name = "EstudiantecomboBox";
+            this.EstudiantecomboBox.Size = new System.Drawing.Size(214, 21);
+            this.EstudiantecomboBox.TabIndex = 145;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(269, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 23);
+            this.button1.TabIndex = 144;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(167, 122);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(96, 20);
+            this.dateTimePicker1.TabIndex = 143;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 13);
+            this.label6.TabIndex = 142;
+            this.label6.Text = "Nombre Estudiante:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 13);
+            this.label7.TabIndex = 141;
+            this.label7.Text = "PrestamoId:";
+            // 
+            // PrestamoidnumericUpDown
+            // 
+            this.PrestamoidnumericUpDown.Location = new System.Drawing.Point(167, 38);
+            this.PrestamoidnumericUpDown.Name = "PrestamoidnumericUpDown";
+            this.PrestamoidnumericUpDown.Size = new System.Drawing.Size(96, 20);
+            this.PrestamoidnumericUpDown.TabIndex = 140;
+            // 
+            // LibrocomboBox
+            // 
+            this.LibrocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LibrocomboBox.FormattingEnabled = true;
+            this.LibrocomboBox.Location = new System.Drawing.Point(167, 95);
+            this.LibrocomboBox.Name = "LibrocomboBox";
+            this.LibrocomboBox.Size = new System.Drawing.Size(214, 21);
+            this.LibrocomboBox.TabIndex = 139;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 95);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 13);
+            this.label9.TabIndex = 137;
+            this.label9.Text = "Titulo Libro:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 119);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 13);
+            this.label1.TabIndex = 174;
+            this.label1.Text = "Fecha Devolucion Establecida:";
+            // 
             // rDevlucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 429);
+            this.ClientSize = new System.Drawing.Size(488, 583);
+            this.Controls.Add(this.PrestamogroupBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.FechaEntregadateTimePicker);
             this.Controls.Add(this.Buscarbutton);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.FechaDevoluciondateTimePicker);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DisponiblecheckBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.IdnumericUpDown1);
-            this.Controls.Add(this.EstudiantecomboBox);
-            this.Controls.Add(this.LibrocomboBox);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
@@ -298,6 +330,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MydataGridView)).EndInit();
+            this.PrestamogroupBox.ResumeLayout(false);
+            this.PrestamogroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PrestamoidnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,12 +342,7 @@
 
         private System.Windows.Forms.CheckBox DisponiblecheckBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown IdnumericUpDown1;
-        private System.Windows.Forms.ComboBox EstudiantecomboBox;
-        private System.Windows.Forms.ComboBox LibrocomboBox;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button NuevoButton;
@@ -321,10 +351,18 @@
         private System.Windows.Forms.Button Removerbutton;
         private System.Windows.Forms.Button AñadirButton;
         private System.Windows.Forms.DataGridView MydataGridView;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker FechaDevoluciondateTimePicker;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker FechaEntregadateTimePicker;
+        private System.Windows.Forms.GroupBox PrestamogroupBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox EstudiantecomboBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown PrestamoidnumericUpDown;
+        private System.Windows.Forms.ComboBox LibrocomboBox;
+        private System.Windows.Forms.Label label9;
     }
 }

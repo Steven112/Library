@@ -14,7 +14,7 @@ namespace LibraryServices.Entdades
         public int PrestamoId { get; set; }
         public int EstudianteId { get; set; }
         [ForeignKey("EstudianteId")]
-        public Estudiante Estudiante { get; set; }
+        public virtual Estudiante Estudiante { get; set; }
         public int LibroId { get; set; }
         public DateTime FechaPrestamo { get; set; }
         public DateTime FechaDevolucion { get; set; }

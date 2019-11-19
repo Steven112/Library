@@ -49,15 +49,35 @@ namespace LibraryServices.BLL
             bool paso = false;
             Contexto db = new Contexto();
             try
-            {//Buscar las entidades que no estan para removerlas
-                var Anterior =PrestamoBLL.Buscar(prestamo.PrestamoId);
-                foreach (var item in Anterior.Detalle)
+            {
+                var Anterior = PrestamoBLL.Buscar(prestamo.PrestamoId);
+               foreach (var item in prestamo.Detalle)
+               {
+                   if (!prestamo.Detalle.Exists(d => d.DetalleId == item.DetalleId))
+                   db.Entry(item).State = EntityState.Deleted;
+                   db.Libro.Find(item.LibroId).Disponibilidad = false;
+               }
+                //funcion de agregar nuevos detalles
+                foreach (var item in prestamo.Detalle)
                 {
-                    if (!prestamo.Detalle.Exists(d => d.NombreLibro == item.NombreLibro))
-                        db.Entry(item).State = EntityState.Deleted;
+                    if(item.DetalleId == 0)
+                    {
+                        db.Entry(item).State = EntityState.Added;
+                    }
+                    else
+                    {
+                        db.Entry(item).State = EntityState.Modified;
+                    }
+
                 }
-                db.Entry(prestamo).State = EntityState.Modified;
-                paso = (db.SaveChanges() > 0);
+
+
+               db.Entry(prestamo).State = EntityState.Modified;
+               paso = (db.SaveChanges() > 0);
+
+                
+                
+                
             }
             catch (Exception)
             {
@@ -76,9 +96,19 @@ namespace LibraryServices.BLL
             Contexto db = new Contexto();
             try
             {
-                var eliminar = db.Prestamo.Find(id);
-                db.Entry(eliminar).State = EntityState.Deleted;
-                paso = (db.SaveChanges() > 0);
+                Prestamo prestamo = db.Prestamo.Find(id);
+
+                foreach (var item in prestamo.Detalle)
+                {
+                    var eliminar = db.Prestamo.Find(id);
+
+                    db.Libro.Find(item.LibroId).Disponibilidad = true;
+                    // contexto.Entry(eliminar).State = System.Data.Entity.EntityState.Deleted;
+
+                }
+                //   contexto.Entry(eliminar).State = System.Data.Entity.EntityState.Deleted;
+                db.Prestamo.Remove(prestamo);
+                paso = (db.SaveChanges() > 0); ;
             }
             catch (Exception)
             {

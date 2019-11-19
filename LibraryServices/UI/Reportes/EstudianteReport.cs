@@ -13,16 +13,28 @@ namespace LibraryServices.UI.Reportes
 {
     public partial class EstudianteReport : Form
     {
-        List<Estudiante> reporte;
+        List<Estudiante> reporte = new List<Estudiante>();
         public EstudianteReport(List<Estudiante> estudiantes)
         {
+            this.reporte = estudiantes;
             InitializeComponent();
-            this.reporte = new List<Estudiante>();
+            EstudentReport reporteEstudiantes = new EstudentReport();
+            reporteEstudiantes.SetDataSource(reporte);
+
+            EstudiantescrystalReportViewer1.ReportSource = reporteEstudiantes;
+            EstudiantescrystalReportViewer1.Refresh();
+
         }
 
         private void EstudiantescrystalReportViewer1_Load(object sender, EventArgs e)
         {
-           // reporte RP = new reporte();
+
+
+            EstudentReport reporteEstudiantes = new EstudentReport();
+            reporteEstudiantes.SetDataSource(reporte);
+
+            EstudiantescrystalReportViewer1.ReportSource = reporteEstudiantes;
+            EstudiantescrystalReportViewer1.Refresh();
         }
     }
 }
