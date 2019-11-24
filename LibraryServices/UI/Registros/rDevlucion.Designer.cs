@@ -34,25 +34,25 @@
             this.IdnumericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Removerbutton = new System.Windows.Forms.Button();
+            this.AñadirButton = new System.Windows.Forms.Button();
             this.MydataGridView = new System.Windows.Forms.DataGridView();
             this.FechaEntregadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.PrestamogroupBox = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BuscarPrestamobutton = new System.Windows.Forms.Button();
+            this.PrestamoIdnumericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.EstudiantecomboBox = new System.Windows.Forms.ComboBox();
             this.DevoluciondateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.LibrocomboBox = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.PrestamoIdnumericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.BuscarPrestamobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.Removerbutton = new System.Windows.Forms.Button();
-            this.AñadirButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -64,17 +64,21 @@
             // DisponiblecheckBox
             // 
             this.DisponiblecheckBox.AutoSize = true;
+            this.DisponiblecheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.DisponiblecheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DisponiblecheckBox.Location = new System.Drawing.Point(16, 65);
             this.DisponiblecheckBox.Name = "DisponiblecheckBox";
             this.DisponiblecheckBox.Size = new System.Drawing.Size(75, 17);
             this.DisponiblecheckBox.TabIndex = 170;
             this.DisponiblecheckBox.Text = "Disponible";
-            this.DisponiblecheckBox.UseVisualStyleBackColor = true;
+            this.DisponiblecheckBox.UseVisualStyleBackColor = false;
             this.DisponiblecheckBox.CheckedChanged += new System.EventHandler(this.DisponiblecheckBox_CheckedChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(13, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 13);
@@ -94,6 +98,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.groupBox1.Controls.Add(this.Removerbutton);
             this.groupBox1.Controls.Add(this.AñadirButton);
             this.groupBox1.Controls.Add(this.MydataGridView);
@@ -102,6 +107,32 @@
             this.groupBox1.Size = new System.Drawing.Size(463, 227);
             this.groupBox1.TabIndex = 171;
             this.groupBox1.TabStop = false;
+            // 
+            // Removerbutton
+            // 
+            this.Removerbutton.Image = global::LibraryServices.Properties.Resources.icons8_remover_etiqueta_20;
+            this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Removerbutton.Location = new System.Drawing.Point(16, 197);
+            this.Removerbutton.Name = "Removerbutton";
+            this.Removerbutton.Size = new System.Drawing.Size(107, 30);
+            this.Removerbutton.TabIndex = 2;
+            this.Removerbutton.Text = "Remover Fila";
+            this.Removerbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Removerbutton.UseVisualStyleBackColor = true;
+            this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
+            // 
+            // AñadirButton
+            // 
+            this.AñadirButton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
+            this.AñadirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AñadirButton.Location = new System.Drawing.Point(353, 6);
+            this.AñadirButton.Name = "AñadirButton";
+            this.AñadirButton.Size = new System.Drawing.Size(96, 26);
+            this.AñadirButton.TabIndex = 1;
+            this.AñadirButton.Text = "Añadir";
+            this.AñadirButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AñadirButton.UseVisualStyleBackColor = true;
+            this.AñadirButton.Click += new System.EventHandler(this.AñadirButton_Click);
             // 
             // MydataGridView
             // 
@@ -122,14 +153,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(13, 49);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(162, 13);
+            this.label5.Size = new System.Drawing.Size(161, 13);
             this.label5.TabIndex = 176;
-            this.label5.Text = "Fecha En que se Devolvio Libro:";
+            this.label5.Text = "Fecha en que se Devolvio Libro:";
             // 
             // PrestamogroupBox
             // 
+            this.PrestamogroupBox.BackColor = System.Drawing.Color.DarkTurquoise;
             this.PrestamogroupBox.Controls.Add(this.label2);
             this.PrestamogroupBox.Controls.Add(this.BuscarPrestamobutton);
             this.PrestamogroupBox.Controls.Add(this.PrestamoIdnumericUpDown1);
@@ -145,6 +179,35 @@
             this.PrestamogroupBox.TabIndex = 177;
             this.PrestamogroupBox.TabStop = false;
             this.PrestamogroupBox.Text = "Datos Prestamo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 177;
+            this.label2.Text = "PrestamoId:";
+            // 
+            // BuscarPrestamobutton
+            // 
+            this.BuscarPrestamobutton.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
+            this.BuscarPrestamobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BuscarPrestamobutton.Location = new System.Drawing.Point(288, 44);
+            this.BuscarPrestamobutton.Name = "BuscarPrestamobutton";
+            this.BuscarPrestamobutton.Size = new System.Drawing.Size(100, 23);
+            this.BuscarPrestamobutton.TabIndex = 176;
+            this.BuscarPrestamobutton.Text = "Buscar";
+            this.BuscarPrestamobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarPrestamobutton.UseVisualStyleBackColor = true;
+            this.BuscarPrestamobutton.Click += new System.EventHandler(this.BuscarPrestamobutton_Click);
+            // 
+            // PrestamoIdnumericUpDown1
+            // 
+            this.PrestamoIdnumericUpDown1.Location = new System.Drawing.Point(174, 44);
+            this.PrestamoIdnumericUpDown1.Name = "PrestamoIdnumericUpDown1";
+            this.PrestamoIdnumericUpDown1.Size = new System.Drawing.Size(108, 20);
+            this.PrestamoIdnumericUpDown1.TabIndex = 175;
             // 
             // label1
             // 
@@ -177,9 +240,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(13, 70);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 13);
+            this.label6.Size = new System.Drawing.Size(105, 13);
             this.label6.TabIndex = 142;
-            this.label6.Text = "Nombre Estudiante:";
+            this.label6.Text = "Nombres Estudiante:";
             // 
             // LibrocomboBox
             // 
@@ -199,26 +262,6 @@
             this.label9.TabIndex = 137;
             this.label9.Text = "Titulo Libro:";
             // 
-            // PrestamoIdnumericUpDown1
-            // 
-            this.PrestamoIdnumericUpDown1.Location = new System.Drawing.Point(174, 44);
-            this.PrestamoIdnumericUpDown1.Name = "PrestamoIdnumericUpDown1";
-            this.PrestamoIdnumericUpDown1.Size = new System.Drawing.Size(108, 20);
-            this.PrestamoIdnumericUpDown1.TabIndex = 175;
-            // 
-            // BuscarPrestamobutton
-            // 
-            this.BuscarPrestamobutton.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
-            this.BuscarPrestamobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarPrestamobutton.Location = new System.Drawing.Point(288, 44);
-            this.BuscarPrestamobutton.Name = "BuscarPrestamobutton";
-            this.BuscarPrestamobutton.Size = new System.Drawing.Size(100, 23);
-            this.BuscarPrestamobutton.TabIndex = 176;
-            this.BuscarPrestamobutton.Text = "Buscar";
-            this.BuscarPrestamobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BuscarPrestamobutton.UseVisualStyleBackColor = true;
-            this.BuscarPrestamobutton.Click += new System.EventHandler(this.BuscarPrestamobutton_Click);
-            // 
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
@@ -231,32 +274,6 @@
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
-            // 
-            // Removerbutton
-            // 
-            this.Removerbutton.Image = global::LibraryServices.Properties.Resources.icons8_remover_etiqueta_20;
-            this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Removerbutton.Location = new System.Drawing.Point(16, 197);
-            this.Removerbutton.Name = "Removerbutton";
-            this.Removerbutton.Size = new System.Drawing.Size(107, 30);
-            this.Removerbutton.TabIndex = 2;
-            this.Removerbutton.Text = "Remover Fila";
-            this.Removerbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Removerbutton.UseVisualStyleBackColor = true;
-            this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
-            // 
-            // AñadirButton
-            // 
-            this.AñadirButton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
-            this.AñadirButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AñadirButton.Location = new System.Drawing.Point(353, 6);
-            this.AñadirButton.Name = "AñadirButton";
-            this.AñadirButton.Size = new System.Drawing.Size(96, 26);
-            this.AñadirButton.TabIndex = 1;
-            this.AñadirButton.Text = "Añadir";
-            this.AñadirButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AñadirButton.UseVisualStyleBackColor = true;
-            this.AñadirButton.Click += new System.EventHandler(this.AñadirButton_Click);
             // 
             // EliminarButton
             // 
@@ -300,19 +317,12 @@
             this.NuevoButton.UseVisualStyleBackColor = true;
             this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 177;
-            this.label2.Text = "PrestamoId:";
-            // 
             // rDevlucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LibraryServices.Properties.Resources.fdfe18cc8108550335a9117e297f2fa1_diseno_de_plantilla_de_logotipo_de_biblioteca;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(488, 583);
             this.Controls.Add(this.PrestamogroupBox);
             this.Controls.Add(this.label5);
