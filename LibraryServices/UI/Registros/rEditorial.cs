@@ -95,6 +95,18 @@ namespace LibraryServices.UI
         {
             Limpiar();
         }
+        private bool ValidarNombre()
+        {
+            bool realizado = true;
+            RepositorioBase<Editorial> genericaBLL = new RepositorioBase<Editorial>(new Contexto());
+            List<Editorial> productores = genericaBLL.GetList(d => (d.Nombre ).Contains(NombretextBox.Text));
+
+            if (productores != null)
+            {
+                realizado = false;
+            }
+            return realizado;
+        }
         private bool validar()
         {
             bool paso = true;
@@ -110,6 +122,12 @@ namespace LibraryServices.UI
                 MyerrorProvider.SetError(DireccionTextBox, "El Campo no debe estar vacio");
                 DireccionTextBox.Focus();
                 paso = false;
+            }
+            if (ValidarNombre())
+            {
+                MyerrorProvider.SetError(NombretextBox, "Ya existe una Editorial con este nombre ");
+                NombretextBox.Focus();
+                paso= false;
             }
 
             return paso;

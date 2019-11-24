@@ -15,12 +15,12 @@ namespace LibraryServices.Entdades
         public string NombreLibro { get; set; }
         public string ISBN { get; set; }
         public int CategoriaId { get; set; }
-        public string Introduccion { get; set; }
         public int EditorialId { get; set; }
         [ForeignKey("EditorialId")]
         public Editorial editorial { get; set; }
         public DateTime FechaImpresion { get; set; }
         public bool Disponibilidad { get; set; }
+        public int UsuarioId { get; set; }
 
         public Libro()
         {
@@ -28,12 +28,12 @@ namespace LibraryServices.Entdades
             NombreLibro = string.Empty;
             ISBN = string.Empty;
             CategoriaId = 0;
-            Introduccion = string.Empty;
             EditorialId = 0;
+            editorial = editorial;
             FechaImpresion = DateTime.Now;
             Disponibilidad = true;
         }
 
-       
+        
     }
 }

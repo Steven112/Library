@@ -16,12 +16,13 @@ namespace LibraryServices.Entdades
         public string Email { get; set; }
         public string Contraseña { get; set; }
         public DateTime FechaInsercion { get; set; }
+        public string Nivel { get; set; }
 
         public Usuarios()
         {
         }
 
-        public Usuarios(int usuarioId, string nombres, string celular, string email, string contraseña, DateTime fechaInsercion)
+        public Usuarios(int usuarioId, string nombres, string celular, string email, string contraseña, DateTime fechaInsercion, string nivel)
         {
             UsuarioId = usuarioId;
             Nombres = nombres;
@@ -29,6 +30,7 @@ namespace LibraryServices.Entdades
             Email = email;
             Contraseña = contraseña;
             FechaInsercion = fechaInsercion;
+            Nivel = nivel;
         }
     }
 }

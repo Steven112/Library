@@ -24,7 +24,7 @@ namespace LibraryServices.BLL
                     db.SaveChanges();
                     paso = true;
                 }
-                
+
             }
             catch (Exception)
             {
@@ -49,7 +49,7 @@ namespace LibraryServices.BLL
                 {
                     paso = true;
                 }
-               
+
             }
             catch (Exception)
             {
@@ -68,7 +68,7 @@ namespace LibraryServices.BLL
             try
             {
                 estudiante = db.Estudiante.Find(id);
-                
+
             }
             catch (Exception)
             {
@@ -95,7 +95,7 @@ namespace LibraryServices.BLL
                 {
                     paso = true;
                 }
-                
+
             }
             catch (Exception)
             {
@@ -115,7 +115,7 @@ namespace LibraryServices.BLL
             try
             {
                 lista = db.Estudiante.Where(expression).ToList();
-                
+
             }
             catch (Exception)
             {
@@ -127,9 +127,7 @@ namespace LibraryServices.BLL
             }
             return lista;
 
-            
+
         }
-
-
     }
 }

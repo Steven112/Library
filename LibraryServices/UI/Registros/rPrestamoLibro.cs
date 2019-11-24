@@ -25,10 +25,10 @@ namespace LibraryServices.UI
         {
 
             InitializeComponent();
-            LlenaCombox();
             this.Detalles = new List<PrestamosDetalle>();
             Estudent = new RepositorioBase<Estudiante>(new Contexto());
             Book = new RepositorioBase<Libro>(new Contexto());
+            LlenaCombox();
         }
 
 
@@ -102,8 +102,8 @@ namespace LibraryServices.UI
             FechaPrestamodateTimePicker.Value = prestamo.FechaPrestamo;
             FechaDevoluciondateTimePicker.Value = prestamo.FechaDevolucion;
             this.Detalles = prestamo.Detalle;
-            CargarGrid();
             LlenaCombox();
+            CargarGrid();
 
 
 

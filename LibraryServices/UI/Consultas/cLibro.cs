@@ -31,13 +31,13 @@ namespace LibraryServices.UI.Consultas
                 case 1:
 
 
-                    id = Convert.ToInt32(ConsultanumericUpDown.Value);
+                    id = Convert.ToInt32(CriteriotextBox.Text);
 
                     filtro = a => a.LibroId == id;
                     break;
                 case 2:// por nombre
 
-                    filtro = a => a.NombreLibro.Contains(Criterio_textBox.Text);
+                    filtro = a => a.NombreLibro.Contains(CriteriotextBox.Text);
                     break;
 
                 ///FECHA          
@@ -47,10 +47,10 @@ namespace LibraryServices.UI.Consultas
                     break;
                 case 4:// por ISBN
 
-                    filtro = a => a.ISBN.Contains(Criterio_textBox.Text);
+                    filtro = a => a.ISBN.Contains(CriteriotextBox.Text);
                     break;
                 case 5:// por CATEGORIA
-                    id = Convert.ToInt32(ConsultanumericUpDown.Value);
+                    id = Convert.ToInt32(CriteriotextBox.Text);
                     filtro = a => a.CategoriaId == id;
                     break;
 
@@ -78,7 +78,7 @@ namespace LibraryServices.UI.Consultas
 
         private void Consulta_dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            Consulta_dataGridView.Columns[6].Visible = false;
         }
 
         private void ConsultanumericUpDown_ValueChanged(object sender, EventArgs e)

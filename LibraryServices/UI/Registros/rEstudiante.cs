@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -31,12 +32,45 @@ namespace LibraryServices.UI
             DirecciontextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
             EmailtextBox.Text = string.Empty;
+            UsuariocomboBox.SelectedItem = -1;
         }
         private bool ExisteEnLaBaseDeDatos()
         {
             Estudent = new RepositorioBase<Estudiante>(new Contexto());
             Estudiante estudiante = Estudent.Buscar((int)IDnumericUpDown.Value);
             return (estudiante != null);
+        }
+        private bool ValidarMatricula()
+        {
+            bool realizado = true;
+            RepositorioBase<Estudiante> generica = new RepositorioBase<Estudiante>(new Contexto());
+            List<Estudiante> estudiantes = generica.GetList(d => d.Matricula.Contains(MatriculatextBox.Text));
+
+            if (estudiantes != null)
+            {
+                realizado = false;
+            }
+            return realizado;
+        }
+        private Boolean EmailValido(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private bool validar()
@@ -60,6 +94,30 @@ namespace LibraryServices.UI
             {
                 MyerrorProvider.SetError(EmailtextBox, "El campo no debe estar vacio");
                EmailtextBox.Focus();
+                paso = false;
+            }
+            if (ValidaEmail())
+            {
+                MyerrorProvider.SetError(EmailtextBox, "Ya existe un estudiante con este Email");
+                EmailtextBox.Focus();
+                paso = false;
+            }
+            if (!EmailValido(EmailtextBox.Text))
+            {
+                MyerrorProvider.SetError(EmailtextBox, "Email no valido");
+                EmailtextBox.Focus();
+                paso = false;
+            }
+            if (ValidarMatricula())
+            {
+                MyerrorProvider.SetError(MatriculatextBox, "Ya existe un estudiante con esta matricula");
+                MatriculatextBox.Focus();
+                paso = false;
+            }
+            if (ValidarCelular())
+            {
+                MyerrorProvider.SetError(CelularMaskedTextBox, "Ya existe un estudiante con este celular");
+                CelularMaskedTextBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(ApellidotextBox.Text))
@@ -95,6 +153,18 @@ namespace LibraryServices.UI
                 paso = false;
             }
             return paso;
+        }
+        private bool ValidaEmail()
+        {
+            bool realizado = true;
+            RepositorioBase<Estudiante> generica = new RepositorioBase<Estudiante>(new Contexto());
+            List<Estudiante> estudiantes = generica.GetList(d => d.Email.Contains(EmailtextBox.Text));
+
+            if (estudiantes != null)
+            {
+                realizado = false;
+            }
+            return realizado;
         }
         private Estudiante LlenaClase()
         {
@@ -151,7 +221,18 @@ namespace LibraryServices.UI
             UsuariocomboBox.DisplayMember = "Nombres";
 
         }
+        private bool ValidarCelular()
+        {
+            bool realizado = true;
+           RepositorioBase<Estudiante> generic = new RepositorioBase<Estudiante>(new Contexto());
+            List<Estudiante> Estudent = generic.GetList(d => d.Celular.Contains(CelularMaskedTextBox.Text));
 
+            if (Estudent != null)
+            {
+                realizado = false;
+            }
+            return realizado;
+        }
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Estudent = new RepositorioBase<Estudiante>(new Contexto());

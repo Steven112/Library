@@ -12,23 +12,29 @@ namespace LibraryServices.Entdades
     public class Devoluciones
     {
         [Key]
-        public int DevolucionId { get; set; }     
+        public int DevolucionId { get; set; }
+        public bool Disponible { get; set; }
+        public int PrestamoId { get; set; }
         public int EstudianteId { get; set; }
         [ForeignKey("EstudianteId")]
-        public Estudiante estudiante { get; set; }
+        public Estudiante Estudiante { get; set; }
         public int LibroId { get; set; }
-        public bool Disponible { get; set; }
+        [ForeignKey("LibroId")]
+        public Libro libro { get; set; }
         public virtual List<DevolucionDetalles> DetalleDev { get; set; }
         public DateTime FechaDevolucion { get; set; }
         public DateTime FechaDevueltaLibro { get; set; }
+        public int UsuarioId { get; set; }
 
-        public Devoluciones(int devolucionId, int estudianteId, Estudiante estudiante, int libroId, bool disponible, List<DevolucionDetalles> detalleDev, DateTime fechaDevolucion, DateTime fechaDevueltaLibro)
+        public Devoluciones(int devolucionId, bool disponible, int prestamoId, int estudianteId, Estudiante estudiante, int libroId, Libro libro, List<DevolucionDetalles> detalleDev, DateTime fechaDevolucion, DateTime fechaDevueltaLibro)
         {
             DevolucionId = devolucionId;
-            EstudianteId = estudianteId;
-            this.estudiante = estudiante;
-            LibroId = libroId;
             Disponible = disponible;
+            PrestamoId = prestamoId;
+            EstudianteId = estudianteId;
+            Estudiante = estudiante;
+            LibroId = libroId;
+            this.libro = libro;
             DetalleDev = detalleDev;
             FechaDevolucion = fechaDevolucion;
             FechaDevueltaLibro = fechaDevueltaLibro;

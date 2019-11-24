@@ -46,6 +46,8 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.MyerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.UsuariocomboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -164,7 +166,7 @@
             // 
             this.Eliminarbutton.Image = global::LibraryServices.Properties.Resources.icons8_eliminar_propiedad_35;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(167, 186);
+            this.Eliminarbutton.Location = new System.Drawing.Point(169, 212);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 56);
             this.Eliminarbutton.TabIndex = 125;
@@ -177,7 +179,7 @@
             // 
             this.Guardarbutton.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(86, 186);
+            this.Guardarbutton.Location = new System.Drawing.Point(88, 212);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 56);
             this.Guardarbutton.TabIndex = 124;
@@ -190,7 +192,7 @@
             // 
             this.Nuevobutton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_35;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(5, 186);
+            this.Nuevobutton.Location = new System.Drawing.Point(7, 212);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 56);
             this.Nuevobutton.TabIndex = 123;
@@ -203,11 +205,33 @@
             // 
             this.MyerrorProvider.ContainerControl = this;
             // 
+            // UsuariocomboBox
+            // 
+            this.UsuariocomboBox.FormattingEnabled = true;
+            this.UsuariocomboBox.Items.AddRange(new object[] {
+            "Administrador",
+            "Usuario"});
+            this.UsuariocomboBox.Location = new System.Drawing.Point(101, 173);
+            this.UsuariocomboBox.Name = "UsuariocomboBox";
+            this.UsuariocomboBox.Size = new System.Drawing.Size(138, 21);
+            this.UsuariocomboBox.TabIndex = 127;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 173);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 128;
+            this.label2.Text = "Tipo Usuario:";
+            // 
             // rUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 251);
+            this.ClientSize = new System.Drawing.Size(256, 280);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.UsuariocomboBox);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
@@ -252,5 +276,7 @@
         private System.Windows.Forms.TextBox NombresTextBox;
         private System.Windows.Forms.NumericUpDown IdNumericUpDown;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox UsuariocomboBox;
     }
 }

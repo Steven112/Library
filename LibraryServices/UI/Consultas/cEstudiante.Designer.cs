@@ -44,9 +44,9 @@
             // 
             // Imprimirbutton
             // 
-            this.Imprimirbutton.Location = new System.Drawing.Point(259, 233);
+            this.Imprimirbutton.Location = new System.Drawing.Point(638, 12);
             this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(75, 35);
+            this.Imprimirbutton.Size = new System.Drawing.Size(75, 22);
             this.Imprimirbutton.TabIndex = 63;
             this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.UseVisualStyleBackColor = true;
@@ -54,20 +54,23 @@
             // 
             // Consultarbutton
             // 
-            this.Consultarbutton.Location = new System.Drawing.Point(373, 233);
+            this.Consultarbutton.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
+            this.Consultarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Consultarbutton.Location = new System.Drawing.Point(566, 13);
             this.Consultarbutton.Name = "Consultarbutton";
-            this.Consultarbutton.Size = new System.Drawing.Size(75, 35);
+            this.Consultarbutton.Size = new System.Drawing.Size(68, 21);
             this.Consultarbutton.TabIndex = 62;
-            this.Consultarbutton.Text = "Consultar";
+            this.Consultarbutton.Text = "Buscar";
+            this.Consultarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Consultarbutton.UseVisualStyleBackColor = true;
             this.Consultarbutton.Click += new System.EventHandler(this.Consultarbutton_Click);
             // 
             // Hasta_dateTimePicker
             // 
             this.Hasta_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Hasta_dateTimePicker.Location = new System.Drawing.Point(212, 12);
+            this.Hasta_dateTimePicker.Location = new System.Drawing.Point(175, 12);
             this.Hasta_dateTimePicker.Name = "Hasta_dateTimePicker";
-            this.Hasta_dateTimePicker.Size = new System.Drawing.Size(122, 20);
+            this.Hasta_dateTimePicker.Size = new System.Drawing.Size(80, 20);
             this.Hasta_dateTimePicker.TabIndex = 60;
             // 
             // Desde_dateTimePicker
@@ -75,13 +78,13 @@
             this.Desde_dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.Desde_dateTimePicker.Location = new System.Drawing.Point(48, 12);
             this.Desde_dateTimePicker.Name = "Desde_dateTimePicker";
-            this.Desde_dateTimePicker.Size = new System.Drawing.Size(117, 20);
+            this.Desde_dateTimePicker.Size = new System.Drawing.Size(80, 20);
             this.Desde_dateTimePicker.TabIndex = 59;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(171, 12);
+            this.label4.Location = new System.Drawing.Point(134, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 58;
@@ -98,15 +101,15 @@
             // 
             // CriteriotextBox
             // 
-            this.CriteriotextBox.Location = new System.Drawing.Point(574, 12);
+            this.CriteriotextBox.Location = new System.Drawing.Point(468, 13);
             this.CriteriotextBox.Name = "CriteriotextBox";
-            this.CriteriotextBox.Size = new System.Drawing.Size(139, 20);
+            this.CriteriotextBox.Size = new System.Drawing.Size(92, 20);
             this.CriteriotextBox.TabIndex = 56;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(526, 12);
+            this.label2.Location = new System.Drawing.Point(420, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 55;
@@ -125,15 +128,15 @@
             "Email",
             "Direccion",
             "Fecha"});
-            this.FiltrocomboBox.Location = new System.Drawing.Point(399, 12);
+            this.FiltrocomboBox.Location = new System.Drawing.Point(320, 12);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
-            this.FiltrocomboBox.Size = new System.Drawing.Size(121, 21);
+            this.FiltrocomboBox.Size = new System.Drawing.Size(94, 21);
             this.FiltrocomboBox.TabIndex = 54;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(340, 12);
+            this.label1.Location = new System.Drawing.Point(261, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 53;
@@ -151,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 275);
+            this.ClientSize = new System.Drawing.Size(723, 226);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.Consultarbutton);
             this.Controls.Add(this.Hasta_dateTimePicker);

@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,8 +30,10 @@ namespace LibraryServices.UI.Registros
             CelularMaskedTextBox.Text = string.Empty;
             ContraseñaTextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
+            UsuariocomboBox.SelectedItem = 0;
         }
         private Usuarios LlenaClase()
+
         {
             Usuarios usuarios = new Usuarios();
             usuarios.UsuarioId = Convert.ToInt32(IdNumericUpDown.Value);
@@ -39,6 +42,7 @@ namespace LibraryServices.UI.Registros
             usuarios.Celular = CelularMaskedTextBox.Text;
             usuarios.Contraseña = ContraseñaTextBox.Text;
             usuarios.FechaInsercion = FechadateTimePicker.Value;
+            usuarios.Nivel = Convert.ToString(UsuariocomboBox.SelectedItem);            
             return usuarios;
         }
         private void LlenaCampo(Usuarios usuarios)
@@ -49,6 +53,8 @@ namespace LibraryServices.UI.Registros
             CelularMaskedTextBox.Text = usuarios.Celular;
             ContraseñaTextBox.Text = usuarios.Contraseña;
             FechadateTimePicker.Value = usuarios.FechaInsercion;
+            UsuariocomboBox.SelectedItem= usuarios.Nivel;
+            
         }
         private bool ExisteEnLaBaseDeDatos()
         {
@@ -56,11 +62,90 @@ namespace LibraryServices.UI.Registros
             Usuarios user = repositorio.Buscar((int)IdNumericUpDown.Value);
             return (user != null);
         }
+        private Boolean EmailValido(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        private bool ValidaEmail()
+        {
+            bool realizado = true;
+            RepositorioBase<Estudiante> generica = new RepositorioBase<Estudiante>(new Contexto());
+            List<Estudiante> estudiantes = generica.GetList(d => d.Email.Contains(EmailTextBox.Text));
+
+            if (estudiantes != null)
+            {
+                realizado = false;
+            }
+            return realizado;
+        }
+        private bool ValidarNombre()
+        {
+            bool realizado = true;
+            RepositorioBase<Usuarios> generic = new RepositorioBase<Usuarios>(new Contexto());
+            List<Usuarios> productores = generic.GetList(d => (d.Nombres + d.Contraseña).Contains(NombresTextBox.Text + ContraseñaTextBox.Text));
+
+            if (productores != null)
+            {
+                realizado = false;
+            }
+            return realizado;
+        }
+        private bool ValidarCelular()
+        {
+            bool realizado = true;
+            RepositorioBase<Usuarios> generic = new RepositorioBase<Usuarios>(new Contexto());
+            List<Usuarios> user = generic.GetList(d => d.Celular.Contains(CelularMaskedTextBox.Text));
+
+            if (user != null)
+            {
+                realizado = false;
+            }
+            return realizado;
+        }
         private bool validar()
         {
             bool paso = true;
             MyerrorProvider.Clear();
-
+            if (!ValidarCelular())
+            {
+                MyerrorProvider.SetError(CelularMaskedTextBox, "Ya existe un usuario con este celular");
+                CelularMaskedTextBox.Focus();
+                paso = false;
+            }
+            if (!ValidaEmail())
+            {
+                MyerrorProvider.SetError(EmailTextBox, "Ya existe un usuario con este Email");
+                EmailTextBox.Focus();
+                paso = false;
+            }
+            if (!EmailValido(EmailTextBox.Text))
+            {
+                MyerrorProvider.SetError(EmailTextBox, "Email no valido");
+                EmailTextBox.Focus();
+                paso = false;
+            }
+            if (ContraseñaTextBox.Text == NombresTextBox.Text)
+            {
+                MyerrorProvider.SetError(ContraseñaTextBox, "La contraseña no debe ser igual al nombre");
+                ContraseñaTextBox.Focus();
+                paso = false;
+            }
             if (string.IsNullOrWhiteSpace(NombresTextBox.Text))
             {
                 MyerrorProvider.SetError(NombresTextBox, "El campo no puede estar vacio");
@@ -73,8 +158,19 @@ namespace LibraryServices.UI.Registros
                 EmailTextBox.Focus();
                 paso = false;
             }
+            if (!ValidarNombre())
+            {
+                MyerrorProvider.SetError(ContraseñaTextBox, "Ya existe un usuario con esa contraseña");
+                ContraseñaTextBox.Focus();
+                paso = false;
+            }
+            if (string.IsNullOrWhiteSpace(UsuariocomboBox.Text))
+            {
+                MyerrorProvider.SetError(UsuariocomboBox, "El campo no puedes estar vacio");
+                UsuariocomboBox.Focus();
+                paso = false;
+            }
 
-            
             if (string.IsNullOrWhiteSpace(CelularMaskedTextBox.Text))
             {
                 MyerrorProvider.SetError(CelularMaskedTextBox, "El campo no puede estar vacio");

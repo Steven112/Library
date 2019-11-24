@@ -49,12 +49,25 @@ namespace LibraryServices.BLL
 
             Contexto db = new Contexto();
             try
-            {//Buscar las entidades que no estan para removerlas
+            {
                 var Anterior = DevolucionesBLL.Buscar(devoluciones.DevolucionId);
                 foreach (var item in Anterior.DetalleDev)
                 {
-                    if (!devoluciones.DetalleDev.Exists(d => d.LibroId == item.LibroId))
+                    if (!devoluciones.DetalleDev.Exists(d => d.DevolucionDetId == item.DevolucionDetId))
                         db.Entry(item).State = EntityState.Deleted;
+                        db.Libro.Find(item.LibroId).Disponibilidad = true;
+                }
+                foreach (var item in devoluciones.DetalleDev)
+                {
+                    if (item.DevolucionDetId == 0)
+                    {
+                        db.Entry(item).State = EntityState.Added;
+                    }
+                    else
+                    {
+                        db.Entry(item).State = EntityState.Modified;
+                    }
+
                 }
                 db.Entry(devoluciones).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
@@ -76,9 +89,18 @@ namespace LibraryServices.BLL
             Contexto db = new Contexto();
             try
             {
-                var eliminar = db.Devolucion.Find(id);
-                db.Entry(eliminar).State = EntityState.Deleted;
-                paso = (db.SaveChanges() > 0);
+                Devoluciones devoluciones = db.Devolucion.Find(id);
+
+                foreach (var item in devoluciones.DetalleDev)
+                {
+                    var eliminar = db.Devolucion.Find(id);
+
+                    db.Libro.Find(item.LibroId).Disponibilidad = true;
+
+
+                }
+                db.Devolucion.Remove(devoluciones);
+                paso = (db.SaveChanges() > 0); 
             }
             catch (Exception)
             {
@@ -95,11 +117,15 @@ namespace LibraryServices.BLL
                 devoluciones = db.Devolucion.Find(id);
                 if (devoluciones != null)
                     devoluciones.DetalleDev.Count();
-                db.Dispose();
+                
             }
             catch (Exception)
             {
                 throw;
+            }
+            finally
+            {
+                db.Dispose();
             }
             return devoluciones;
         }

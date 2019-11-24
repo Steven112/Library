@@ -39,18 +39,20 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(83, 221);
+            this.button1.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(371, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 42);
+            this.button1.Size = new System.Drawing.Size(99, 20);
             this.button1.TabIndex = 44;
-            this.button1.Text = "Consultar";
+            this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(305, 11);
+            this.label2.Location = new System.Drawing.Point(190, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 43;
@@ -80,7 +82,7 @@
             // 
             // CriteriotextBox
             // 
-            this.CriteriotextBox.Location = new System.Drawing.Point(353, 13);
+            this.CriteriotextBox.Location = new System.Drawing.Point(238, 13);
             this.CriteriotextBox.Name = "CriteriotextBox";
             this.CriteriotextBox.Size = new System.Drawing.Size(117, 20);
             this.CriteriotextBox.TabIndex = 40;
@@ -98,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 275);
+            this.ClientSize = new System.Drawing.Size(476, 233);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

@@ -53,11 +53,10 @@ namespace LibraryServices.BLL
                 var Anterior = PrestamoBLL.Buscar(prestamo.PrestamoId);
                foreach (var item in prestamo.Detalle)
                {
-                   if (!prestamo.Detalle.Exists(d => d.DetalleId == item.DetalleId))
+                   if (!prestamo.Detalle.Exists(d => d.DetalleId== item.DetalleId))
                    db.Entry(item).State = EntityState.Deleted;
                    db.Libro.Find(item.LibroId).Disponibilidad = false;
                }
-                //funcion de agregar nuevos detalles
                 foreach (var item in prestamo.Detalle)
                 {
                     if(item.DetalleId == 0)
@@ -70,8 +69,6 @@ namespace LibraryServices.BLL
                     }
 
                 }
-
-
                db.Entry(prestamo).State = EntityState.Modified;
                paso = (db.SaveChanges() > 0);
 
@@ -103,12 +100,11 @@ namespace LibraryServices.BLL
                     var eliminar = db.Prestamo.Find(id);
 
                     db.Libro.Find(item.LibroId).Disponibilidad = true;
-                    // contexto.Entry(eliminar).State = System.Data.Entity.EntityState.Deleted;
+                  
 
                 }
-                //   contexto.Entry(eliminar).State = System.Data.Entity.EntityState.Deleted;
                 db.Prestamo.Remove(prestamo);
-                paso = (db.SaveChanges() > 0); ;
+                paso = (db.SaveChanges() > 0); 
             }
             catch (Exception)
             {

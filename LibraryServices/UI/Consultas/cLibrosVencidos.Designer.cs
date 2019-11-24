@@ -40,26 +40,29 @@
             // 
             // Imprimirbutton
             // 
-            this.Imprimirbutton.Location = new System.Drawing.Point(223, 285);
+            this.Imprimirbutton.Location = new System.Drawing.Point(569, 9);
             this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(75, 35);
+            this.Imprimirbutton.Size = new System.Drawing.Size(87, 21);
             this.Imprimirbutton.TabIndex = 36;
             this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(342, 285);
+            this.button1.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(483, 9);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
+            this.button1.Size = new System.Drawing.Size(80, 22);
             this.button1.TabIndex = 35;
-            this.button1.Text = "Consultar";
+            this.button1.Text = "Buscar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Criterio_textBox
             // 
-            this.Criterio_textBox.Location = new System.Drawing.Point(414, 9);
+            this.Criterio_textBox.Location = new System.Drawing.Point(338, 10);
             this.Criterio_textBox.Name = "Criterio_textBox";
             this.Criterio_textBox.Size = new System.Drawing.Size(139, 20);
             this.Criterio_textBox.TabIndex = 30;
@@ -67,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(366, 9);
+            this.label2.Location = new System.Drawing.Point(290, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 29;
@@ -78,7 +81,7 @@
             this.Filtro_comboBox.FormattingEnabled = true;
             this.Filtro_comboBox.Items.AddRange(new object[] {
             "todo"});
-            this.Filtro_comboBox.Location = new System.Drawing.Point(177, 8);
+            this.Filtro_comboBox.Location = new System.Drawing.Point(75, 10);
             this.Filtro_comboBox.Name = "Filtro_comboBox";
             this.Filtro_comboBox.Size = new System.Drawing.Size(121, 21);
             this.Filtro_comboBox.TabIndex = 28;
@@ -87,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(114, 9);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 27;
@@ -105,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 332);
+            this.ClientSize = new System.Drawing.Size(669, 284);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Criterio_textBox);

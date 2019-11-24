@@ -56,11 +56,23 @@ namespace LibraryServices.UI
             LibroIdnumericUpDown.Value = LB.LibroId;
             NombretextBox.Text = LB.NombreLibro;
             ISBNtextBox.Text = LB.ISBN;
-            CategoriacomboBox.SelectedItem = LB.CategoriaId;
-            EditoracomboBox.SelectedItem = LB.EditorialId;
+            CategoriacomboBox.SelectedValue = LB.CategoriaId;
+            EditoracomboBox.SelectedValue = LB.EditorialId;
             FeechaLibrodateTimePicker.Value =LB.FechaImpresion;
             LlenaCombox();
 
+        }
+        private bool ValidarISBN()
+        {
+            bool realizado = true;
+            RepositorioBase<Libro> genericaBLL = new RepositorioBase<Libro>(new Contexto());
+            List<Libro> productores = genericaBLL.GetList(d => (d.ISBN).Contains(ISBNtextBox.Text));
+
+            if (productores != null)
+            {
+                realizado = false;
+            }
+            return realizado;
         }
         private bool validar()
         {
@@ -89,6 +101,12 @@ namespace LibraryServices.UI
             {
                 MyerrorProvider.SetError(EditoracomboBox, "El Campo no debe estar vacio");
                 EditoracomboBox.Focus();
+                paso = false;
+            }
+            if (ValidarISBN())
+            {
+                MyerrorProvider.SetError(ISBNtextBox, "Ya existe un Libro con este ISBN");
+                ISBNtextBox.Focus();
                 paso = false;
             }
 
