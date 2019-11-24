@@ -48,7 +48,7 @@
             this.NuevoButton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.EstudiantecomboBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PrestamoidnumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MydataGridView)).BeginInit();
@@ -190,7 +190,7 @@
             this.EliminarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.EliminarButton.Image = global::LibraryServices.Properties.Resources.icons8_eliminar_propiedad_35;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(320, 427);
+            this.EliminarButton.Location = new System.Drawing.Point(269, 427);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(85, 55);
             this.EliminarButton.TabIndex = 134;
@@ -204,7 +204,7 @@
             this.GuardarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.GuardarButton.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(229, 427);
+            this.GuardarButton.Location = new System.Drawing.Point(178, 427);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(85, 55);
             this.GuardarButton.TabIndex = 133;
@@ -218,7 +218,7 @@
             this.NuevoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.NuevoButton.Image = global::LibraryServices.Properties.Resources.icons8_agregar_propiedad_35;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(138, 427);
+            this.NuevoButton.Location = new System.Drawing.Point(87, 427);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(85, 55);
             this.NuevoButton.TabIndex = 132;
@@ -248,18 +248,19 @@
             this.EstudiantecomboBox.Size = new System.Drawing.Size(214, 21);
             this.EstudiantecomboBox.TabIndex = 136;
             // 
-            // button1
+            // Imprimirbutton
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Image = global::LibraryServices.Properties.Resources.icons8_guardar_35;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(411, 427);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 55);
-            this.button1.TabIndex = 137;
-            this.button1.Text = "Guardar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Imprimirbutton.Image = global::LibraryServices.Properties.Resources.icons8_imprimir_35;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Imprimirbutton.Location = new System.Drawing.Point(360, 427);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(85, 55);
+            this.Imprimirbutton.TabIndex = 138;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
             // rPrestamoLibro
             // 
@@ -268,7 +269,7 @@
             this.BackgroundImage = global::LibraryServices.Properties.Resources.fdfe18cc8108550335a9117e297f2fa1_diseno_de_plantilla_de_logotipo_de_biblioteca;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(545, 494);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.EstudiantecomboBox);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
@@ -315,6 +316,6 @@
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.ErrorProvider MyerrorProvider;
         private System.Windows.Forms.ComboBox EstudiantecomboBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Imprimirbutton;
     }
 }

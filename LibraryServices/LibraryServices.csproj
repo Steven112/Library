@@ -95,7 +95,73 @@
     <Compile Include="UI\Login\Logins.Designer.cs">
       <DependentUpon>Logins.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Reportes\EstudentReport.cs">
+    <Compile Include="UI\Reportes\CategoriaR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\CategoriaR.Designer.cs">
+      <DependentUpon>CategoriaR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\EditorialR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\EditorialR.Designer.cs">
+      <DependentUpon>EditorialR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\PrestamoReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\PrestamoReportes.Designer.cs">
+      <DependentUpon>PrestamoReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\RPLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\RPLibros.Designer.cs">
+      <DependentUpon>RPLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\DevolucionesR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\DevolucionesR.Designer.cs">
+      <DependentUpon>DevolucionesR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\RPTConsutas\DevolucionesRP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DevolucionesRP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\RPTConsutas\EditorialRP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorialRP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\RPTConsutas\LibrosRP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibrosRP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\PrestamoRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\PrestamoRP.Designer.cs">
+      <DependentUpon>PrestamoRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\RPTConsutas\RPCategorias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPCategorias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\RPT\Detalle.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Detalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\RPTConsutas\EstudentReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EstudentReport.rpt</DependentUpon>
@@ -131,11 +197,11 @@
     <Compile Include="UI\Consultas\cLibro.Designer.cs">
       <DependentUpon>cLibro.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consultas\cLibrosVencidos.cs">
+    <Compile Include="UI\Consultas\cDevoluciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\cLibrosVencidos.Designer.cs">
-      <DependentUpon>cLibrosVencidos.cs</DependentUpon>
+    <Compile Include="UI\Consultas\cDevoluciones.Designer.cs">
+      <DependentUpon>cDevoluciones.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Consultas\cPrestamos.cs">
       <SubType>Form</SubType>
@@ -185,7 +251,7 @@
     <Compile Include="UI\Registros\rUsuario.Designer.cs">
       <DependentUpon>rUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Reportes\PrestamoReporte.cs">
+    <Compile Include="UI\Reportes\RPTConsutas\PrestamoReporte.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PrestamoReporte.rpt</DependentUpon>
@@ -207,7 +273,45 @@
     <EmbeddedResource Include="UI\Login\Logins.resx">
       <DependentUpon>Logins.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Reportes\EstudentReport.rpt">
+    <EmbeddedResource Include="UI\Reportes\CategoriaR.resx">
+      <DependentUpon>CategoriaR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\EditorialR.resx">
+      <DependentUpon>EditorialR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\PrestamoReportes.resx">
+      <DependentUpon>PrestamoReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPLibros.resx">
+      <DependentUpon>RPLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\DevolucionesR.resx">
+      <DependentUpon>DevolucionesR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPTConsutas\DevolucionesRP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DevolucionesRP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPTConsutas\EditorialRP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EditorialRP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPTConsutas\LibrosRP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LibrosRP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\PrestamoRP.resx">
+      <DependentUpon>PrestamoRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPTConsutas\RPCategorias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPCategorias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPT\Detalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Detalle.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPTConsutas\EstudentReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>EstudentReport.cs</LastGenOutput>
     </EmbeddedResource>
@@ -226,8 +330,8 @@
     <EmbeddedResource Include="UI\Consultas\cLibro.resx">
       <DependentUpon>cLibro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\cLibrosVencidos.resx">
-      <DependentUpon>cLibrosVencidos.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Consultas\cDevoluciones.resx">
+      <DependentUpon>cDevoluciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\cPrestamos.resx">
       <DependentUpon>cPrestamos.cs</DependentUpon>
@@ -253,7 +357,7 @@
     <EmbeddedResource Include="UI\Registros\rUsuario.resx">
       <DependentUpon>rUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Reportes\PrestamoReporte.rpt">
+    <EmbeddedResource Include="UI\Reportes\RPTConsutas\PrestamoReporte.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PrestamoReporte.cs</LastGenOutput>
     </EmbeddedResource>
@@ -320,7 +424,9 @@
   <ItemGroup>
     <None Include="Resources\icons8-imprimir-35.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-entrar-35.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\14642670581216.gif" />
   </ItemGroup>
@@ -332,6 +438,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-imprimir-18.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

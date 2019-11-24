@@ -34,6 +34,7 @@
             this.FiltrarcomboBox = new System.Windows.Forms.ComboBox();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.MydataGridView = new System.Windows.Forms.DataGridView();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MydataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(371, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 20);
+            this.button1.Size = new System.Drawing.Size(78, 20);
             this.button1.TabIndex = 44;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -92,15 +93,29 @@
             this.MydataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MydataGridView.Location = new System.Drawing.Point(7, 39);
             this.MydataGridView.Name = "MydataGridView";
-            this.MydataGridView.Size = new System.Drawing.Size(463, 176);
+            this.MydataGridView.Size = new System.Drawing.Size(526, 176);
             this.MydataGridView.TabIndex = 39;
             this.MydataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MydataGridView_CellContentClick);
+            // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.Image = global::LibraryServices.Properties.Resources.icons8_imprimir_18;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Imprimirbutton.Location = new System.Drawing.Point(455, 10);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(78, 23);
+            this.Imprimirbutton.TabIndex = 45;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
             // cEditorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 233);
+            this.ClientSize = new System.Drawing.Size(545, 233);
+            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -123,5 +138,6 @@
         private System.Windows.Forms.ComboBox FiltrarcomboBox;
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.DataGridView MydataGridView;
+        private System.Windows.Forms.Button Imprimirbutton;
     }
 }

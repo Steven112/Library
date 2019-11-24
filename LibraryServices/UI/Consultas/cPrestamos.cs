@@ -1,5 +1,7 @@
 ﻿using LibraryServices.BLL;
 using LibraryServices.Entdades;
+using LibraryServices.UI.Reportes;
+using LibraryServices.UI.Reportes.RPTConsutas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,7 +62,14 @@ namespace LibraryServices.UI.Consultas
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
+            if (prestamo.Count == 0)
+            {
+                MessageBox.Show("No hay datos que imprimir");
+                return;
+            }
 
+            PrestamoRP Report = new PrestamoRP(prestamo);
+            Report.ShowDialog();
         }
 
         private void Hasta_dateTimePicker_ValueChanged(object sender, EventArgs e)

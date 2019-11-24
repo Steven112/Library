@@ -1,4 +1,5 @@
 ﻿using LibraryServices.Entdades;
+using LibraryServices.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,6 @@ namespace LibraryServices.UI.Consultas
                 case 0: /// todos
                     break;
                 case 1:
-
 
                     id = Convert.ToInt32(CriteriotextBox.Text);
 
@@ -68,7 +68,14 @@ namespace LibraryServices.UI.Consultas
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-            
+            if (Lib.Count == 0)
+            {
+                MessageBox.Show("No hay datos que imprimir");
+                return;
+            }
+
+            RPLibros Report = new RPLibros(Lib);
+            Report.ShowDialog();
         }
 
         private void Label4_Click(object sender, EventArgs e)

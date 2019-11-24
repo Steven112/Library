@@ -173,6 +173,16 @@ namespace LibraryServices.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_entrar_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-entrar-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_guardar_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-guardar-30", resourceCulture);
@@ -206,6 +216,16 @@ namespace LibraryServices.Properties {
         internal static System.Drawing.Bitmap icons8_guardar_35 {
             get {
                 object obj = ResourceManager.GetObject("icons8-guardar-35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_imprimir_18 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-imprimir-18", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

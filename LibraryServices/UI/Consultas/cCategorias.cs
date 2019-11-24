@@ -1,6 +1,7 @@
 ﻿using LibraryServices.BLL;
 using LibraryServices.DAL;
 using LibraryServices.Entdades;
+using LibraryServices.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace LibraryServices.UI.Consultas
     public partial class cCategorias : Form
     {
         private RepositorioBase<Categoria> repository;
+        private List<Categoria> Est = new List<Categoria>();
         public cCategorias()
         {
             InitializeComponent();
@@ -41,16 +43,26 @@ namespace LibraryServices.UI.Consultas
                     filtro = a => a.Descripcion.Contains(CriteriotextBox.Text);
                     break;
 
-              
-
-
             }
+            Est = repository.GetList(filtro);
             MydataGridView.DataSource = repository.GetList(filtro);
         }
 
         private void CCategorias_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            if (Est.Count == 0)
+            {
+                MessageBox.Show("No hay datos que imprimir");
+                return;
+            }
+
+            CategoriaR Report = new CategoriaR(Est);
+            Report.ShowDialog();
         }
     }
 }

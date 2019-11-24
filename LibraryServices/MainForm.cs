@@ -125,7 +125,7 @@ namespace LibraryServices
 
         private void LibrosVencidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cLibrosVencidos vencido = new cLibrosVencidos();
+            cDevoluciones vencido = new cDevoluciones();
             vencido.MdiParent = this;
             vencido.Show();
         }

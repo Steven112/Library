@@ -153,6 +153,7 @@
             // 
             // AgregarEditorialbutton
             // 
+            this.AgregarEditorialbutton.Image = global::LibraryServices.Properties.Resources.icons8_crear_nuevo_16;
             this.AgregarEditorialbutton.Location = new System.Drawing.Point(247, 172);
             this.AgregarEditorialbutton.Name = "AgregarEditorialbutton";
             this.AgregarEditorialbutton.Size = new System.Drawing.Size(33, 23);
@@ -176,7 +177,7 @@
             // 
             // AgregarCategoriabutton
             // 
-            this.AgregarCategoriabutton.Image = global::LibraryServices.Properties.Resources.icons8_añadir_subnodo_20;
+            this.AgregarCategoriabutton.Image = global::LibraryServices.Properties.Resources.icons8_crear_nuevo_16;
             this.AgregarCategoriabutton.Location = new System.Drawing.Point(247, 119);
             this.AgregarCategoriabutton.Name = "AgregarCategoriabutton";
             this.AgregarCategoriabutton.Size = new System.Drawing.Size(33, 23);

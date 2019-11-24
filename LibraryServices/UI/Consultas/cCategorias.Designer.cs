@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MydataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.MydataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MydataGridView.Location = new System.Drawing.Point(12, 36);
             this.MydataGridView.Name = "MydataGridView";
-            this.MydataGridView.Size = new System.Drawing.Size(428, 150);
+            this.MydataGridView.Size = new System.Drawing.Size(510, 150);
             this.MydataGridView.TabIndex = 0;
             // 
             // CriteriotextBox
@@ -95,11 +96,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.Image = global::LibraryServices.Properties.Resources.icons8_imprimir_18;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Imprimirbutton.Location = new System.Drawing.Point(447, 7);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(75, 23);
+            this.Imprimirbutton.TabIndex = 39;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
+            // 
             // cCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 200);
+            this.ClientSize = new System.Drawing.Size(534, 200);
+            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -123,5 +138,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Imprimirbutton;
     }
 }

@@ -104,8 +104,8 @@ namespace LibraryServices.UI.Registros
             FechaEntregadateTimePicker.Value = devoluciones.FechaDevueltaLibro;
             PrestamoIdnumericUpDown1.Value = prestamo.PrestamoId;
             DevoluciondateTimePicker.Value = devoluciones.FechaDevolucion;
-            EstudiantecomboBox.SelectedValue = devoluciones.EstudianteId;
-            LibrocomboBox.SelectedValue = devoluciones.LibroId;
+            EstudiantecomboBox.SelectedValue = prestamo.EstudianteId;
+            LibrocomboBox.SelectedValue = prestamo.LibroId;
             DevoluciondateTimePicker.Value = devoluciones.FechaDevolucion;
             this.Detalles = devoluciones.DetalleDev;
             CargarGrid();

@@ -1,6 +1,7 @@
 ﻿using LibraryServices.BLL;
 using LibraryServices.DAL;
 using LibraryServices.Entdades;
+using LibraryServices.UI.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace LibraryServices.UI.Consultas
     public partial class cEditorial : Form
     {
         private RepositorioBase<Editorial> repository;
+        private List<Editorial> editorials = new List<Editorial>();
         public cEditorial()
         {
             InitializeComponent();
@@ -29,14 +31,14 @@ namespace LibraryServices.UI.Consultas
             int id;
             switch (FiltrarcomboBox.SelectedIndex)
             {
-                case 0: /// todos
+                case 0: 
                     break;
-                case 1://por Id
+                case 1:
 
                     id = Convert.ToInt32(CriteriotextBox.Text);
                     filtro = a => a.EditorialId == id;
                     break;
-                case 2:// por nombre
+                case 2:
                     filtro = a => a.Nombre.Contains(CriteriotextBox.Text);
 
                     break;
@@ -48,12 +50,25 @@ namespace LibraryServices.UI.Consultas
 
 
             }
+            editorials = repository.GetList(filtro);
             MydataGridView.DataSource = repository.GetList(filtro);
         }
 
         private void MydataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            if (editorials.Count == 0)
+            {
+                MessageBox.Show("No hay datos que imprimir");
+                return;
+            }
+
+            EditorialR Report = new EditorialR(editorials);
+            Report.ShowDialog();
         }
     }
 }

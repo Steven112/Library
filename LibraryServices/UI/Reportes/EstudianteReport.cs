@@ -1,4 +1,6 @@
 ﻿using LibraryServices.Entdades;
+using LibraryServices.UI.Reportes.RPT;
+using LibraryServices.UI.Reportes.RPTConsutas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

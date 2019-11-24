@@ -44,11 +44,14 @@
             // 
             // Imprimirbutton
             // 
+            this.Imprimirbutton.Image = global::LibraryServices.Properties.Resources.icons8_imprimir_18;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Imprimirbutton.Location = new System.Drawing.Point(638, 12);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(75, 22);
             this.Imprimirbutton.TabIndex = 63;
             this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Imprimirbutton.UseVisualStyleBackColor = true;
             this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 

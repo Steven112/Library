@@ -11,12 +11,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibraryServices.UI;
 using LibraryServices.DAL;
+using LibraryServices.UI.Reportes;
 
 namespace LibraryServices.UI
 {
     public partial class rPrestamoLibro : Form
     {
-
+        
         public List<PrestamosDetalle> Detalles { get; set; }
         public RepositorioBase<Estudiante> Estudent;
         public RepositorioBase<Libro> Book;
@@ -258,6 +259,19 @@ namespace LibraryServices.UI
         private void GroupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            if (Detalles.Count == 0)
+            {
+                MessageBox.Show("No hay datos que imprimir");
+                return;
+            }
+
+            PrestamoReportes Report = new PrestamoReportes(Detalles);
+            Report.ShowDialog();
         }
     }
 }
