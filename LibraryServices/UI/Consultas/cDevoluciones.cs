@@ -72,5 +72,20 @@ namespace LibraryServices.UI.Consultas
             DevolucionesR Report = new DevolucionesR(prestamo);
             Report.ShowDialog();
         }
+
+        private void CDevoluciones_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConsultadataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,9 +42,9 @@
             // 
             this.button1.Image = global::LibraryServices.Properties.Resources.icons8_búsqueda_de_propiedad_18;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(371, 13);
+            this.button1.Location = new System.Drawing.Point(371, 10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 20);
+            this.button1.Size = new System.Drawing.Size(78, 23);
             this.button1.TabIndex = 44;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -53,6 +53,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(190, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
@@ -62,6 +64,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(4, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
@@ -90,6 +94,7 @@
             // 
             // MydataGridView
             // 
+            this.MydataGridView.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.MydataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MydataGridView.Location = new System.Drawing.Point(7, 39);
             this.MydataGridView.Name = "MydataGridView";
@@ -114,6 +119,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LibraryServices.Properties.Resources.fdfe18cc8108550335a9117e297f2fa1_diseno_de_plantilla_de_logotipo_de_biblioteca;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(545, 233);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.button1);
@@ -123,7 +130,7 @@
             this.Controls.Add(this.CriteriotextBox);
             this.Controls.Add(this.MydataGridView);
             this.Name = "cEditorial";
-            this.Text = "cEditorial";
+            this.Text = "Consultas Editoriales";
             ((System.ComponentModel.ISupportInitialize)(this.MydataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

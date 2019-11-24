@@ -78,6 +78,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(459, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
@@ -103,6 +105,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(294, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
@@ -111,11 +115,13 @@
             // 
             // ConsultadataGridView
             // 
+            this.ConsultadataGridView.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultadataGridView.Location = new System.Drawing.Point(12, 37);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
             this.ConsultadataGridView.Size = new System.Drawing.Size(762, 234);
             this.ConsultadataGridView.TabIndex = 26;
+            this.ConsultadataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConsultadataGridView_CellContentClick);
             // 
             // Hasta_dateTimePicker
             // 
@@ -136,6 +142,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(147, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
@@ -145,11 +153,14 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(16, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 60;
             this.label3.Text = "Desde:";
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // cDevoluciones
             // 
@@ -171,6 +182,7 @@
             this.Controls.Add(this.ConsultadataGridView);
             this.Name = "cDevoluciones";
             this.Text = "Consulta Devoluciones";
+            this.Load += new System.EventHandler(this.CDevoluciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

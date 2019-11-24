@@ -87,6 +87,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(134, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
@@ -96,6 +98,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(9, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
@@ -112,6 +116,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(420, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
@@ -139,6 +145,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(261, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
@@ -147,6 +155,7 @@
             // 
             // Consulta_dataGridView
             // 
+            this.Consulta_dataGridView.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.Consulta_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Consulta_dataGridView.Location = new System.Drawing.Point(12, 39);
             this.Consulta_dataGridView.Name = "Consulta_dataGridView";
@@ -157,6 +166,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LibraryServices.Properties.Resources.fdfe18cc8108550335a9117e297f2fa1_diseno_de_plantilla_de_logotipo_de_biblioteca;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(723, 226);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.Consultarbutton);
@@ -170,7 +181,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Consulta_dataGridView);
             this.Name = "cEstudiante";
-            this.Text = "cEstudiante";
+            this.Text = "Consultas Estudiantes";
             ((System.ComponentModel.ISupportInitialize)(this.Consulta_dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

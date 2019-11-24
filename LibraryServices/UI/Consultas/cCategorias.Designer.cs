@@ -40,6 +40,7 @@
             // 
             // MydataGridView
             // 
+            this.MydataGridView.BackgroundColor = System.Drawing.Color.DarkTurquoise;
             this.MydataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MydataGridView.Location = new System.Drawing.Point(12, 36);
             this.MydataGridView.Name = "MydataGridView";
@@ -68,6 +69,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
@@ -77,6 +80,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(195, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
@@ -113,6 +118,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::LibraryServices.Properties.Resources.fdfe18cc8108550335a9117e297f2fa1_diseno_de_plantilla_de_logotipo_de_biblioteca;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(534, 200);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.button1);
@@ -122,7 +129,7 @@
             this.Controls.Add(this.CriteriotextBox);
             this.Controls.Add(this.MydataGridView);
             this.Name = "cCategorias";
-            this.Text = "cCategorias";
+            this.Text = "Consultas Categorias";
             this.Load += new System.EventHandler(this.CCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MydataGridView)).EndInit();
             this.ResumeLayout(false);
