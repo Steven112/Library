@@ -17,7 +17,7 @@ namespace LibraryServices.BLL.Tests
         {
             Libro libro = new Libro();
             bool paso;
-            libro.LibroId = 2;
+            libro.LibroId = 8;
             libro.NombreLibro = "Coco";
             libro.ISBN = "78nj";
             libro.CategoriaId = 1;
@@ -37,7 +37,7 @@ namespace LibraryServices.BLL.Tests
             bool paso;
             libro.LibroId = 1;
             libro.NombreLibro = "Coco";
-            libro.ISBN = "78nj";
+            libro.ISBN = "78neej";
             libro.CategoriaId = 1;
             libro.EditorialId = 1;
             libro.FechaImpresion = DateTime.Now;
@@ -52,19 +52,23 @@ namespace LibraryServices.BLL.Tests
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            bool realizado = LibroBLL.Eliminar(8);
+            Assert.AreEqual(realizado, true);
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            var encontrado = LibroBLL.Buscar(1);
+            Assert.IsNotNull(encontrado);
         }
 
         [TestMethod()]
         public void GetListTest()
         {
-            Assert.Fail();
+            List<Libro> lista = new List<Libro>();
+            lista = LibroBLL.GetList(l => true);
+            Assert.IsNotNull(lista);
         }
     }
 }

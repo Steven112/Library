@@ -15,7 +15,7 @@ namespace LibraryServices.BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            Estudiante estudiante = new Estudiante(5, "Manuel", "Perez", "20170605", "825947852", "ggt/25", "stn6♦gmail.com", DateTime.Now, 1, null);
+            Estudiante estudiante = new Estudiante(8, "Manuel", "Perez", "20170605", "825947852", "ggt/25", "stn6♦gmail.com", DateTime.Now, 1, null);
             bool paso= EstudianteBLL.Guardar(estudiante);
             Assert.AreEqual(paso,true);
         }
@@ -23,25 +23,31 @@ namespace LibraryServices.BLL.Tests
         [TestMethod()]
         public void ModificarTest()
         {
-            Assert.Fail();
+            Estudiante estudiante = new Estudiante(8, "Manuele", "Perez", "20170615", "825947852", "ggt/25", "stn6♦gmail.com", DateTime.Now, 1, null);
+            bool paso = EstudianteBLL.Guardar(estudiante);
+            Assert.AreEqual(paso, true);
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            var encontrado = EstudianteBLL.Buscar(5);
+            Assert.IsNotNull(encontrado);
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            bool realizado = EstudianteBLL.Eliminar(5);
+            Assert.AreEqual(realizado, true);
         }
 
         [TestMethod()]
         public void GetListTest()
         {
-            Assert.Fail();
+            List<Estudiante> lista = new List<Estudiante>();
+            lista = EstudianteBLL.GetList(l => true);
+            Assert.IsNotNull(lista);
         }
     }
 }

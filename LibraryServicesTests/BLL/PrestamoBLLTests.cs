@@ -15,10 +15,10 @@ namespace LibraryServices.BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            PrestamosDetalle pagosDetalle = new PrestamosDetalle(2,1,"Menu", DateTime.Now);
+            PrestamosDetalle pagosDetalle = new PrestamosDetalle(8,1,"Menu", DateTime.Now);
             List<PrestamosDetalle> list = new List<PrestamosDetalle>();
             list.Add(pagosDetalle);
-            Prestamo prestamo = new Prestamo(2,1,null,1, DateTime.Now, DateTime.Now,list);
+            Prestamo prestamo = new Prestamo(7,1,null,1, DateTime.Now, DateTime.Now,list);
             bool realizado = PrestamoBLL.Guardar(prestamo);
             Assert.AreEqual(true, realizado);
         }
@@ -26,12 +26,12 @@ namespace LibraryServices.BLL.Tests
         [TestMethod()]
         public void ModificarTest()
         {
-            PrestamosDetalle pagosDetalle = new PrestamosDetalle(2, 1, "Menu", DateTime.Now);
-            PrestamosDetalle pagosDetalle1 = new PrestamosDetalle(3, 1, "Menu", DateTime.Now);
+            PrestamosDetalle pagosDetalle = new PrestamosDetalle(8, 1, "Menu", DateTime.Now);
+            PrestamosDetalle pagosDetalle1 = new PrestamosDetalle(9, 1, "Menu", DateTime.Now);
             List<PrestamosDetalle> list = new List<PrestamosDetalle>();
             list.Add(pagosDetalle);
             list.Add(pagosDetalle1);
-            Prestamo prestamo = new Prestamo(2, 1, null, 1, DateTime.Now, DateTime.Now, list);
+            Prestamo prestamo = new Prestamo(7, 1, null, 1, DateTime.Now, DateTime.Now, list);
             bool realizado = PrestamoBLL.Guardar(prestamo);
             Assert.AreEqual(true, realizado);
         }
@@ -39,19 +39,23 @@ namespace LibraryServices.BLL.Tests
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            bool realizado = PrestamoBLL.Eliminar(1);
+            Assert.AreEqual(realizado, true);
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            var encontrado = PrestamoBLL.Buscar(1);
+            Assert.IsNotNull(encontrado);
         }
 
         [TestMethod()]
         public void GetListTest()
         {
-            Assert.Fail();
+            List<Prestamo> lista = new List<Prestamo>();
+            lista = PrestamoBLL.GetList(l => true);
+            Assert.IsNotNull(lista);
         }
     }
 }
