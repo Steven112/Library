@@ -71,6 +71,7 @@
             this.ApellidotextBox.Name = "ApellidotextBox";
             this.ApellidotextBox.Size = new System.Drawing.Size(116, 20);
             this.ApellidotextBox.TabIndex = 117;
+            this.ApellidotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApellidotextBox_KeyPress);
             // 
             // NombretextBox
             // 
@@ -78,6 +79,7 @@
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(116, 20);
             this.NombretextBox.TabIndex = 114;
+            this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
             // 
             // IDnumericUpDown
             // 
@@ -215,6 +217,7 @@
             // 
             // UsuariocomboBox
             // 
+            this.UsuariocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.UsuariocomboBox.FormattingEnabled = true;
             this.UsuariocomboBox.Location = new System.Drawing.Point(122, 222);
             this.UsuariocomboBox.Name = "UsuariocomboBox";

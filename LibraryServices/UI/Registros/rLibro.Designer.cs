@@ -65,6 +65,7 @@
             // 
             // EditoracomboBox
             // 
+            this.EditoracomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EditoracomboBox.FormattingEnabled = true;
             this.EditoracomboBox.Location = new System.Drawing.Point(135, 172);
             this.EditoracomboBox.Name = "EditoracomboBox";
@@ -74,6 +75,7 @@
             // 
             // CategoriacomboBox
             // 
+            this.CategoriacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoriacomboBox.FormattingEnabled = true;
             this.CategoriacomboBox.Location = new System.Drawing.Point(135, 119);
             this.CategoriacomboBox.Name = "CategoriacomboBox";
@@ -100,6 +102,7 @@
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(145, 20);
             this.NombretextBox.TabIndex = 41;
+            this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
             // 
             // label2
             // 

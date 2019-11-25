@@ -249,5 +249,10 @@ namespace LibraryServices.UI
 
             }
         }
+
+        private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

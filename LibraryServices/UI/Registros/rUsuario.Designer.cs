@@ -156,6 +156,7 @@
             this.NombresTextBox.Name = "NombresTextBox";
             this.NombresTextBox.Size = new System.Drawing.Size(138, 20);
             this.NombresTextBox.TabIndex = 112;
+            this.NombresTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombresTextBox_KeyPress);
             // 
             // IdNumericUpDown
             // 
@@ -219,6 +220,7 @@
             // 
             // UsuariocomboBox
             // 
+            this.UsuariocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.UsuariocomboBox.FormattingEnabled = true;
             this.UsuariocomboBox.Items.AddRange(new object[] {
             "Administrador",

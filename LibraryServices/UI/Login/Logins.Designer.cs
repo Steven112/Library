@@ -60,6 +60,7 @@
             // 
             // UsercomboBox
             // 
+            this.UsercomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.UsercomboBox.FormattingEnabled = true;
             this.UsercomboBox.Location = new System.Drawing.Point(119, 37);
             this.UsercomboBox.Name = "UsercomboBox";
