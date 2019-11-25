@@ -62,6 +62,10 @@ En el registro devolución se agregan las devoluciones de cada libro, buscando a
 
 Este programa tine la firma de derecho de autro atribuida al estudiante de ingenieria Steven Natiel Caceres Nuñez, el cual tiene en su poder el codigo fuente original de este programa.
 
+Para mas informacion contactenos
+Cell Phone: 829-472-0158
+Email: stivennunez809@gmail.com
+
 
 
 
