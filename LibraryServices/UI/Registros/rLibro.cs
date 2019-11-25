@@ -65,8 +65,8 @@ namespace LibraryServices.UI
         private bool ValidarISBN()
         {
             bool realizado = true;
-            RepositorioBase<Libro> genericaBLL = new RepositorioBase<Libro>(new Contexto());
-            List<Libro> productores = genericaBLL.GetList(d => (d.ISBN).Contains(ISBNtextBox.Text));
+           
+            List<Libro> productores = LibroBLL.GetList(d => (d.ISBN).Contains(ISBNtextBox.Text));
 
             if (productores != null)
             {
@@ -198,6 +198,7 @@ namespace LibraryServices.UI
         {
             rEditorial Editorial = new rEditorial();
             Editorial.ShowDialog();
+
             LlenaCombox();
         }
 
@@ -205,6 +206,7 @@ namespace LibraryServices.UI
         {
             rCategoria RC = new rCategoria();
             RC.ShowDialog();
+            
             LlenaCombox();
         }
 

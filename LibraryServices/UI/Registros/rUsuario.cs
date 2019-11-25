@@ -87,8 +87,8 @@ namespace LibraryServices.UI.Registros
         private bool ValidaEmail()
         {
             bool realizado = true;
-            RepositorioBase<Estudiante> generica = new RepositorioBase<Estudiante>(new Contexto());
-            List<Estudiante> estudiantes = generica.GetList(d => d.Email.Contains(EmailTextBox.Text));
+            RepositorioBase<Usuarios> generica = new RepositorioBase<Usuarios>(new Contexto());
+            List<Usuarios> estudiantes = generica.GetList(d => d.Email.Contains(EmailTextBox.Text));
 
             if (estudiantes != null)
             {
@@ -99,8 +99,8 @@ namespace LibraryServices.UI.Registros
         private bool ValidarNombre()
         {
             bool realizado = true;
-            RepositorioBase<Usuarios> generic = new RepositorioBase<Usuarios>(new Contexto());
-            List<Usuarios> productores = generic.GetList(d => (d.Nombres + d.Contraseña).Contains(NombresTextBox.Text + ContraseñaTextBox.Text));
+
+            List<Usuarios> productores = UsuariosBLL.GetList(d => (d.Nombres ).Contains(NombresTextBox.Text ));
 
             if (productores != null)
             {
@@ -162,8 +162,10 @@ namespace LibraryServices.UI.Registros
             }
             if (ValidarNombre())
             {
-                MyerrorProvider.SetError(ContraseñaTextBox, "Ya existe un usuario con esa contraseña");
-                ContraseñaTextBox.Focus();
+                MyerrorProvider.SetError(NombresTextBox, "Ya existe un usuario con esa y ese nombre contraseña");
+                NombresTextBox.Focus();
+              
+
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(UsuariocomboBox.Text))
@@ -172,6 +174,8 @@ namespace LibraryServices.UI.Registros
                 UsuariocomboBox.Focus();
                 paso = false;
             }
+            
+
 
             if (string.IsNullOrWhiteSpace(CelularMaskedTextBox.Text))
             {
@@ -258,10 +262,10 @@ namespace LibraryServices.UI.Registros
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            repositorio = new RepositorioBase<Usuarios>(new Contexto());
+           
             int.TryParse(IdNumericUpDown.Text, out int id);
             Usuarios usuarios= new Usuarios();
-            usuarios = repositorio.Buscar(id);
+            usuarios = UsuariosBLL.Buscar(id);
 
             if (usuarios != null)
             {

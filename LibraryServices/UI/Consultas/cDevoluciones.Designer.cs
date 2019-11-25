@@ -90,7 +90,7 @@
             // 
             this.Filtro_comboBox.FormattingEnabled = true;
             this.Filtro_comboBox.Items.AddRange(new object[] {
-            "todo",
+            "Todo",
             "DevolucionId",
             "LibroId",
             "EstudianteId",
