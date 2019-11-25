@@ -1,3 +1,6 @@
+
+#Usuario:Admin
+# Clave : Admin123
 # Library
 
 ![image](https://user-images.githubusercontent.com/54567861/69506171-c99c3e80-0f03-11ea-9859-5eef17ab9459.png)
