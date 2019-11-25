@@ -63,6 +63,7 @@ namespace LibraryServices.UI.Consultas
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
+            
             if (prestamo.Count == 0)
             {
                 MessageBox.Show("No hay datos que imprimir");

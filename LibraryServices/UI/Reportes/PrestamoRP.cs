@@ -18,7 +18,7 @@ namespace LibraryServices.UI.Reportes.RPTConsutas
         {
             this.reporte = prestamos;
             InitializeComponent();
-            PrestamoReporte report = new PrestamoReporte();
+            cReportePrestamo report = new cReportePrestamo();
             report.SetDataSource(reporte);
 
             MycrystalReportViewer1.ReportSource = report;
@@ -27,7 +27,7 @@ namespace LibraryServices.UI.Reportes.RPTConsutas
 
         private void MycrystalReportViewer1_Load(object sender, EventArgs e)
         {
-            PrestamoReporte report = new PrestamoReporte();
+            cReportePrestamo report = new cReportePrestamo();
             report.SetDataSource(reporte);
 
             MycrystalReportViewer1.ReportSource = report;

@@ -141,5 +141,17 @@ namespace LibraryServices
             help.MdiParent = this;
             help.Show();
         }
+
+        private void UsuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cUsuarios cUsuarios = new cUsuarios();
+            cUsuarios.MdiParent = this;
+            cUsuarios.Show();
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace LibraryServices.UI
     {
         
         public List<PrestamosDetalle> Detalles { get; set; }
+        public List<PrestamosDetalle> Reporte { get; set; }
         public RepositorioBase<Estudiante> Estudent;
         public RepositorioBase<Libro> Book;
 
@@ -245,7 +246,7 @@ namespace LibraryServices.UI
 
                         )
                 );
-            
+            this.Reporte = ((List<PrestamosDetalle>)MydataGridView.DataSource);
             CargarGrid();
             LibrocomboBox.SelectAll();
 
@@ -264,13 +265,14 @@ namespace LibraryServices.UI
         
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-            if (Detalles.Count == 0)
+            
+            if (MydataGridView.RowCount == 0)
             {
                 MessageBox.Show("No hay datos que imprimir");
                 return;
             }
 
-            PrestamoReportes Report = new PrestamoReportes(Detalles);
+            RPPrestamos Report = new RPPrestamos(Detalles);
             Report.ShowDialog();
         }
     }

@@ -46,7 +46,6 @@ namespace LibraryServices.UI.Consultas
 
             }
             prestamo = BLL.PrestamoBLL.GetList(filtro);
-            ConsultadataGridView.DataSource = null;
             ConsultadataGridView.DataSource = prestamo;
         }
 
@@ -62,14 +61,14 @@ namespace LibraryServices.UI.Consultas
 
         private void Imprimirbutton_Click(object sender, EventArgs e)
         {
-            if (prestamo.Count == 0)
+            if (ConsultadataGridView.RowCount == 0)
             {
                 MessageBox.Show("No hay datos que imprimir");
                 return;
             }
 
             PrestamoRP Report = new PrestamoRP(prestamo);
-            Report.ShowDialog();
+            Report.ShowDialog(); 
         }
 
         private void Hasta_dateTimePicker_ValueChanged(object sender, EventArgs e)

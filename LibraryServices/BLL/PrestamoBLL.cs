@@ -157,7 +157,7 @@ namespace LibraryServices.BLL
             }
             finally
             {
-                db.Dispose();
+                //db.Dispose();
             }
             return Lista;
         }

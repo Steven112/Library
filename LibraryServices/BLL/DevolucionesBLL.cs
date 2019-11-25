@@ -139,7 +139,7 @@ namespace LibraryServices.BLL
             try
             {
                 libro = db.Devolucion.Where(expression).ToList();
-                db.Dispose();
+                
             }
             catch (Exception)
             {

@@ -65,12 +65,12 @@ namespace LibraryServices.UI.Registros
             string contraseña = ContrasenatextBox.Text;
             if (ContrasenacheckBox.Checked)
             {
-                ContrasenatextBox.UseSystemPasswordChar = false;
+                ContrasenatextBox.UseSystemPasswordChar = true;
                 ContrasenatextBox.Text = contraseña;
             }
             else
             {
-                ContrasenatextBox.UseSystemPasswordChar = true;
+                ContrasenatextBox.UseSystemPasswordChar = false;
                 ContrasenatextBox.Text = contraseña;
 
             }

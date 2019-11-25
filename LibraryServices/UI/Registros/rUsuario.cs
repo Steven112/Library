@@ -17,6 +17,7 @@ namespace LibraryServices.UI.Registros
     public partial class rUsuario : Form
     {
         private RepositorioBase<Usuarios> repositorio;
+        EncryptKey encryptKey = new EncryptKey();
         public rUsuario()
         {
             InitializeComponent();
@@ -40,7 +41,8 @@ namespace LibraryServices.UI.Registros
             usuarios.Nombres = NombresTextBox.Text;
             usuarios.Email = EmailTextBox.Text;
             usuarios.Celular = CelularMaskedTextBox.Text;
-            usuarios.Contraseña = ContraseñaTextBox.Text;
+            string c = encryptKey.cifrarTexto(ContraseñaTextBox.Text);
+            usuarios.Contraseña = c;
             usuarios.FechaInsercion = FechadateTimePicker.Value;
             usuarios.Nivel = Convert.ToString(UsuariocomboBox.SelectedItem);            
             return usuarios;
@@ -122,13 +124,13 @@ namespace LibraryServices.UI.Registros
         {
             bool paso = true;
             MyerrorProvider.Clear();
-            if (!ValidarCelular())
+            if (ValidarCelular())
             {
                 MyerrorProvider.SetError(CelularMaskedTextBox, "Ya existe un usuario con este celular");
                 CelularMaskedTextBox.Focus();
                 paso = false;
             }
-            if (!ValidaEmail())
+            if (ValidaEmail())
             {
                 MyerrorProvider.SetError(EmailTextBox, "Ya existe un usuario con este Email");
                 EmailTextBox.Focus();
@@ -158,7 +160,7 @@ namespace LibraryServices.UI.Registros
                 EmailTextBox.Focus();
                 paso = false;
             }
-            if (!ValidarNombre())
+            if (ValidarNombre())
             {
                 MyerrorProvider.SetError(ContraseñaTextBox, "Ya existe un usuario con esa contraseña");
                 ContraseñaTextBox.Focus();

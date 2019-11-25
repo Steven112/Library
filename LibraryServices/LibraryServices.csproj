@@ -89,6 +89,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\cUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cUsuarios.Designer.cs">
+      <DependentUpon>cUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Login\Logins.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,12 +119,6 @@
     <Compile Include="UI\Reportes\EditorialR.Designer.cs">
       <DependentUpon>EditorialR.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Reportes\PrestamoReportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Reportes\PrestamoReportes.Designer.cs">
-      <DependentUpon>PrestamoReportes.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Reportes\RPLibros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +130,18 @@
     </Compile>
     <Compile Include="UI\Reportes\DevolucionesR.Designer.cs">
       <DependentUpon>DevolucionesR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\RPPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\RPPrestamos.Designer.cs">
+      <DependentUpon>RPPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\RPTConsutas\cReportePrestamo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cReportePrestamo.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\Reportes\RPTConsutas\DevolucionesRP.cs">
       <AutoGen>True</AutoGen>
@@ -159,12 +171,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RPCategorias.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="UI\Reportes\RPT\Detalle.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Detalle.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\Reportes\RPTConsutas\EstudentReport.cs">
@@ -263,6 +269,24 @@
       <DependentUpon>PrestamoReporte.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Reportes\RPTConsutas\RPUsuarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPUsuarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\RPT\PrestamosRP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrestamosRP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\UsuarioRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\UsuarioRP.Designer.cs">
+      <DependentUpon>UsuarioRP.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +300,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\cUsuarios.resx">
+      <DependentUpon>cUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Login\Logins.resx">
       <DependentUpon>Logins.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,14 +315,18 @@
     <EmbeddedResource Include="UI\Reportes\EditorialR.resx">
       <DependentUpon>EditorialR.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Reportes\PrestamoReportes.resx">
-      <DependentUpon>PrestamoReportes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\RPLibros.resx">
       <DependentUpon>RPLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\DevolucionesR.resx">
       <DependentUpon>DevolucionesR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPPrestamos.resx">
+      <DependentUpon>RPPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPTConsutas\cReportePrestamo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cReportePrestamo.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\RPTConsutas\DevolucionesRP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -315,10 +346,6 @@
     <EmbeddedResource Include="UI\Reportes\RPTConsutas\RPCategorias.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPCategorias.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Reportes\RPT\Detalle.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Detalle.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\RPTConsutas\EstudentReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -369,6 +396,17 @@
     <EmbeddedResource Include="UI\Reportes\RPTConsutas\PrestamoReporte.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PrestamoReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPTConsutas\RPUsuarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPUsuarios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\RPT\PrestamosRP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrestamosRP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\UsuarioRP.resx">
+      <DependentUpon>UsuarioRP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
