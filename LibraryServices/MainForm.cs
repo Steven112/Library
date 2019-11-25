@@ -134,5 +134,12 @@ namespace LibraryServices
         {
 
         }
+
+        private void AyudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ayuda help = new Ayuda();
+            help.MdiParent = this;
+            help.Show();
+        }
     }
 }

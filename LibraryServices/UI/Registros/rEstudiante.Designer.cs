@@ -308,7 +308,7 @@
             this.Controls.Add(this.NombretextBox);
             this.Controls.Add(this.IDnumericUpDown);
             this.Name = "rEstudiante";
-            this.Text = "rEstudiante";
+            this.Text = "Registos Estudiantes";
             this.Load += new System.EventHandler(this.REstudiante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();

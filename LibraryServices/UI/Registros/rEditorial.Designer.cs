@@ -170,7 +170,7 @@
             this.Controls.Add(this.IdEditorialnumericUpDown);
             this.Controls.Add(this.label1);
             this.Name = "rEditorial";
-            this.Text = "rEditorial";
+            this.Text = "Registros Editoriales";
             this.Load += new System.EventHandler(this.REditorial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IdEditorialnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();

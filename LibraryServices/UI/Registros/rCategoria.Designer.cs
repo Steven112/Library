@@ -141,7 +141,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LibraryServices.Properties.Resources.fdfe18cc8108550335a9117e297f2fa1_diseno_de_plantilla_de_logotipo_de_biblioteca;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(272, 232);
+            this.ClientSize = new System.Drawing.Size(262, 221);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Eliminarbutton);
@@ -151,7 +151,7 @@
             this.Controls.Add(this.IntroduccionTextBox);
             this.Controls.Add(this.IdcategorianumericUpDown);
             this.Name = "rCategoria";
-            this.Text = "rCategoria";
+            this.Text = "Registros Categorias";
             ((System.ComponentModel.ISupportInitialize)(this.IdcategorianumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);

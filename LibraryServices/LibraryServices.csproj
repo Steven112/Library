@@ -95,6 +95,12 @@
     <Compile Include="UI\Login\Logins.Designer.cs">
       <DependentUpon>Logins.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\Ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\Ayuda.Designer.cs">
+      <DependentUpon>Ayuda.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Reportes\CategoriaR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Login\Logins.resx">
       <DependentUpon>Logins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\Ayuda.resx">
+      <DependentUpon>Ayuda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\CategoriaR.resx">
       <DependentUpon>CategoriaR.cs</DependentUpon>

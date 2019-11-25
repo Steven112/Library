@@ -262,7 +262,7 @@
             this.Controls.Add(this.NombretextBox);
             this.Controls.Add(this.label1);
             this.Name = "rLibro";
-            this.Text = "Registro Libro";
+            this.Text = "Registros Libros";
             this.Load += new System.EventHandler(this.RLibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LibroIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();

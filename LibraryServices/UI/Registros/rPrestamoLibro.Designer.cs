@@ -296,7 +296,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "rPrestamoLibro";
-            this.Text = "rPrestamoLibro";
+            this.Text = "Registros Prestamos";
             ((System.ComponentModel.ISupportInitialize)(this.PrestamoidnumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MydataGridView)).EndInit();

@@ -336,7 +336,7 @@
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
             this.Name = "rDevlucion";
-            this.Text = "rDevlucion";
+            this.Text = "Registros Devluciones";
             this.Load += new System.EventHandler(this.RDevlucion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();

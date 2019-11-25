@@ -265,7 +265,7 @@
             this.Controls.Add(this.NombresTextBox);
             this.Controls.Add(this.IdNumericUpDown);
             this.Name = "rUsuario";
-            this.Text = "rUsuario";
+            this.Text = " Registros Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyerrorProvider)).EndInit();
             this.ResumeLayout(false);
