@@ -25,7 +25,7 @@ namespace LibraryServices.BLL.Tests
             bool paso;
             RepositorioBase<Categoria> Ct = new RepositorioBase<Categoria>(new Contexto());
             Categoria categoria = new Categoria();
-            categoria.CategoriaId = 1;
+            categoria.CategoriaId = 4;
             categoria.Descripcion = "hu";
             paso = Ct.Guardar(categoria);
             Assert.AreEqual(paso, true);
@@ -33,7 +33,7 @@ namespace LibraryServices.BLL.Tests
             bool paso1;
             RepositorioBase<Editorial> Ed = new RepositorioBase<Editorial>(new Contexto());
             Editorial editorial = new Editorial();
-            editorial.EditorialId=1;
+            editorial.EditorialId=4;
             editorial.Dirrecion = "Nada";
             editorial.Nombre = "Nu";
             paso1 = Ed.Guardar(editorial);

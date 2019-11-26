@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36212A4B-D528-4FA5-A9FE-E20C9232295D}</ProjectGuid>
+    <ProjectGuid>{848C9884-B95D-46C8-9038-626232F89E4B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DDA</RootNamespace>
-    <AssemblyName>DDA</AssemblyName>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,15 +51,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexto.cs" />
+    <Compile Include="DevolucionesBLL.cs" />
+    <Compile Include="EncryptKey.cs" />
+    <Compile Include="EstudianteBLL.cs" />
+    <Compile Include="iRepository.cs" />
+    <Compile Include="LibroBLL.cs" />
+    <Compile Include="PrestamoBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositorioBase.cs" />
+    <Compile Include="UsuarioSBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entity\Entidades.csproj">
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{36212A4B-D528-4FA5-A9FE-E20C9232295D}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{7926E319-8FE4-49A4-B5B7-DCC6489C9ABC}</Project>
       <Name>Entidades</Name>
     </ProjectReference>

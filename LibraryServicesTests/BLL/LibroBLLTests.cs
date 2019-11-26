@@ -17,7 +17,7 @@ namespace LibraryServices.BLL.Tests
         {
             Libro libro = new Libro();
             bool paso;
-            libro.LibroId = 8;
+            libro.LibroId = 2;
             libro.NombreLibro = "Coco";
             libro.ISBN = "78nj";
             libro.CategoriaId = 1;
@@ -32,12 +32,13 @@ namespace LibraryServices.BLL.Tests
 
         [TestMethod()]
         public void ModificarTest()
+
         {
             Libro libro = new Libro();
             bool paso;
             libro.LibroId = 1;
             libro.NombreLibro = "Coco";
-            libro.ISBN = "78neej";
+            libro.ISBN = "789neej";
             libro.CategoriaId = 1;
             libro.EditorialId = 1;
             libro.FechaImpresion = DateTime.Now;

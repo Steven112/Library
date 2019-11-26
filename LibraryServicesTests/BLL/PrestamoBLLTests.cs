@@ -15,10 +15,10 @@ namespace LibraryServices.BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            PrestamosDetalle pagosDetalle = new PrestamosDetalle(8,1,"Menu", DateTime.Now);
+            PrestamosDetalle pagosDetalle = new PrestamosDetalle(1,1,"Menu", DateTime.Now);
             List<PrestamosDetalle> list = new List<PrestamosDetalle>();
             list.Add(pagosDetalle);
-            Prestamo prestamo = new Prestamo(7,1,null,1, DateTime.Now, DateTime.Now,list);
+            Prestamo prestamo = new Prestamo(1,1,null,1, DateTime.Now, DateTime.Now,list);
             bool realizado = PrestamoBLL.Guardar(prestamo);
             Assert.AreEqual(true, realizado);
         }

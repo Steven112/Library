@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryServices", "LibraryS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryServicesTests", "LibraryServicesTests\LibraryServicesTests.csproj", "{6F5D8680-CB69-478E-885D-3442B1918AFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "dfg\BLL.csproj", "{848C9884-B95D-46C8-9038-626232F89E4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{848C9884-B95D-46C8-9038-626232F89E4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DDA\DAL.csproj", "{36212A4B-D528-4FA5-A9FE-E20C9232295D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{36212A4B-D528-4FA5-A9FE-E20C9232295D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entity\Entidades.csproj", "{7926E319-8FE4-49A4-B5B7-DCC6489C9ABC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{7926E319-8FE4-49A4-B5B7-DCC6489C9ABC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

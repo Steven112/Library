@@ -472,15 +472,15 @@
     <None Include="Resources\icons8-imprimir-18.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DDA\DAL.csproj">
-      <Project>{36212A4B-D528-4FA5-A9FE-E20C9232295D}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\dfg\BLL.csproj">
+    <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{848C9884-B95D-46C8-9038-626232F89E4B}</Project>
       <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entity\Entidades.csproj">
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{36212A4B-D528-4FA5-A9FE-E20C9232295D}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{7926E319-8FE4-49A4-B5B7-DCC6489C9ABC}</Project>
       <Name>Entidades</Name>
     </ProjectReference>

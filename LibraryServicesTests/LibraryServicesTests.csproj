@@ -77,6 +77,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{848c9884-b95d-46c8-9038-626232f89e4b}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{36212a4b-d528-4fa5-a9fe-e20c9232295d}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{7926e319-8fe4-49a4-b5b7-dcc6489c9abc}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibraryServices\LibraryServices.csproj">
       <Project>{5E37753D-B216-4E6A-8BCD-5E13DDD27471}</Project>
       <Name>LibraryServices</Name>
