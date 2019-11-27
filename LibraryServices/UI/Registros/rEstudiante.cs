@@ -42,7 +42,7 @@ namespace LibraryServices.UI
         }
         private bool ValidarMatricula()
         {
-            bool realizado = true;
+            bool realizado = false;
             RepositorioBase<Estudiante> generica = new RepositorioBase<Estudiante>(new Contexto());
             List<Estudiante> estudiantes = generica.GetList(d => d.Matricula.Contains(MatriculatextBox.Text));
 
@@ -77,6 +77,12 @@ namespace LibraryServices.UI
         {
             bool paso = true;
 
+            if (string.IsNullOrWhiteSpace(IDnumericUpDown.Text))
+            {
+                MyerrorProvider.SetError(IDnumericUpDown, "El campo no debe estar vacio");
+                IDnumericUpDown.Focus();
+                paso = false;
+            }
             if (string.IsNullOrWhiteSpace(NombretextBox.Text))
             {
                 MyerrorProvider.SetError(NombretextBox, "El campo no debe estar vacio");

@@ -110,7 +110,12 @@ namespace LibraryServices.UI
         private bool validar()
         {
             bool paso = true;
-           
+            if (string.IsNullOrWhiteSpace(IdEditorialnumericUpDown.Text))
+            {
+                MyerrorProvider.SetError(IdEditorialnumericUpDown, "El campo no debe estar vacio");
+                IdEditorialnumericUpDown.Focus();
+                paso = false;
+            }
             if (string.IsNullOrWhiteSpace(NombretextBox.Text))
             {
                 MyerrorProvider.SetError(NombretextBox, "El campo no debe estar vacio");

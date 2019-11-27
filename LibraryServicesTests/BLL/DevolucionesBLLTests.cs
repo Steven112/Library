@@ -16,33 +16,49 @@ namespace LibraryServices.BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-          
+            DevolucionDetalles devolucionDetalles = new DevolucionDetalles(1, 1, "Moni", DateTime.Now);
 
-            
+            List<DevolucionDetalles> list = new List<DevolucionDetalles>();
+            list.Add(devolucionDetalles);
+            Devoluciones devoluciones= new Devoluciones(1,true,1,1,null,1,null, list,DateTime.Now, DateTime.Now);
+            bool realizado = DevolucionesBLL.Guardar(devoluciones);
+            Assert.AreEqual(true, realizado);
+
+
         }
 
         [TestMethod()]
         public void ModificarTest()
         {
-            Assert.Fail();
+            DevolucionDetalles devolucionDetalles = new DevolucionDetalles(1, 1, "Monki", DateTime.Now);
+
+            List<DevolucionDetalles> list = new List<DevolucionDetalles>();
+            list.Add(devolucionDetalles);
+            Devoluciones devoluciones = new Devoluciones(1, true, 1, 1, null, 1, null, list, DateTime.Now, DateTime.Now);
+            bool realizado = DevolucionesBLL.Guardar(devoluciones);
+            Assert.AreEqual(true, realizado);
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            bool realizado = DevolucionesBLL.Eliminar(1);
+            Assert.AreEqual(realizado, true);
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            var encontrado = DevolucionesBLL.Buscar(2);
+            Assert.IsNotNull(encontrado);
         }
 
         [TestMethod()]
         public void GetListTest()
         {
-            Assert.Fail();
+            List<Devoluciones> lista = new List<Devoluciones>();
+            lista = DevolucionesBLL.GetList(l => true);
+            Assert.IsNotNull(lista);
         }
     }
 }

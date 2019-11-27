@@ -77,7 +77,12 @@ namespace LibraryServices.UI
         private bool validar()
         {
             bool paso = true;
-
+            if (string.IsNullOrWhiteSpace(LibroIdnumericUpDown.Text))
+            {
+                MyerrorProvider.SetError(LibroIdnumericUpDown, "El campo no debe estar vacio");
+                LibroIdnumericUpDown.Focus();
+                paso = false;
+            }
             if (string.IsNullOrWhiteSpace(NombretextBox.Text))
             {
                 MyerrorProvider.SetError(NombretextBox, "El campo no debe estar vacio");
@@ -93,13 +98,13 @@ namespace LibraryServices.UI
             
             if (string.IsNullOrWhiteSpace(CategoriacomboBox.Text))
             {
-                MyerrorProvider.SetError(CategoriacomboBox, "El Campo no debe estar vacio");
+                MyerrorProvider.SetError(CategoriacomboBox, "Seleccione la categoria del libro");
                 CategoriacomboBox.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(EditoracomboBox.Text))
             {
-                MyerrorProvider.SetError(EditoracomboBox, "El Campo no debe estar vacio");
+                MyerrorProvider.SetError(EditoracomboBox, "Seleccione la editorial de la cual proviene el libro");
                 EditoracomboBox.Focus();
                 paso = false;
             }

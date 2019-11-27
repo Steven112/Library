@@ -13,11 +13,7 @@ namespace LibraryServices.BLL.Tests
     [TestClass()]
     public class RepositorioBaseTests
     {
-        [TestMethod()]
-        public void RepositorioBaseTest()
-        {
-           
-        }
+       
 
         [TestMethod()]
         public void GuardarTest()
@@ -62,11 +58,7 @@ namespace LibraryServices.BLL.Tests
             Assert.AreEqual(paso1, true);
         }
 
-        [TestMethod()]
-        public void DisposeTest()
-        {
-            Assert.Fail();
-        }
+        
 
         [TestMethod()]
         public void EliminarTest()

@@ -47,7 +47,6 @@
             this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Usuariolabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,11 +69,11 @@
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.prestamosToolStripMenuItem,
             this.librosToolStripMenuItem,
+            this.estudiantesToolStripMenuItem,
             this.categoriasToolStripMenuItem,
             this.editorialToolStripMenuItem,
-            this.estudiantesToolStripMenuItem,
-            this.usuariosToolStripMenuItem,
-            this.devolucionToolStripMenuItem});
+            this.devolucionToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
             this.registrosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
@@ -132,11 +131,11 @@
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.categoriasToolStripMenuItem1,
-            this.editorialToolStripMenuItem1,
+            this.prestamosToolStripMenuItem1,
             this.libroToolStripMenuItem,
             this.estudianteToolStripMenuItem,
-            this.prestamosToolStripMenuItem1,
+            this.categoriasToolStripMenuItem1,
+            this.editorialToolStripMenuItem1,
             this.librosVencidosToolStripMenuItem,
             this.usuariosToolStripMenuItem1});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
@@ -209,16 +208,6 @@
             this.Usuariolabel.Size = new System.Drawing.Size(0, 13);
             this.Usuariolabel.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 422);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,7 +216,6 @@
             this.BackgroundImage = global::LibraryServices.Properties.Resources.fdfe18cc8108550335a9117e297f2fa1_diseno_de_plantilla_de_logotipo_de_biblioteca;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(865, 447);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Usuariolabel);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
@@ -263,7 +251,6 @@
         private System.Windows.Forms.ToolStripMenuItem librosVencidosToolStripMenuItem;
         private System.Windows.Forms.Label Usuariolabel;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem1;
-        private System.Windows.Forms.Label label1;
     }
 }
 

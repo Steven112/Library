@@ -54,9 +54,10 @@ namespace LibraryServices.BLL
                foreach (var item in prestamo.Detalle)
                {
                    if (!prestamo.Detalle.Exists(d => d.DetalleId== item.DetalleId))
-                   db.Entry(item).State = EntityState.Deleted;
-                   db.Libro.Find(item.LibroId).Disponibilidad = false;
-               }
+                    db.Entry(item).State = EntityState.Deleted;
+                    db.Libro.Find(item.LibroId).Disponibilidad = false;
+
+                }
                 foreach (var item in prestamo.Detalle)
                 {
                     if(item.DetalleId == 0)

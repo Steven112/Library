@@ -60,20 +60,14 @@ namespace LibraryServices.UI.Registros
                 MessageBox.Show("Contraseña incorrecta", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void VerContraseñabutton_Click(object sender, EventArgs e)
-        {
-            string contraseña = ContrasenatextBox.Text;
-            if (ContrasenacheckBox.Checked)
-            {
-                ContrasenatextBox.UseSystemPasswordChar = true;
-                ContrasenatextBox.Text = contraseña;
-            }
-            else
-            {
-                ContrasenatextBox.UseSystemPasswordChar = false;
-                ContrasenatextBox.Text = contraseña;
+       
 
-            }
+       
+
+        private void Verbutton_Click(object sender, EventArgs e)
+        {
+          
+            
         }
     }
 

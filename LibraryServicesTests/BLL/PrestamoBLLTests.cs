@@ -26,8 +26,8 @@ namespace LibraryServices.BLL.Tests
         [TestMethod()]
         public void ModificarTest()
         {
-            PrestamosDetalle pagosDetalle = new PrestamosDetalle(8, 1, "Menu", DateTime.Now);
-            PrestamosDetalle pagosDetalle1 = new PrestamosDetalle(9, 1, "Menu", DateTime.Now);
+            PrestamosDetalle pagosDetalle = new PrestamosDetalle(1, 1, "Menpu", DateTime.Now);
+            PrestamosDetalle pagosDetalle1 = new PrestamosDetalle(1, 1, "Menu", DateTime.Now);
             List<PrestamosDetalle> list = new List<PrestamosDetalle>();
             list.Add(pagosDetalle);
             list.Add(pagosDetalle1);

@@ -65,12 +65,12 @@
             // 
             this.DisponiblecheckBox.AutoSize = true;
             this.DisponiblecheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.DisponiblecheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DisponiblecheckBox.Location = new System.Drawing.Point(16, 65);
+            this.DisponiblecheckBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DisponiblecheckBox.Location = new System.Drawing.Point(276, 124);
             this.DisponiblecheckBox.Name = "DisponiblecheckBox";
-            this.DisponiblecheckBox.Size = new System.Drawing.Size(75, 17);
+            this.DisponiblecheckBox.Size = new System.Drawing.Size(91, 17);
             this.DisponiblecheckBox.TabIndex = 170;
-            this.DisponiblecheckBox.Text = "Disponible";
+            this.DisponiblecheckBox.Text = "Disponibilidad";
             this.DisponiblecheckBox.UseVisualStyleBackColor = false;
             this.DisponiblecheckBox.CheckedChanged += new System.EventHandler(this.DisponiblecheckBox_CheckedChanged);
             // 
@@ -169,6 +169,7 @@
             this.PrestamogroupBox.Controls.Add(this.PrestamoIdnumericUpDown1);
             this.PrestamogroupBox.Controls.Add(this.label1);
             this.PrestamogroupBox.Controls.Add(this.EstudiantecomboBox);
+            this.PrestamogroupBox.Controls.Add(this.DisponiblecheckBox);
             this.PrestamogroupBox.Controls.Add(this.DevoluciondateTimePicker);
             this.PrestamogroupBox.Controls.Add(this.label6);
             this.PrestamogroupBox.Controls.Add(this.LibrocomboBox);
@@ -329,7 +330,6 @@
             this.Controls.Add(this.FechaEntregadateTimePicker);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.DisponiblecheckBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.IdnumericUpDown1);
             this.Controls.Add(this.EliminarButton);

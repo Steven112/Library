@@ -52,7 +52,12 @@ namespace LibraryServices.UI
         {
             bool paso = true;
 
-            
+            if (string.IsNullOrWhiteSpace(IdcategorianumericUpDown.Text))
+            {
+                MyerrorProvider.SetError(IdcategorianumericUpDown, "El campo no debe estar vacio"); ;
+                IdcategorianumericUpDown.Focus();
+                paso = false;
+            }
             if (string.IsNullOrWhiteSpace(IntroduccionTextBox.Text))
             {
                 MyerrorProvider.SetError(IntroduccionTextBox, "El Campo no debe estar vacio");

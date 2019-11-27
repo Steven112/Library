@@ -59,20 +59,36 @@ namespace LibraryServices.UI.Registros
         private bool validar()
         {
             bool paso = true;
-
-            if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
+            if (string.IsNullOrWhiteSpace(IdnumericUpDown1.Text))
             {
-                MyerrorProvider.SetError(EstudiantecomboBox, "El campo no debe estar vacio");
-                EstudiantecomboBox.Focus();
+                MyerrorProvider.SetError(IdnumericUpDown1, "El campo no debe estar vacio");
+                IdnumericUpDown1.Focus();
+                paso = false;
+            }
+            if (string.IsNullOrWhiteSpace(PrestamoIdnumericUpDown1.Text))
+            {
+                MyerrorProvider.SetError(PrestamoIdnumericUpDown1, "Tiene que buscar el id del prestamo donde se encuentra el libro");
+                PrestamoIdnumericUpDown1.Focus();
                 paso = false;
             }
             if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
             {
-                MyerrorProvider.SetError(EstudiantecomboBox, "El Campo no debe estar vacio");
+                MyerrorProvider.SetError(EstudiantecomboBox, "Seleccione un estudiante que devolvera el libro");
                 EstudiantecomboBox.Focus();
                 paso = false;
             }
-            
+            if (string.IsNullOrWhiteSpace(LibrocomboBox.Text))
+            {
+                MyerrorProvider.SetError(LibrocomboBox, "Seleccione el libro a devolver");
+                LibrocomboBox.Focus();
+                paso = false;
+            }
+            if (!DisponiblecheckBox.Checked)
+            {
+                MyerrorProvider.SetError(DisponiblecheckBox, "Marque el libro como disponible");
+                DisponiblecheckBox.Focus();
+                paso = false;
+            }
             if (this.Detalles.Count == 0)
             {
                 MyerrorProvider.SetError(MydataGridView, "Debe Agregar alguna devolucion");

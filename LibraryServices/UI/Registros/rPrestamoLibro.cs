@@ -47,23 +47,31 @@ namespace LibraryServices.UI
             CargarGrid();
 
 
-            // this.DetalleEstudiante = new List<EstudiantesDetalle>();
-
-
         }
 
         private bool Validar()
         {
             bool paso = true;
-
+            if (string.IsNullOrWhiteSpace(PrestamoidnumericUpDown.Text))
+            {
+                MyerrorProvider.SetError(PrestamoidnumericUpDown, "El campo no debe estar vacio");
+                PrestamoidnumericUpDown.Focus();
+                paso = false;
+            }
             if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
              {
-                 MyerrorProvider.SetError(EstudiantecomboBox, "El Campo no debe estar vacio");
+                 MyerrorProvider.SetError(EstudiantecomboBox, "Seleccione un estudiante de la lista");
                  EstudiantecomboBox.Focus();
                  paso = false;
              }
-             
-            
+            if (string.IsNullOrWhiteSpace(LibrocomboBox.Text))
+            {
+                MyerrorProvider.SetError(EstudiantecomboBox, "Seleccione un libro de la lista");
+                LibrocomboBox.Focus();
+                paso = false;
+            }
+
+
             if (FechaDevoluciondateTimePicker.Value <= FechaPrestamodateTimePicker.Value)
             {
                 MyerrorProvider.SetError(FechaDevoluciondateTimePicker, "La fecha de devolucion no puede ser menor o igual a la Fecha de prestamo");

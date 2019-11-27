@@ -110,15 +110,16 @@ namespace LibraryServices.UI.Registros
         }
         private bool ValidarCelular()
         {
-            bool realizado = true;
-            RepositorioBase<Usuarios> generic = new RepositorioBase<Usuarios>(new Contexto());
-            List<Usuarios> user = generic.GetList(d => d.Celular.Contains(CelularMaskedTextBox.Text));
-
+            bool existe = true;
+           
+            List<Usuarios> user = UsuariosBLL.GetList(d => d.Celular.Contains(CelularMaskedTextBox.Text));
+            Usuarios usuarios = new Usuarios();
+            
             if (user != null)
             {
-                realizado = false;
+                existe = false;
             }
-            return realizado;
+            return existe;
         }
         private bool validar()
         {
@@ -130,12 +131,7 @@ namespace LibraryServices.UI.Registros
                 CelularMaskedTextBox.Focus();
                 paso = false;
             }
-            if (ValidaEmail())
-            {
-                MyerrorProvider.SetError(EmailTextBox, "Ya existe un usuario con este Email");
-                EmailTextBox.Focus();
-                paso = false;
-            }
+            
             if (!EmailValido(EmailTextBox.Text))
             {
                 MyerrorProvider.SetError(EmailTextBox, "Email no valido");
